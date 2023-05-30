@@ -1,0 +1,102 @@
+﻿<%@ Page Title="Alpha Professional Tools® :: Request Dealer Information" Language="C#" MasterPageFile="~/MasterPages/Product.master" AutoEventWireup="true" CodeFile="CCForm.aspx.cs" Inherits="pages_CCForm" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .control-group {
+            float: left;
+            width: 100%;
+            padding-top: 5px;
+            padding-right: 0;
+            padding-bottom: 5px;
+            padding-left: 0;
+        }
+
+        label {
+            float: left;
+            width: 30%;
+            font-weight: normal;
+        }
+
+        .span6 {
+            float: left;
+            width: 50%;
+        }
+
+        .controls {
+            float: left;
+            width: 60%;
+        }
+
+        .required {
+            color: red;
+        }
+
+        @media screen and (min-width: 320px) and (max-width: 640px) {
+            label {
+                float: left;
+                font-weight: normal;
+                width: 100% !important;
+            }
+
+            .span6 {
+                float: left;
+                width: 88%;
+            }
+
+            .controls {
+                float: left;
+                width: 100% !important;
+            }
+
+            .btn {
+                margin-left: 18% !important;
+                min-width: 0;
+            }
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+    <div class="page-intro">
+        <ol class="breadcrumb">
+            <li><i class="fa fa-home pr-10"></i>
+                <a href="/Default.aspx">Home</a></li>
+            <li class="active">Customer Contact Information Form</li>
+        </ol>
+    </div>
+    <section class="main-container" style="margin-top: 0px;">
+         <div class="row">
+                <div class="col-sm-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="title"> <h3>Customer Contact Information Form</h3>
+                            </span>
+                        </div>   
+Alpha<sup>&reg;</sup></span> has implemented technologies to reduce the amount a printed materials such as sales order confirmations, invoices, statements, etc. and are now sending these items via e-mail.  Please complete this form to ensure these items are sent to the appropriate personnel in your company as well as for those who require access to our Members’ section to obtain document copies and artwork.</p>
+                            <ul>
+                            <li><strong>SOC</strong> - Sales Order Confirmations – From Alpha<sup>&reg;</sup> </span>Customer Service &amp; Tool Department Contacts
+                           </li> 
+                           <li> <strong>RMA</strong> - Return Merchandise Authorizations (RMAs) - From Alpha® Customer Service &amp; Tool Department Contacts</li>
+                           <li><strong>INV </strong>- Invoices and Statements - From Alpha<sup>&reg;</sup> Accounting Contacts</li>
+                           <li><strong>DPP</strong> - Dealer Program, Pricing Information and Promotions – To Receive Dealer Information and Promotions</li>
+                           <li><strong>WEB</strong> - Website Access for Dealer Information/Artwork - Members’ Section Access</li>
+                           <li><strong>ART</strong> - Website Access for Artwork ONLY - Members’ Section Artwork ONLY</li>
+                         </ul>
+<div style="width:95%; padding:10px;">
+  <p><strong>Please be sure the information is complete before submitting the request.</strong></p></div>   </div> 
+                        <div class="form-actions">
+                          <asp:Button ID="btnSubmit" Text="Submit" runat="server" ValidationGroup="checkout" style="margin-left:25%;" OnClick="btnSubmit_Click"  CssClass="btn btn-primary" />
+                      </div>     
+                                                
+                  </div>  
+                  </div>
+                </div>
+            </div>
+    </section>
+    <form id="form1" runat="server">
+        <div></div>
+    </form>
+
+</asp:Content>
+
+

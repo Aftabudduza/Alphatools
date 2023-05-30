@@ -1,0 +1,150 @@
+					<ul id="sectionNavigation">
+<%
+	Dim strPageRelativeURL As String = LCase(Request.ServerVariables("URL"))
+	Dim numThisGroupID As String
+		
+	Select Case strPageRelativeURL
+		Case "/group.aspx"
+			numThisGroupID = Request("ID")
+		Case Else
+			numThisGroupID = CStr(numGroupID)
+	End Select
+
+	Dim strConnect_Group As New Data.SqlClient.SqlConnection
+	strConnect_Group.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+	strConnect_Group.Open()
+
+	Dim strSQL_Group As String
+	Dim numCurrentSectionID As Integer = 0
+	Dim numCurrentGroupID As Integer = 0
+	Dim strCurrentPageName As String = ""
+	Dim flgNewGroup As Boolean = False
+	Dim flgNewPageName As Boolean = False
+	Dim flgFirstGroup As Boolean = False
+					
+	strSQL_Group = "SELECT MWebSection.WebSection, MWebSection.WebSectionID, MWebGroup.WebGroup, MWebGroup.WebGroupID, ProductPage.PageName, ProductPage.ProductPageCode, ProductPage.BannerName, MWebTitle.WebTitleID, MWebTitle.WebTitleSort " & _
+	  "FROM MWebGroup " & _
+	  "INNER JOIN ProductPage ON MWebGroup.WebGroupID = ProductPage.WebGroupID " & _
+	  "INNER JOIN MWebSection ON ProductPage.WebSectionID = MWebSection.WebSectionID " & _
+	  "INNER JOIN MWebTitle ON ProductPage.WebTitleID = MWebTitle.WebTitleID " & _
+	  "WHERE MWebSection.WebSectionID < 80 " & _
+	  "GROUP BY MWebSection.WebSection, MWebSection.WebSectionSort, MWebSection.WebSectionID, MWebGroup.WebGroup, MWebGroup.WebGroupSort, MWebGroup.WebGroupID, ProductPage.PageName, ProductPage.ProductPageCode, ProductPage.BannerName, MWebTitle.WebTitleID, MWebTitle.WebTitleSort " & _
+	  "ORDER BY MWebSection.WebSectionSort, MWebSection.WebSectionID, MWebGroup.WebGroupID, MWebGroup.WebGroupSort, MWebTitle.WebTitleSort, MWebTitle.WebTitleID"
+	'Response.Write(strSQL_Group)
+
+	Dim strDr_Group As Data.SqlClient.SqlDataReader
+	Dim strCMD_Group As New Data.SqlClient.SqlCommand(strSQL_Group, strConnect_Group)
+	strDr_Group = strCMD_Group.ExecuteReader()
+
+	Do While strDr_Group.Read
+		If numCurrentSectionID <> CInt(strDr_Group.Item("WebSectionID")) Then
+			If flgNewGroup Then
+				flgNewGroup = False
+				If flgNewPageName Then
+					flgNewPageName = False
+					%>
+					</ul>
+					</li>
+					<%
+				End If
+					%>
+					</ul>
+					<%
+				End If
+					If numCurrentSectionID <> 0 Then
+					%>
+					</li>
+					<%
+				End If
+			%>
+			<li<%=IIf((CInt(strDr_Group.Item("WebSectionID").ToString.Trim) = numSectionID), " class=""" & GetSectionClassName(CInt(strDr_Group.Item("WebSectionID").ToString.Trim)) & """", "") %>>
+				<a href="/Section.aspx?ID=<%=strDr_Group.Item("WebSectionID").ToString.Trim%>"<%=IIf(Len(strDr_Group.Item("WebSection").ToString.Trim) > 20, " class=""long""", "")%>>
+					<%=strDr_Group.Item("WebSection").ToString.Trim%>
+				</a>
+			<%
+			End If
+			If (CInt(strDr_Group.Item("WebSectionID").ToString.Trim) = numSectionID) Then
+				If Not flgNewGroup Then
+					flgNewGroup = True
+					flgFirstGroup = True
+					%>
+					<ul>
+					<%
+				End If
+					If numCurrentGroupID <> CInt(strDr_Group.Item("WebGroupID")) Then
+						Dim strFirstGroup As String
+						If flgFirstGroup Then
+							strFirstGroup = "class=""top"""
+							flgFirstGroup = False
+						Else
+							strFirstGroup = ""
+						End If
+						
+						If flgNewPageName Then
+							flgNewPageName = False
+					%>
+					</ul>
+					</li>
+					<%
+				End If
+						%>
+					<li <%=strFirstGroup%>>
+						<a href="/Group.aspx?ID=<%=strDr_Group.Item("WebGroupID").ToString.Trim%>">
+							<%=strDr_Group.Item("WebGroup").ToString.Trim%>
+						</a>
+						<%
+						End If
+						If numThisGroupID = strDr_Group.Item("WebGroupID").ToString.Trim Then
+							If Not flgNewPageName Then
+								flgNewPageName = True
+									%>
+									<ul>
+									<%
+								End If
+									If strCurrentPageName <> strDr_Group.Item("PageName").ToString.Trim Then
+								%>
+								<li>
+									<a href="/Product.aspx?PageCode=<%=strDr_Group.Item("ProductPageCode").ToString.Trim%>">
+										<%=strDr_Group.Item("BannerName").ToString.Trim%>
+									</a>
+								</li>
+								<%
+								End If
+							End If
+							If numCurrentGroupID <> CInt(strDr_Group.Item("WebGroupID")) Then
+								%>
+					</li>
+				<%
+				End If
+				Dim numTempSectionID As Integer = numCurrentSectionID
+				numCurrentGroupID = CInt(strDr_Group.Item("WebGroupID"))
+				numCurrentSectionID = CInt(strDr_Group.Item("WebSectionID"))
+				strCurrentPageName = strDr_Group.Item("PageName").ToString.Trim
+			Else
+				numCurrentGroupID = CInt(strDr_Group.Item("WebGroupID"))
+				numCurrentSectionID = CInt(strDr_Group.Item("WebSectionID"))
+				strCurrentPageName = strDr_Group.Item("PageName").ToString.Trim
+			End If
+		Loop
+		strDr_Group.Close()
+		'Response.Write(flgNewPageName)
+		'Response.Write(flgNewGroup)
+		If flgNewGroup Then
+			%>
+			</li></ul>
+			<%
+				If flgNewPageName Then
+					%>
+					</li></ul>
+					<%
+				End If
+		End If			
+%>
+					</li>
+					<li>
+						<a href="/EducationalMaterials.aspx" title="Educational Materials" class="long">Educational Materials</a>
+					</li>
+					<li>
+						<a href="/NewProducts.aspx" title="New Products">New Products</a>
+					</li>
+					</ul>

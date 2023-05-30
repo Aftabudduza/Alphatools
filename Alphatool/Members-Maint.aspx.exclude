@@ -1,0 +1,144 @@
+﻿<%@ Page Language="vb" Explicit="true" Strict="true" AutoEventWireup="false" Debug="true" %>
+<%@Import NameSpace="AlphaTools"%>
+<%@Import NameSpace="AlphaTools.GlobalDeclarations"%>
+<%@ Register TagPrefix="adi" TagName="SectionNavigation" Src="~/Controls/SectionNavigation.ascx" %>
+<script runat="server">
+	Dim strSQL As String
+	Dim objConnection As New Data.SqlClient.SqlConnection
+	Dim objCommand As Data.SqlClient.SqlCommand
+	Dim objDataReader As Data.SqlClient.SqlDataReader
+	
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Me.Load
+        strSQL = "SELECT Employment.* " & _
+          "FROM Employment " & _
+          "WHERE Employment.CurrentYN  = 1 " & _
+          "ORDER BY Employment.DatePosted DESC"
+		
+        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+        objConnection.Open()
+		
+        objCommand = New Data.SqlClient.SqlCommand(strSQL, objConnection)
+		
+        objDataReader = objCommand.ExecuteReader()
+    End Sub
+	
+    Private Sub Page_Unload(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Unload
+        CleanUp()
+    End Sub
+
+    Protected Sub Page_Error(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Error
+        CleanUp()
+    End Sub
+    
+    Private Sub CleanUp()
+        If (objDataReader Is Nothing) = False Then
+            objDataReader.Close()
+            objDataReader.Dispose()
+            objDataReader = Nothing
+        End If
+		
+        If (objCommand Is Nothing) = False Then
+            objCommand.Dispose()
+            objCommand = Nothing
+        End If
+
+        If (objConnection Is Nothing) = False Then
+            objConnection.Close()
+            objConnection.Dispose()
+            objConnection = Nothing
+        End If
+    End Sub
+</script>
+<%=""%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Alpha Professional Tools</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="Stylesheet" type="text/css" href="/includes/screen.css" media="screen" />
+</head>
+<body class="product">
+	<div id="bodyContainer">
+		<div id="bodyWrapper">
+			<div id="header">
+				<dl>
+					<dt>
+						<a href="/index.aspx"><img src="/images/alphatools_sub_logo.gif" class="logo" alt="Providing Better Solutions to the Professional"  title="Providing Better Solutions to the Professional" width="182" height="43" /></a>
+					</dt>
+					<dd>
+						<h1>
+							<a href="/index.aspx">Providing Better Solutions to the Professional</a>
+						</h1>
+					</dd>									
+				</dl>
+				<h2>Members</h2>
+				<div id="banner"><img src="/images/banner_left_generic.jpg" title="Alpha Professional Tools: providing better solutions to the professional." alt="Alpha Professional Tools: providing better solutions to the professional." width="158" height="144" /><img src="/images/banner_middle_generic.gif" title="Alpha Professional Tools: providing better solutions to the professional." alt="Alpha Professional Tools: providing better solutions to the professional." width="19" height="144" /><img src="/images/banner_right_generic.jpg" title="Alpha Professional Tools: providing better solutions to the professional." alt="Alpha Professional Tools: providing better solutions to the professional." width="552" height="144" /></div>
+			</div>
+			<div id="busStmnt">
+				<!--#include virtual="includes/busStmnt.htm"-->
+				<a href="/ProductSearch.aspx" class="productSearchLink">Product Search &gt;</a>
+				<!--<a href="">Members &gt;&gt;</a>-->
+			</div>
+			<div id="contentContainer">
+				<div id="leftNavigation">
+					<adi:SectionNavigation runat="server" />
+					<!--#include virtual="includes/nav_main.htm"-->
+				</div>
+				<div id="content">
+					<h3><a href="/index.aspx">Home</a> &gt; Members</h3>
+					<h4>Members</h4>
+					<p>
+                        Oops!! The Members' site is currently unavailable due to maintenance. We apologize for any inconvenience this may cause.
+                    </p>
+                    <p>
+                        As always, we appreciate your support of the Alpha Professional Tools product line.
+                    </p>
+                    <hr class="color" />
+					<%
+					Dim strFilePath As String
+					Dim strFileURL As String
+					If objDataReader.HasRows Then
+						Do While objDataReader.Read
+							%>
+							<h6>
+								<%=objDataReader.Item("EmployTitle").ToString.Trim%>
+							</h6>
+							<%
+							If objDataReader.Item("DateListed").ToString.Trim <> "" Then 	
+								%>
+								<p style="margin: 0;">
+									Posted on <%=FormatDate(objDataReader.Item("DateListed").ToString.Trim, 3)%>
+								</p>
+								<%
+							End If
+								%>
+								<p>
+									<%=objDataReader.Item("EmployBlurb").ToString.Trim%>
+								<%
+							If objDataReader.Item("EmployeeEmailLink").ToString.Trim <> "" Then 	
+								%>
+									<br />Email your resume to <a href="mailto:<%=objDataReader.Item("EmployeeEmailLink").ToString.Trim%>">
+										<%=objDataReader.Item("EmployeeEmailLink").ToString.Trim%>.
+									</a>
+								<%
+							End If
+							%>
+								</p>
+							<hr class="color" />
+							<%
+						Loop
+					Else
+						%>
+						<!--
+						<p>There are currently no Employment records in the system.</p>
+						-->
+						<%
+					End If
+					%>
+				</div>
+			</div>
+			<!--#include virtual="includes/footer.htm"-->
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,9 @@
+F:\Source\Alphatool\AlphatoolServices\bin\Debug\AlphatoolServices.dll.config
+F:\Source\Alphatool\AlphatoolServices\bin\Debug\AlphatoolServices.dll
+F:\Source\Alphatool\AlphatoolServices\bin\Debug\AlphatoolServices.pdb
+F:\Source\Alphatool\AlphatoolServices\bin\Debug\EntityFramework.dll
+F:\Source\Alphatool\AlphatoolServices\obj\Debug\AlphatoolServices.csproj.CoreCompileInputs.cache
+F:\Source\Alphatool\AlphatoolServices\obj\Debug\AlphatoolServices.csproj.CopyComplete
+F:\Source\Alphatool\AlphatoolServices\obj\Debug\AlphatoolServices.dll
+F:\Source\Alphatool\AlphatoolServices\obj\Debug\AlphatoolServices.pdb
+F:\Source\Alphatool\AlphatoolServices\obj\Debug\AlphatoolServices.csproj.AssemblyReference.cache

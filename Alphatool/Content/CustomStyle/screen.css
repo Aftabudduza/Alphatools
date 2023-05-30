@@ -1,0 +1,1543 @@
+﻿
+body {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+img {
+    border: 0 none;
+}
+div#bodyContainer {
+    background: rgba(0, 0, 0, 0) url("/images/background_top.jpg") no-repeat scroll 0 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25px;
+    width: 770px;
+}
+div#bodyWrapper {
+    background: rgba(0, 0, 0, 0) url("/images/container_bg2.gif") repeat-y scroll 0 0;
+    float: left;
+    width: 770px;
+}
+div#header {
+    margin: 25px 20px 0;
+    width: 730px;
+}
+div#header h1 {
+    background: rgba(0, 0, 0, 0) url("/images/alphatools_logo.gif") no-repeat scroll 0 0;
+    font: bold 14px Arial,sans-serif;
+    margin: 0;
+    padding: 5px 0 10px;
+    text-align: right;
+}
+div#busStmnt {
+    float: left;
+    margin: 5px 20px 4px;
+    width: 730px;
+}
+div#busStmnt div#busStmnt1 {
+    float: left;
+    padding: 1px 0 0;
+}
+div#busStmnt div#busStmnt2 {
+    float: left;
+    padding: 0 0 0 5px;
+}
+div#busStmnt span {
+    font: bold 12px Arial,sans-serif;
+    text-transform: uppercase;
+}
+div#busStmnt span a {
+    color: #000;
+    text-decoration: none;
+}
+div#busStmnt img {
+    border: 0 none;
+    height: 18px;
+    width: 17px;
+}
+div#busStmnt a.productSearchLink {
+    color: rgb(1, 11, 110);
+    float: right;
+    font: 600 15px Arial,sans-serif;
+    padding: 1px 5px 0 0;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+div#contentContainer {
+    background: #fff url("/images/maincontainer_bg2.gif") no-repeat scroll 0 0;
+    border-bottom: 1px solid #000;
+    display: inline;
+    float: left;
+    margin: 0 20px;
+    padding: 0 0 3px;
+    width: 730px;
+}
+div#leftNavigationContact {
+    display: inline;
+    float: left;
+    margin-left: 0;
+    padding-top: 15px;
+    width: 50px;
+}
+div#leftNavigation {
+    display: inline;
+    float: left;
+    margin-left: 0;
+    padding-top: 15px;
+    width: 144px;
+}
+div#leftNavigation ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+div#leftNavigation ul li {
+    margin: 0;
+    padding: 0;
+}
+div#leftNavigation ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/navbutton.gif") no-repeat scroll 0 0;
+    color: #000;
+    display: block;
+    font: bold 10px Arial,sans-serif;
+    height: 17px;
+    margin: 1px 0;
+    padding: 4px 5px 0 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+div#leftNavigation ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/navbutton_hover.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul li a.long {
+    background: rgba(0, 0, 0, 0) url("/images/navbutton_long.gif") no-repeat scroll 0 0;
+    color: #000;
+    display: block;
+    font: bold 10px Arial,sans-serif;
+    height: 28px;
+    margin: 1px 0;
+    padding: 3px 5px 0 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+div#leftNavigation ul li a.long:hover {
+    background: rgba(0, 0, 0, 0) url("/images/navbutton_long_hover.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation {
+    border-bottom: 4px solid #000;
+}
+div#leftNavigation ul#sectionNavigation li ul {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom2.gif") no-repeat scroll center bottom;
+    padding-bottom: 3px;
+}
+div#leftNavigation ul#sectionNavigation li ul li {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li ul li ul {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    padding-bottom: 0;
+}
+div#leftNavigation ul#sectionNavigation li.cutting a {
+    background: #cc0000 url("/images/navbutton_cutting.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_cutting.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_cutting.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.cutting ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#leftNavigation ul#sectionNavigation li.profiling a {
+    background: #ff6600 url("/images/navbutton_profiling.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_profiling.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_profiling.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.profiling ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#leftNavigation ul#sectionNavigation li.grinding a {
+    background: #996600 url("/images/navbutton_grinding.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_grinding.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_grinding.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.grinding ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#leftNavigation ul#sectionNavigation li.drilling a {
+    background: #999900 url("/images/navbutton_drilling.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_drilling.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_drilling.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.drilling ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#leftNavigation ul#sectionNavigation li.handtools a {
+    background: #336633 url("/images/navbutton_handtools.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_handtools.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_handtools.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.handtools ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#leftNavigation ul#sectionNavigation li.polishing a {
+    background: #0066ff url("/images/navbutton_polishing.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_polishing.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_polishing.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.polishing ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#leftNavigation ul#sectionNavigation li.restoration a {
+    background: #663366 url("/images/navbutton_restoration.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_restoration.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_restoration.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.restoration ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#leftNavigation ul#sectionNavigation li.educational a {
+    background: #003399 url("/images/navbutton_educational.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_educational.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_educational.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.educational ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#leftNavigation ul#sectionNavigation li.new a {
+    background: #003399 url("/images/navbutton_new.gif") no-repeat scroll 0 0;
+    color: #fff;
+    margin: 0;
+    padding: 8px 5px 0 15px;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li {
+    border-top: 1px solid rgb(165, 165, 165);
+}
+div#leftNavigation ul#sectionNavigation li.new ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton.gif") no-repeat scroll 0 0;
+    color: #fff;
+    display: block;
+    font: 10px Arial,sans-serif;
+    height: auto;
+    margin: 0;
+    padding: 2px 5px 2px 25px;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_new.gif") no-repeat scroll 0 0;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li.top {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li.bottom {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li.bottom a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom.gif") no-repeat scroll center bottom;
+    margin: 0;
+    padding: 2px 5px 4px 25px;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li.bottom a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bottom_new.gif") no-repeat scroll center bottom;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li ul li {
+    border: 0 none;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li ul li a {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 0 10px 2px 0;
+    text-align: right;
+    text-decoration: none;
+    text-transform: none;
+}
+div#leftNavigation ul#sectionNavigation li.new ul li ul li a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/subnavbutton_bg.gif") repeat-y scroll 0 0;
+    text-decoration: underline;
+}
+div#productSections {
+    float: left;
+    padding: 15px 0 0 14px;
+    width: 381px;
+}
+div.productSection {
+    float: left;
+    font: 10px Arial,sans-serif;
+    height: 100px;
+    margin: 0 0 10px;
+    position: relative;
+    width: 116px;
+}
+div.productSection h2 {
+    display: block;
+    margin: 0;
+}
+div.productSection h2 a {
+    display: block;
+    height: 27px;
+    margin: 0;
+    padding: 0;
+    text-indent: -10001px;
+    width: 110px;
+}
+div.productSection p {
+    margin: 3px 10px 0;
+}
+div.productSection label {
+    bottom: 18px;
+    float: right;
+    font: bold 9px Verdana,sans-serif;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    right: 0;
+    text-transform: lowercase;
+}
+div.productSection a {
+    color: #000;
+    display: block;
+    margin-right: 18px;
+    text-decoration: none;
+    width: 62px;
+}
+div#cutting {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_cutting.gif") no-repeat scroll 0 0;
+    margin-right: 12px;
+}
+div#cutting label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_cutting_arrow.gif") no-repeat scroll right center;
+}
+div#profiling {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_profiling.gif") no-repeat scroll 0 0;
+}
+div#profiling label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_profiling_arrow.gif") no-repeat scroll right center;
+}
+div#grinding {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_grinding.gif") no-repeat scroll 0 0;
+    margin-right: 12px;
+}
+div#grinding label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_grinding_arrow.gif") no-repeat scroll right center;
+}
+div#drilling {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_drilling.gif") no-repeat scroll 0 0;
+    margin-right: 12px;
+}
+div#drilling label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_drilling_arrow.gif") no-repeat scroll right center;
+}
+div#handtools {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_handtools.gif") no-repeat scroll 0 0;
+}
+div#handtools label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_handtools_arrow.gif") no-repeat scroll right center;
+}
+div#polishing {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_polishing.gif") no-repeat scroll 0 0;
+    margin-right: 12px;
+}
+div#polishing label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_polishing_arrow.gif") no-repeat scroll right center;
+}
+div#restoration {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_restoration.gif") no-repeat scroll 0 0;
+    margin-right: 12px;
+}
+div#restoration label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_restoration_arrow.gif") no-repeat scroll right center;
+}
+div#educational {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_educational.gif") no-repeat scroll 0 0;
+}
+div#educational label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_educational_arrow.gif") no-repeat scroll right center;
+}
+div#new {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_new.gif") no-repeat scroll 0 0;
+    margin-right: 12px;
+}
+div#new label a {
+    background: rgba(0, 0, 0, 0) url("/images/productsection_new_arrow.gif") no-repeat scroll right center;
+}
+div#productSearch {
+    float: left;
+    padding: 16px 0 0 10px;
+    width: 180px;
+}
+div#productSearch h3 {
+    font: bold 12px Arial MS,sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+}
+div#productSearch p {
+    font: 10px Arial MS,sans-serif;
+    margin: 0;
+}
+div#productSearch form {
+    margin: 0;
+}
+div#productSearch form dl {
+    margin: 10px 0 0;
+}
+div#productSearch form dl dt {
+    font: 11px Arial MS,sans-serif;
+    margin: 0;
+}
+div#productSearch form dl dd {
+    margin: 0 0 5px;
+}
+div#productSearch form dl dd input, div#productSearch form dl dd select {
+    background: #f0f0f0 none repeat scroll 0 0;
+    border: 1px solid #a9aaab;
+    font: 9px Arial MS,sans-serif;
+    width: 172px;
+}
+div#productSearch form input.image {
+    float: right;
+    margin: 10px 20px 0 0;
+}
+div#footer {
+    float: left;
+    font: 11px Arial,sans-serif;
+    padding: 10px 0;
+    text-align: center;
+    width: 770px;
+}
+div#footer p {
+    margin: 0;
+}
+div#footer span.round {
+    font-family: Verdana;
+}
+div#author {
+    background: #fff url("/images/footer_bg2.jpg") no-repeat scroll center top;
+    float: left;
+    padding: 10px 0;
+    text-align: right;
+    width: 770px;
+}
+div#author a {
+    color: #3e5162;
+    font: bold 11px Arial,sans-serif;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+div#header dl {
+    float: right;
+    margin: 0;
+    padding: 0 0 10px;
+}
+div#header dl dt, div#header dl dd {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+div#header dl dt img {
+    border: 0 none;
+}
+div#header dl dd h1 {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    font-size: 10px;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+    text-transform: none;
+    width: 300px;
+}
+div#header a {
+    color: #000;
+    text-decoration: none;
+}
+div#header h2 {
+    display: inline;
+    float: left;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 0 10px;
+    padding: 35px 0 0;
+}
+div#header h2.cutting {
+    color: #cc0000;
+}
+div#header h2.profiling {
+    color: #ff6600;
+}
+div#header h2.grinding {
+    color: #996600;
+}
+div#header h2.drilling {
+    color: #999900;
+}
+div#header h2.handtools {
+    color: #336633;
+}
+div#header h2.polishing {
+    color: #0066ff;
+}
+div#header h2.restoration {
+    color: #663366;
+}
+div#header h2.educational {
+    color: #003399;
+}
+div#header h2.new {
+    color: #003399;
+}
+body.listing div#content dl {
+    display: inline;
+    float: left;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0 15px 0 0;
+    padding: 0;
+    width: 165px;
+}
+body.listing div#content dl dt {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+body.listing div#content dl dt img {
+    border: 0 none;
+}
+body.listing div#content dl dd {
+    color: #78797b;
+    margin: 0 0 20px;
+    padding: 0;
+    text-align: center;
+}
+body.listing div#content dl dd a {
+    color: #78797b;
+    text-decoration: none;
+}
+div#content {
+    float: left;
+    font-size: 11px;
+    padding: 15px 15px 0 14px;
+    width: 366px;
+}
+div#content h3 {
+    color: rgb(1, 11, 110);
+    font-size: 11px;
+    font-weight: normal;
+    margin-top: 0;
+}
+div#content h3 a {
+    color: rgb(1, 11, 110);
+    text-decoration: none;
+}
+div#content h3 a:hover {
+    text-decoration: underline;
+}
+div#content h4 {
+    color: #003399;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+div#content h5 {
+    font-size: 14px;
+    margin: 0 0 10px;
+    text-decoration: none;
+}
+div#content h5 a {
+    color: #000;
+}
+div#content h6 {
+    font-size: 11px;
+    margin: 10px 0 0;
+}
+div#content dl.inline {
+    margin: 0;
+    padding: 0;
+}
+div#content dl.inline dt {
+    float: left;
+    width: 200px;
+}
+div#content dl.inline dd {
+    float: left;
+    margin: 0;
+    padding: 0 0 3px;
+    width: 346px;
+}
+div#content address {
+    font-style: normal;
+    margin: 0;
+}
+div#content p {
+    font-size: 11px;
+    margin: 10px 0;
+}
+div#content hr {
+    background-color: #fff;
+    border: 0 none;
+    clear: both;
+    color: #fff;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+}
+div#content hr.color {
+    background-color: #3e5162;
+    border: 0 none;
+    clear: both;
+    color: #3e5162;
+    height: 1px;
+    margin: 0 0 5px;
+    padding: 0;
+}
+ul.breadcrumb {
+    clear: both;
+    display: inline;
+    float: right;
+    font-size: 11px;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+ul.breadcrumb li {
+    display: inline;
+    margin: 0;
+    padding: 0 2px;
+}
+ul.breadcrumb li.front {
+    border-right: 1px solid #000;
+    display: inline;
+    margin: 0 3px 0 0;
+    padding: 0;
+}
+ul.breadcrumb li.last {
+    border-left: 1px solid #000;
+    display: inline;
+    margin: 0;
+    padding: 0 0 0 5px;
+}
+ul.breadcrumb li a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+body.product div#content {
+    border: 0 none;
+    float: left;
+    padding: 15px 15px 0 14px;
+    width: 556px;
+}
+body.product div#content img.productImage {
+    float: left;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+body.product div#contentContainer {
+    background: #fff url("/images/maincontainer_bg3.gif") repeat-x scroll 0 0;
+    border-bottom: 1px solid #000;
+    display: inline;
+    float: left;
+    margin: 0 20px;
+    padding: 0 0 3px;
+    width: 730px;
+}
+body.product div#content table.productInfo {
+    border-bottom: 1px solid #858585;
+    border-left: 1px solid #858585;
+    clear: left;
+    font-size: 11px;
+    margin-top: 10px;
+}
+body.product div#content table.productInfo th {
+    background: #333 none repeat scroll 0 0;
+    border-right: 1px solid #858585;
+    border-top: 1px solid #858585;
+    color: #fff;
+    padding: 4px;
+    text-align: center;
+}
+body.product div#content table.productInfo td {
+    border-right: 1px solid #858585;
+    border-top: 1px solid #858585;
+    color: #000;
+    padding: 4px;
+    text-align: center;
+}
+body.product div#content table.productInfo td.firstrow {
+    background: #dadadb none repeat scroll 0 0;
+}
+body.product div#content table.productInfo td.secondrow {
+    background: #fff none repeat scroll 0 0;
+}
+div#productDocuments {
+    background: rgba(0, 0, 0, 0) url("/images/product_documents_right_bg.gif") no-repeat scroll right top;
+    clear: left;
+    float: left;
+    height: 57px;
+    line-height: 13px;
+    margin: 0;
+    padding: 0 10px 0 0;
+    text-align: center;
+}
+div.productDocument {
+    /*background: rgba(0, 0, 0, 0) url("/images/product_documents_bg.gif") repeat-x scroll 0 0;*/
+    float: left;
+    padding: 8px 3px 2px 4px;
+    text-align: center;
+}
+div#productDocuments div#first {
+    background: rgba(0, 0, 0, 0) url("/images/product_documents_left_bg.gif") no-repeat scroll left center;
+    padding: 8px 3px 2px 15px;
+}
+div.productDocument a {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg.gif") no-repeat scroll 0 0;
+    color: #80807e;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    height: 40px;
+    padding-top: 7px;
+    text-decoration: none;
+    width: 58px;
+}
+div.productDocument a.long {
+    padding-top: 7px;
+}
+div#productThumbnails {
+    background: rgba(0, 0, 0, 0) url("/images/product_thumbnails_right_bg.gif") no-repeat scroll right center;
+    float: left;
+    height: 64px;
+    padding: 0 9px 0 0;
+}
+div#productThumbnails div.productThumbnail {
+    background: rgba(0, 0, 0, 0) url("/images/product_thumbnail_bg.gif") repeat-x scroll 0 0;
+    border-left: 1px solid #e5e5e5;
+    float: left;
+    height: 54px;
+    padding: 10px 7px 0;
+}
+div#productThumbnails div#first {
+    background: rgba(0, 0, 0, 0) url("/images/product_thumbnails_left_bg.gif") no-repeat scroll left center;
+    border: medium none;
+    height: 54px;
+    padding: 10px 7px 0 16px;
+}
+div#productThumbnails div.productThumbnail img {
+    border: 0 none;
+}
+div#features {
+    color: #000;
+    float: left;
+    font-size: 11px;
+    margin-bottom: 10px;
+    width: 325px;
+}
+div#features h6 {
+    color: #fff;
+    display: block;
+    margin: 0;
+    padding: 4px;
+    text-transform: uppercase;
+    width: 58px;
+}
+div#features p {
+    margin: 10px;
+}
+div#RelatedProducts {
+    margin-bottom: 10px;
+}
+div#RelatedProducts h6 {
+    color: #000;
+    font-style: italic;
+}
+div#RelatedProducts p {
+    margin: 3px 0 0;
+}
+div#TechTip {
+    clear: both;
+    float: left;
+    margin-bottom: 10px;
+}
+div#TechTip h6 {
+    display: inline;
+    margin: 0 5px 0 0;
+}
+div#TechTip p {
+    display: inline;
+}
+div.cutting div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_cutting.gif") no-repeat scroll 0 0;
+}
+div.profiling div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_profiling.gif") no-repeat scroll 0 0;
+}
+div.grinding div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_grinding.gif") no-repeat scroll 0 0;
+}
+div.drilling div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_drilling.gif") no-repeat scroll 0 0;
+}
+div.handtools div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_handtools.gif") no-repeat scroll 0 0;
+}
+div.polishing div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_polishing.gif") no-repeat scroll 0 0;
+}
+div.restoration div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_restoration.gif") no-repeat scroll 0 0;
+}
+div.educational div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_educational.gif") no-repeat scroll 0 0;
+}
+div.new div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_new.gif") no-repeat scroll 0 0;
+}
+div.cutting div#features {
+    border: 1px solid #cc0000;
+}
+div.cutting div#features h6 {
+    background: #cc0000 none repeat scroll 0 0;
+}
+div.cutting div#RelatedProducts a, div.cutting div#RelatedProducts {
+    color: #cc0000;
+}
+div.cutting div#TechTip h6 {
+    color: #cc0000;
+}
+div.cutting ul.breadcrumb li a {
+    color: #cc0000;
+    text-decoration: none;
+}
+div.cutting ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+div.cutting h4#cutting, a.cutting {
+    color: #cc0000;
+}
+div.profiling div#features {
+    border: 1px solid #ff6600;
+}
+div.profiling div#features h6 {
+    background: #ff6600 none repeat scroll 0 0;
+}
+div.profiling div#RelatedProducts a, div.profiling div#RelatedProducts {
+    color: #ff6600;
+}
+div.profiling div#TechTip h6 {
+    color: #ff6600;
+}
+div.profiling ul.breadcrumb li a {
+    color: #ff6600;
+    text-decoration: none;
+}
+div.profiling ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+div.profiling h4#profiling, a.profiling {
+    color: #ff6600;
+}
+div.grinding div#features {
+    border: 1px solid #996600;
+}
+div.grinding div#features h6 {
+    background: #996600 none repeat scroll 0 0;
+}
+div.grinding div#RelatedProducts a, div.grinding div#RelatedProducts {
+    color: #996600;
+}
+div.grinding div#TechTip h6 {
+    color: #996600;
+}
+div.grinding ul.breadcrumb li a {
+    color: #996600;
+    text-decoration: none;
+}
+div.grinding ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+div.grinding h4#grinding, a.grinding {
+    color: #996600;
+}
+div.drilling div#features {
+    border: 1px solid #999900;
+}
+div.drilling div#features h6 {
+    background: #999900 none repeat scroll 0 0;
+}
+div.drilling div#RelatedProducts a, div.drilling div#RelatedProducts {
+    color: #999900;
+}
+div.drilling div#TechTip h6 {
+    color: #999900;
+}
+div.drilling ul.breadcrumb li a {
+    color: #999900;
+    text-decoration: none;
+}
+div.drilling ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+div.drilling h4#drilling, a.drilling {
+    color: #999900;
+}
+div.handtools div#features {
+    border: 1px solid #336633;
+}
+div.handtools div#features h6 {
+    background: #336633 none repeat scroll 0 0;
+}
+div.handtools div#RelatedProducts a, div.handtools div#RelatedProducts {
+    color: #336633;
+}
+div.handtools div#TechTip h6 {
+    color: #336633;
+}
+div.handtools ul.breadcrumb li a {
+    color: #336633;
+    text-decoration: none;
+}
+div.handtools ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+div.handtools h4#handtools, a.handtools {
+    color: #336633;
+}
+div.polishing div#features {
+    border: 1px solid #0066ff;
+}
+div.polishing div#features h6 {
+    background: #0066ff none repeat scroll 0 0;
+}
+div.polishing div#RelatedProducts a, div.polishing div#RelatedProducts {
+    color: #0066ff;
+}
+div.polishing div#TechTip h6 {
+    color: #0066ff;
+}
+div.polishing ul.breadcrumb li a {
+    color: #0066ff;
+    text-decoration: none;
+}
+div.polishing ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+div.polishing h4#polishing, a.polishing {
+    color: #0066ff;
+}
+div.restoration div#features {
+    border: 1px solid #663366;
+}
+div.restoration div#features h6 {
+    background: #663366 none repeat scroll 0 0;
+}
+div.restoration div#RelatedProducts a, div.restoration div#RelatedProducts {
+    color: #663366;
+}
+div.restoration div#TechTip h6 {
+    color: #663366;
+}
+div.restoration ul.breadcrumb li a {
+    color: #663366;
+    text-decoration: underline;
+}
+div.restoration ul.breadcrumb li a.current {
+    text-decoration: none;
+}
+div.restoration h4#restoration, a.restoration {
+    color: #663366;
+}
+div.educational div#features {
+    border: 1px solid #003399;
+}
+div.educational div#features h6 {
+    background: #003399 none repeat scroll 0 0;
+}
+div.educational div#RelatedProducts a, div.educational div#RelatedProducts {
+    color: #003399;
+}
+div.educational div#TechTip h6 {
+    color: #003399;
+}
+div.educational ul.breadcrumb li a {
+    color: #003399;
+    text-decoration: none;
+}
+div.educational ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+div.new div#features {
+    border: 1px solid #003399;
+}
+div.new div#features h6 {
+    background: #003399 none repeat scroll 0 0;
+}
+div.new div#RelatedProducts a, div.new div#RelatedProducts {
+    color: #003399;
+}
+div.new div#TechTip h6 {
+    color: #003399;
+}
+div.new ul.breadcrumb li a {
+    color: #003399;
+    text-decoration: none;
+}
+div.new ul.breadcrumb li a.current {
+    text-decoration: underline;
+}
+dl.form {
+    display: inline;
+    width: 500px;
+}
+dl.form dt {
+    display: inline;
+    float: left;
+    margin-top: 3px;
+    text-align: right;
+    width: 100px;
+}
+dl.form dd {
+    display: inline;
+    float: left;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 400px;
+}
+dl.form dt.longer {
+    display: inline;
+    float: left;
+    text-align: left;
+    width: 500px;
+}
+dl.form dd.longer {
+    display: inline;
+    float: left;
+    margin-bottom: 5px;
+    margin-left: 110px;
+    margin-top: 3px;
+    width: 400px;
+}
+body.print {
+    background-color: #fff;
+    color: #000;
+    font-family: Arial,sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body.print div#bodyWrapper {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    float: left;
+    width: 580px;
+}
+body.print div#header {
+    margin: 25px 20px 0;
+    width: 580px;
+}
+body.print div#contentContainer {
+    background: #fff url("/images/maincontainer_bg3.gif") repeat-x scroll 0 0;
+    border: 0 none;
+    display: inline;
+    float: left;
+    margin: 0 20px;
+    padding: 0 0 10px;
+    width: 580px;
+}
+body.print div#content {
+    border: 0 none;
+    float: left;
+    padding: 15px 15px 0 14px;
+    width: 580px;
+}
+body.print div#content img.productImage {
+    float: left;
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+body.print div#content table.productInfo {
+    border-bottom: 1px solid #858585;
+    border-left: 1px solid #858585;
+    clear: left;
+    font-size: 11px;
+    margin-top: 10px;
+}
+body.print div#content table.productInfo th {
+    background: #333 none repeat scroll 0 0;
+    border-right: 1px solid #858585;
+    border-top: 1px solid #858585;
+    color: #fff;
+    padding: 3px;
+    text-align: center;
+}
+body.print div#content table.productInfo td {
+    border-right: 1px solid #858585;
+    border-top: 1px solid #858585;
+    color: #000;
+    padding: 3px;
+    text-align: center;
+}
+body.print div#content table.productInfo td.firstrow {
+    background: #babbbd none repeat scroll 0 0;
+}
+body.print div#content table.productInfo td.secondrow {
+    background: #fff none repeat scroll 0 0;
+}
+body.print div#footer {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    float: left;
+    margin: 10px 15px 10px 14px;
+    width: 580px;
+}
+body.print div#footer hr {
+    background: #000 none repeat scroll 0 0;
+    border: 0 none;
+    color: #000;
+    height: 1px;
+    margin: 0 0 10px;
+    padding: 0;
+}
+body#popup {
+    background: #fff none repeat scroll 0 0;
+}
+body#popup div {
+    background: #fff none repeat scroll 0 0;
+    border: 2px solid #000;
+    float: left;
+    font: 11px Arial;
+    margin: 10px;
+    padding: 10px;
+}
+body#popup div h4 {
+    font: italic bold 14px Arial;
+    margin: 10px 0;
+}
+body#popup div h4#cutting {
+    color: #cc0000;
+}
+body#popup div h4#profiling {
+    color: #ff6600;
+}
+body#popup div h4#grinding {
+    color: #996600;
+}
+body#popup div h4#drilling {
+    color: #999900;
+}
+body#popup div h4#handtools {
+    color: #336633;
+}
+body#popup div h4#polishing {
+    color: #0066ff;
+}
+body#popup div h4#restoration {
+    color: #663366;
+}
+body#popup div h5 {
+    font: bold 12px Arial;
+    margin: 10px 0;
+}
+div#banner {
+    clear: both;
+    float: left;
+    padding: 3px 0;
+    position: relative;
+    width: 729px;
+}
+div#flashcontent {
+    position: absolute;
+    right: 0;
+    top: 3px;
+    z-index: 10;
+}

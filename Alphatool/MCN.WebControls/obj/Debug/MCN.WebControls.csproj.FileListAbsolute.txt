@@ -1,0 +1,5 @@
+D:\Projects\DataPagerGridView\MCN.WebControls\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\DataPagerGridView\MCN.WebControls\bin\Debug\MCN.WebControls.dll
+D:\Projects\DataPagerGridView\MCN.WebControls\bin\Debug\MCN.WebControls.pdb
+D:\Projects\DataPagerGridView\MCN.WebControls\obj\Debug\MCN.WebControls.dll
+D:\Projects\DataPagerGridView\MCN.WebControls\obj\Debug\MCN.WebControls.pdb

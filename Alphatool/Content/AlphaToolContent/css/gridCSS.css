@@ -1,0 +1,32 @@
+﻿/**************** Gridview Row Styles *****************/
+
+.RowStyle
+{
+    background-color:White;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	padding-right: 12px;
+	text-align: left;}
+.HeaderStyle
+{
+    background-color:#BADD0B;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 90%;
+	font-weight: bold;
+	color: black;
+	text-align:left;
+	
+}
+.FooterStyle
+{
+    background-color:#BADD0B
+}
+
+.AlternateRowStyle{
+    background-color:#CCCCCC;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 80%;
+	padding-right: 12px;
+	text-align: left;
+}
+

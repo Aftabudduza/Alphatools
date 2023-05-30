@@ -1,0 +1,307 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Product.master.cs" Inherits="MasterPages_Product" %>
+
+<%@ Register TagPrefix="AlphaTool" TagName="HeaderTopMenu" Src="~/UserControls/HeaderTop.ascx" %>
+<%@ Register Src="~/UserControls/CategoryMenu.ascx" TagPrefix="AlphaTool" TagName="CategoryMenu" %>
+<%@ Register Src="~/UserControls/Footer.ascx" TagPrefix="AlphaTool" TagName="Footer" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8">
+    <title>Alpha Professional Tools®</title>
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://www.alpha-tools.com/Content/AlphaToolContent/images/favicon.ico">
+    <!-- Web Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700,300&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=PT+Serif' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap core CSS -->
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <!-- Font Awesome CSS -->
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/fonts/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <!-- Fontello CSS -->
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/fonts/fontello/css/fontello.css" rel="stylesheet" />
+    <!-- Plugins -->
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/rs-plugin/css/settings.css" rel="stylesheet" />
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/rs-plugin/css/extralayers.css" rel="stylesheet" />
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" />
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/css/animations.css" rel="stylesheet" />
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <!-- Alpha core CSS file -->
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/css/style.css" rel="stylesheet" />
+    <link href="https://www.alpha-tools.com/Content/CustomStyle/CustomStyle.css" rel="stylesheet" />
+    <!-- Style Switcher Styles (Remove these two lines) -->
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/style-switcher/style-switcher.css" rel="stylesheet" />
+    <!-- Custom css -->
+    <link href="https://www.alpha-tools.com/Content/AlphaToolContent/css/custom.css" rel="stylesheet" />
+    <link href="https://www.alpha-tools.com/Content/Styles/main.css" rel="stylesheet" />
+    <!-- Slider css -->
+
+      <script type="text/javascript" src="https://secure.smart-company-vision.com/js/267165.js" ></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div>
+        <form id="form1" runat="server">
+            <!-- scrollToTop -->
+            <!-- ================ -->
+            <div class="scrollToTop" style="display: none;">
+                <i class="icon-up-open-big"></i>
+            </div>
+            <!-- page wrapper start -->
+            <!-- ================ -->
+
+            <!-- header-top end -->
+            <header class="header fixed clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4">                                                        
+                             <div class="form-group">
+                                <div class="input-group">
+                                    <input id="txtSearchTop" runat="server" class="form-control" type="text" placeholder="Search for a product" />                                   
+                                    <div class="input-group-addon">
+                                        <asp:ImageButton ImageUrl="~/Images/search2.png" Width="40" Height="34" runat="server" ID="btnSearchTopN" OnClick="btnSearchTopN_Click"    />
+                                    </div>
+                                </div>
+                               <div class="col-sm-6 col-xs-11 pull-right" id="adv-search">
+          		                   <a class="advanced-search pull-right" data-toggle="collapse" data-target="#filter-panel">Advanced Search</a>          
+
+                                      <div id="filter-panel" class="collapse filter-panel">
+                                          <a style="display: inline-block; margin: 2px -8px 0px 0px; float: right; 
+                                                background-color: #337AB7; color: white; padding: 4px; border-radius: 14px;" 
+                                                    data-toggle="collapse" data-target="#filter-panel" 
+                                                        class="advanced-search"><i class="fa fa-times"></i></a>
+                                      <asp:Panel ID="Panel" runat="server" DefaultButton="btnSearchTop">
+                                                <div class="form-group">
+												    <label>Part Number</label>
+												    <asp:TextBox runat="server" Width="92%"  ID="txtPartNoTop"></asp:TextBox>
+											    </div>
+											    <div class="form-group">
+												    <label>Product Name</label>
+												    <asp:TextBox runat="server" Width="92%"  ID="txtProductNameTop"></asp:TextBox>
+											    </div>
+											    <div class="form-group">
+												    <label>Process</label>
+												    <asp:DropDownList ID="ddlProcessTop" Width="92%" runat="server"></asp:DropDownList>
+											    </div>
+                                                <div class="form-group">
+												    <label>Usage</label>
+												    <asp:DropDownList ID="ddlUsageTop" Width="92%"  runat="server"></asp:DropDownList>
+											    </div>
+                                                <div class="form-group">
+												    <label>Material</label>
+												    <asp:DropDownList ID="ddlMaterialTop" Width="92%"  runat="server"></asp:DropDownList>
+											    </div>
+                                                <div class="form-group">
+												    <label>Industry Group</label>
+												    <asp:DropDownList ID="ddlIndustryTop" Width="92%"  runat="server"></asp:DropDownList>
+											    </div>
+                                                <div class="form-group">
+												    <label>Application</label>
+												    <asp:DropDownList ID="ddlApplicationTop" Width="92%"  runat="server"></asp:DropDownList>
+											    </div>
+                                                <div class="form-group">
+												        <label>Main Category</label>
+												        <asp:DropDownList ID="ddlCategory" Width="92%"  ValidationGroup="search"  runat="server"></asp:DropDownList>
+											    </div>
+											    <div class="form-group">
+												    <asp:Button runat="server" ID="btnSearchTop" Text="Search" OnClick="btnSearchTop_Click" />
+											    </div>
+                                              </asp:Panel>
+                                          
+       			                     </div>          
+                                </div>
+                               <div class="col-sm-6 pull-left" id="spare-parts-search">
+                                    <a style="color: #e84c3d;" href="https://www.alpha-tools.com/Pages/ProductSpareParts.aspx?SectionId=120">Search Spare Parts >></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-9 col-xs-12">
+
+                            <!-- header-right start -->
+                            <!-- ================ -->
+                            <div class="header-right clearfix">
+
+                                <!-- main-navigation start -->
+                                <!-- ================ -->
+                                <div class="main-navigation animated">
+
+                                    <!-- navbar start -->
+                                    <!-- ================ -->
+                                    <nav class="navbar navbar-default" role="navigation">
+                                        <div class="container-fluid">
+
+                                            <!-- Toggle get grouped for better mobile display -->
+                                            <div class="navbar-header">
+                                                <span class="m-category-box">Menu</span>
+                                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                                    <span class="sr-only">Toggle navigation</span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                    <span class="icon-bar"></span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Collect the nav links, forms, and other content for toggling -->
+                                            <div id="navbar-collapse-1" class="collapse navbar-collapse">
+                                                <AlphaTool:HeaderTopMenu runat="server" ID="HeaderTop" />
+                                            </div>
+                                        </div>
+                                    </nav>
+                                    <!-- navbar end -->
+                                </div>
+                                <!-- main-navigation end -->
+                            </div>
+                            <!-- header-right end clearfix -->
+                        </div>
+                         <div class="col-md-2" style="padding-right: 0px !important;">
+                            <!-- header-left start -->
+                            <!-- ================ -->
+                            <div class="header-left">
+                                <!-- logo -->
+                                <div class="logo">
+                                    <a href="/Default.aspx">
+                                        <asp:Image runat="server" ImageUrl="~/Images/logo.gif" />
+                                        <%--<img id="logo" src="https://www.alpha-tools.com/https://www.alpha-tools.com/Images/logo.gif" alt="Alpha"/>--%>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- header-left end -->
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- header end -->
+            <!-- header-top start (Add "dark" class to .header-top in order to enable dark header-top e.g <div class="header-top dark">) -->
+            <!-- ================ -->
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+                       <%-- <div class="col-xs-12 col-md-11 col-md-offset-1">--%>
+                         <div class="col-md-12">
+                            <!-- header-top-first start -->
+                            <!-- ================ -->
+                            <div class="header-top-first clearfix">
+                                <div class="navbar-header navbar navbar-default">
+                                    <span class="m-category-box"><img class="imgMb2" src="https://www.alpha-tools.com/Images/1stcategory-sample_Final.png"></span>
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-2"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                                </div>
+
+                                <div class="collapse navbar-collapse" id="navbar-collapse-2">
+                                    <AlphaTool:CategoryMenu runat="server" ID="CategoryMenu" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <!-- header-top-first end -->
+
+            <div>
+                <!-- MENU SECTION END-->
+                <div class="content-wrapper">
+                    <div class="container">
+                        <asp:ContentPlaceHolder ID="Body" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div>
+            <span>
+                <AlphaTool:Footer runat="server" ID="FooterMenu" />
+            </span>
+        </div>
+        <!-- footer end -->
+        <!-- page-wrapper end -->
+        <!-- JavaScript files placed at the end of the document so the pages load faster
+		================================================== -->
+       
+        <!-- Jquery and Bootstap core js files -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/jquery.min.js"></script>
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/bootstrap/js/bootstrap.min.js"></script>
+        <!-- Modernizr javascript -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/modernizr.js"></script>
+        <!-- jQuery REVOLUTION Slider  -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+        <!-- Isotope javascript -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/isotope/isotope.pkgd.min.js"></script>
+        <!-- Owl carousel javascript -->
+      <%--  <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/owl-carousel/owl.carousel.js"></script>--%>
+        <!-- Magnific Popup javascript -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/https://www.alpha-tools.com/Content/AlphaToolContent/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/magnific-popup/jquery.magnific-popup.js"></script>
+        <!-- Appear javascript -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/jquery.appear.js"></script>
+        <!-- Count To javascript -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/jquery.countTo.js"></script>
+        <!-- Parallax javascript -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/jquery.parallax-1.1.3.js"></script>
+        <!-- Contact form -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/jquery.validate.js"></script>
+        <!-- SmoothScroll javascript -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/jquery.browser.js"></script>
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/plugins/SmoothScroll.js"></script>
+        <!-- Initialization of Plugins -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/js/template.js"></script>
+        <!-- Custom Scripts -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/js/custom.js"></script>
+        <!-- Color Switcher (Remove these lines) -->
+        <script type="text/javascript" src="https://www.alpha-tools.com/Content/AlphaToolContent/style-switcher/style-switcher.js"></script>
+          <link href="https://www.alpha-tools.com/Content/gallery/jquery.bxslider.css" rel="stylesheet" />
+        <script src="https://www.alpha-tools.com/Content/gallery/jquery.fitvids.js"></script>
+        <script src="https://www.alpha-tools.com/Content/gallery/jquery.bxslider.js"></script>
+        <script src="https://www.alpha-tools.com/Content/gallery/jquery.iframetracker.js"></script>
+        <script type="text/javascript">
+            $.noConflict();
+            jQuery(window).load(function () {
+                jQuery('.youtube-media').magnificPopup({
+                    type: 'iframe',
+                    mainClass: 'mfpc-fade',
+                    removalDelay: 160,
+                    preloader: true,
+                    fixedContentPos: false
+                });
+            });
+        </script>
+        <script type="text/javascript">
+            jQuery(window).load(function () {
+                var slider = jQuery('.bxslider').bxSlider({
+                    stopAuto: true,
+                    video: true,
+                    onSlideAfter: function (slide, oldindex, currentSlide) {
+                        oldSlide = jQuery('.bxslider > li:nth-child(' + (currentSlide + 1) + ')');
+                        youtubeVideo = oldSlide.find('iframe[src*=youtube]');
+                        if (youtubeVideo.length) {
+                            youtubeVideo.get(0).contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+                        }
+                    }
+                });
+            });
+        </script>
+           <script src="https://www.alpha-tools.com/Content/AlphaToolContent/html/assets/js/jquery-1.11.1.js"></script>
+         <script src="https://www.alpha-tools.com/Scripts/jquery.datetimepicker.full.min.js"></script>
+         <script type="text/javascript">
+             $(".datetimepicker_mask").datetimepicker({
+                 datepicker: true,
+                 format: 'm/d/Y g:i A',
+                 //format: 'g:i A',
+                 formatTime: 'g:i A',
+                 mask: '12/31/9999 29:59 99',
+                 step: 30,
+                 ampm: true
+             });
+        </script>
+
+         <noscript><img alt="" src="https://secure.smart-company-vision.com/267165.png" style="display:none;" /></noscript>
+
+    </div>
+	
+</body>
+</html>
+
