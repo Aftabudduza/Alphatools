@@ -86,10 +86,19 @@
     <Compile Include="BO\CollectionEmail.cs">
       <DependentUpon>Alphatool_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="BO\C_SerialNos2020.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="BO\DealerInfo.cs">
       <DependentUpon>Alphatool_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="BO\dtproperties.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\dt_getpropertiesbyid_Result.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\dt_getpropertiesbyid_u_Result.cs">
       <DependentUpon>Alphatool_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="BO\EducationalMaterial.cs">

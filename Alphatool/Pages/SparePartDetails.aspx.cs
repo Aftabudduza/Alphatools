@@ -51,12 +51,19 @@ public partial class pages_SparePartDetails : Page
         {
             if (Session["productId"] != null)
             {
-                ProductSpecification(Convert.ToInt32(Session["productId"]));               
+                ProductSpecification(Convert.ToInt32(Session["productId"]));
                 ProductSparePartsAccordion(Convert.ToInt32(Session["productId"]));
-                ProductDocumentationAccordion(Convert.ToInt32(Session["productId"]));               
+                ProductDocumentationAccordion(Convert.ToInt32(Session["productId"]));
                 ProductFaqsAccordion(Convert.ToInt32(Session["productId"]));
             }
+            if (txtSearchPart.Value.ToString().Trim().Length > 0)
+            {
+                txtSearchPart.Attributes.Add("onkeydown", "if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13))  {document.getElementById('Body_btnSearchPart').click();return false;}} else {return true}; ");
+
+            }
+
         }
+
 
     }
 
@@ -1306,111 +1313,7 @@ public partial class pages_SparePartDetails : Page
         }
     }
 
-    //public void ProductDocumentationAccordion(int productid)
-    //{
-    //    try
-    //    {
-    //        var objPartPage = new PartsPageDa().GetPartsPagebyPPC(Convert.ToInt32(productid));
-    //        if (objPartPage != null)
-    //        {
-
-    //            var producttext = "<div  class='table-responsive'><table>";
-    //            if ((objPartPage.ManualID != null && objPartPage.ManualID > 0)
-    //               || (objPartPage.MaintenanceCardID != null && objPartPage.MaintenanceCardID > 0)
-    //               || (objPartPage.PartsList != null && objPartPage.PartsList > 0)
-    //               || (objPartPage.OtherRef != null && Convert.ToInt32(objPartPage.OtherRef) > 0)
-    //               || (objPartPage.OtherRef1 != null && Convert.ToInt32(objPartPage.OtherRef1) > 0)
-    //               || (objPartPage.OtherRef2 != null && Convert.ToInt32(objPartPage.OtherRef2) > 0)
-    //               || (objPartPage.OtherRef3 != null && Convert.ToInt32(objPartPage.OtherRef3) > 0))
-    //            {
-    //                if (objPartPage.ManualID != null && objPartPage.ManualID > 0)
-    //                {
-    //                    var objManual = new MManualDa().GetMManualbyId(Convert.ToInt32(objPartPage.ManualID));
-
-    //                    producttext +=
-    //                        "<tr><td><span class='docspan'>Manual : </span></td><td><a class='textColor' href='/Files/Manuals/PDFs/" +
-    //                        objManual.ManualLink + "' target='_blank'> " + objManual.ManualLink + "</a></td></tr>";
-    //                }
-
-    //                if (objPartPage.MaintenanceCardID != null && objPartPage.MaintenanceCardID > 0)
-    //                {
-    //                    var objMaintenanceCard =
-    //                        new MMaintenanceCardDa().GetMMaintenanceCardbyId(
-    //                            Convert.ToInt32(objPartPage.MaintenanceCardID));
-
-    //                    producttext +=
-    //                        "<tr><td><span class='docspan'>Maintenance Card : </span></td><td><a class='textColor' href='/Files/MaintenanceCards/PDFs/" +
-    //                        objMaintenanceCard.MaintenanceCardLink + "' target='_blank'> " + objMaintenanceCard.MaintenanceCardLink + "</a></td></tr>";
-    //                }
-
-    //                if (objPartPage.PartsList != null && objPartPage.PartsList > 0)
-    //                {
-    //                    var objPartsList = new MPartsListDa().GetMPartsListbyId(Convert.ToInt32(objPartPage.PartsList));
-
-    //                    producttext +=
-    //                      "<tr><td><span class='docspan'>Parts List : </span></td><td><a class='textColor' href='/Files/PartsList/PDFs/" +
-    //                      objPartsList.MPartsListLink + "' target='_blank'>" +
-    //                     objPartsList.MPartsListLink + "</a></td></tr>";
-    //                }
-
-    //                if (!string.IsNullOrEmpty(objPartPage.OtherRef) && Convert.ToInt32(objPartPage.OtherRef) > 0)
-    //                {
-    //                    var objOtherReference =
-    //                        new MOtherReferenceDa().GetMOtherReferencebyId(
-    //                            Convert.ToInt32(objPartPage.OtherRef));
-
-    //                    producttext +=
-    //                        "<tr><td><span class='docspan'>Other Reference : </span></td><td><a class='textColor' href='/Files/OtherReferences/PDFs/" +
-    //                        objOtherReference.OtherReferenceLink + "' target='_blank'>" +
-    //                        objOtherReference.OtherReferenceLink + "</a></td></tr>";
-    //                }
-
-
-    //                if (!string.IsNullOrEmpty(objPartPage.OtherRef1) && Convert.ToInt32(objPartPage.OtherRef1) > 0)
-    //                {
-    //                    var objOtherRef1 = new MOtherRef1Da().GetMOtherRef1byId(Convert.ToInt32(objPartPage.OtherRef1));
-
-    //                    producttext +=
-    //                        "<tr><td><span class='docspan'>Other Reference  : </span></td><td><a class='textColor' href='/Files/OtherReferences/PDFs/" +
-    //                        objOtherRef1.OtherRef1Link + "' target='_blank'> " + objOtherRef1.OtherRef1Link + "</a></td></tr>";
-    //                }
-
-    //                if (!string.IsNullOrEmpty(objPartPage.OtherRef2) && Convert.ToInt32(objPartPage.OtherRef2) > 0)
-    //                {
-    //                    var objOtherRef2 = new MOtherRef2Da().GetMOtherRef2byId(Convert.ToInt32(objPartPage.OtherRef2));
-
-    //                    producttext +=
-    //                        "<tr><td><span class='docspan'>Other Reference  : </span></td><td><a class='textColor' href='/Files/OtherReferences/PDFs/" +
-    //                        objOtherRef2.OtherRef2Link + "' target='_blank'> " + objOtherRef2.OtherRef2Link + "</a></td></tr>";
-    //                }
-
-    //                if (!string.IsNullOrEmpty(objPartPage.OtherRef3) && Convert.ToInt32(objPartPage.OtherRef3) > 0)
-    //                {
-    //                    var objOtherRef3 = new MOtherRef3Da().GetMOtherRef3byId(Convert.ToInt32(objPartPage.OtherRef3));
-
-    //                    producttext +=
-    //                        "<tr><td><span class='docspan'>Other Reference : </span></td><td><a class='textColor' href='/Files/OtherReferences/PDFs/" +
-    //                        objOtherRef3.OtherRef3Link + "' target='_blank'>" + objOtherRef3.OtherRef3Link + "</a></td></tr>";
-    //                }
-
-    //                producttext += "</table></div>";
-    //                documentDivAcc.InnerHtml = producttext;
-    //            }
-
-    //            else
-    //            {
-
-    //                documentDivAcc.InnerHtml = "<p align='justify' style='color:#337AB7; font-weight:bold'> Currently, there are no documents available for this product.... </p>";
-    //            }
-    //            Session["productId"] = objPartPage.PPC;
-
-    //        }
-    //    }
-    //    catch (Exception)
-    //    {
-    //        //throw;
-    //    }
-    //}
+    
 
     public void ProductFaqsAccordion(int productid)
     {
@@ -1468,10 +1371,915 @@ public partial class pages_SparePartDetails : Page
 
     }
 
+
+    public void ProductSpecificationByPartNo(bool isPart)
+    {
+        Session["CurrentGroup"] = null;
+
+        Table tblparts = new Table();
+        tblparts.Attributes.Add("style", "border:2px solid #3379B7; margin-bottom:0;width:100%;float:left;");
+        TableRow trparts = new TableRow();
+        TableCell tdparts = new TableCell();
+
+        Table tblpartsSub = new Table();
+        tblpartsSub.Attributes.Add("class", "table table-responsive table-bordered ");
+        tblpartsSub.Attributes.Add("style", "margin-bottom:0;");
+        TableHeaderRow trpartsheaderRow = new TableHeaderRow();
+        trpartsheaderRow.Attributes.Add("style", "background:#3379B7;color:#fff;border:2px solid #3379B7; margin-bottom:0;");
+        TableHeaderCell tdpartsheaderCell = new TableHeaderCell();
+
+        try
+        {
+            string sWhere = string.Empty;
+            string dWhere = string.Empty;
+            string sSQL = string.Empty;
+            string tSql = string.Empty;
+
+            string sPageCode = string.Empty;
+            string sPageName = string.Empty;
+            string sMetaTags = string.Empty;
+            string sShortDescription = string.Empty;
+            string sFullPhrase = string.Empty;
+            DataTable dtProducts = new DataTable();
+            char[] whitespace = new char[] { ' ', '\t', '\'', '\"', '!', '"', '@', '#', '$', '%', '^', '&', '*', '(', ')' };
+            string[] searchArray = null;
+            string sStr = "";    
+
+            try
+            {
+                _productId = (Request.QueryString["PageCode"] != null && Utility.IsNumeric(Request.QueryString["PageCode"])) ? Convert.ToInt32(Request.QueryString["PageCode"]) : 0;
+            }
+            catch (Exception)
+            {
+                _productId = 0;
+            }
+
+            if (isPart)
+            {
+                sStr = txtSearchPart.Value.ToString().Trim();
+
+                if (sStr.Length > 0)
+                {
+                    Session["SearchKeywords"] = sStr;
+
+                    searchArray = sStr.Split(whitespace);
+                    foreach (string Str in searchArray)
+                    {
+                        if (string.IsNullOrEmpty(Str))
+                        {
+                            continue;
+                        }
+
+                        sFullPhrase += Str + " ";
+                    }
+                }
+
+                sSQL = "SELECT pp.*, pw.PartsPageCode, pw.DrawingNo DrawingNo, pw.PartNo, pw.Version, pw.Sort, P.[Description], P.[Image] PartsThumb, isnull(P.MSRP,0) MSRP, isnull(pw.QProductID, 0) QProductID, isnull(m.CAProp65Text,'') CAPProp65 FROM PartsWebfields pw INNER join PartsInfo P ON pw.PartNo = P.Partno and pw.PartNo LIKE '%" + sFullPhrase.Trim() + "%' INNER JOIN (SELECT * FROM  PartsPage WHERE PPC = " + _productId + ") pp ON pp.PartsPC = pw.PartsPageCode  left join MCAProp65 m on  m.CAProp65ID = P.CAProp65ID  order by pw.Sort asc, pw.Version ASC ";
+
+            }
+            else
+            {
+                sSQL = "SELECT pp.*, pw.PartsPageCode, pw.DrawingNo DrawingNo, pw.PartNo, pw.Version, pw.Sort, P.[Description], P.[Image] PartsThumb, isnull(P.MSRP,0) MSRP, isnull(pw.QProductID, 0) QProductID, isnull(m.CAProp65Text,'') CAPProp65 FROM PartsWebfields pw INNER join PartsInfo P ON pw.PartNo = P.Partno INNER JOIN (SELECT * FROM  PartsPage WHERE PPC = " + _productId + ") pp ON pp.PartsPC = pw.PartsPageCode  left join MCAProp65 m on  m.CAProp65ID = P.CAProp65ID  order by pw.Sort asc, pw.Version ASC ";
+
+            }
+
+            DataSet ds = this.GetData(sSQL);
+            spareparts.Controls.Clear();
+
+            if (ds != null)
+            {
+                foreach (DataTable table in ds.Tables)
+                {
+                    if (table.Rows.Count > 0)
+                    {
+                        tdpartsheaderCell = new TableHeaderCell { Text = "DRAWING NO." };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "PART NO." };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "VERSION" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "IMAGE" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "DESCRIPTION" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:left;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "PRICE" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:right;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "CAProp65" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "BUY NOW" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center; width:100px;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tblpartsSub.Controls.Add(trpartsheaderRow);
+                        int i = 0;
+                        foreach (DataRow dr in table.Rows)
+                        {
+                            i++;
+                            if (i % 2 == 0)
+                            {
+                                TableRow trdataRow = new TableRow();
+                                TableCell tddatacell = new TableCell();
+                                if (!string.IsNullOrEmpty(dr["DrawingNo"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["DrawingNo"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["PartNo"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["PartNo"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["Version"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["Version"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["PartsThumb"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+                                    if (File.Exists(Server.MapPath("/Files/Products/Parts/" + dr["PartsThumb"].ToString())))
+                                    {
+                                        System.Web.UI.WebControls.Image imgParts = new System.Web.UI.WebControls.Image();
+                                        imgParts.Width = 80;
+                                        imgParts.ImageUrl = "/Files/Products/Parts/" + dr["PartsThumb"].ToString();
+                                        tddatacell.Controls.Add(imgParts);
+                                    }
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["Description"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["Description"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["MSRP"].ToString()) && Convert.ToDecimal(dr["MSRP"].ToString()) > 0)
+                                {
+                                    tddatacell = new TableCell { Text = dr["MSRP"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:right;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "CALL" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:right;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["CAPProp65"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+
+                                    System.Web.UI.WebControls.ImageButton imgParts = new System.Web.UI.WebControls.ImageButton();
+                                    imgParts.Attributes.Add("runat", "server");
+                                    imgParts.Width = 50;
+                                    imgParts.ImageUrl = "/Images/Warning.png";
+                                    imgParts.ToolTip = dr["CAPProp65"].ToString();
+                                    imgParts.OnClientClick = "javascript:showtext('" + dr["CAPProp65"].ToString() + "')";
+                                    tddatacell.Controls.Add(imgParts);
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+                                if (!string.IsNullOrEmpty(dr["MSRP"].ToString()) && Convert.ToDecimal(dr["MSRP"].ToString()) > 0)
+                                {
+                                    tddatacell = new TableCell { Text = dr["MSRP"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+
+                                    System.Web.UI.HtmlControls.HtmlGenericControl addDiv = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+                                    addDiv.InnerHtml = "<div  style = 'width:220px;' data-widget=" + dr["QProductID"].ToString() + "></div>";
+                                    //  addDiv.InnerHtml = "<a onclick='Quivers.Catalog.ProductShort(" + dr["QProductID"].ToString() + ");'><div data-widget=" + dr["QProductID"].ToString() + "></div></a><br /><input class='btn btn-default' value='Add To Cart' onclick='Quivers.Catalog.ProductShort(" + dr["QProductID"].ToString() + ");' type='button'>";
+                                    tddatacell.Controls.Add(addDiv);
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                tblpartsSub.Controls.Add(trdataRow);
+                            }
+                            else
+                            {
+                                TableRow trdataRow = new TableRow();
+                                TableCell tddatacell = new TableCell();
+                                if (!string.IsNullOrEmpty(dr["DrawingNo"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["DrawingNo"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["PartNo"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["PartNo"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["Version"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["Version"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["PartsThumb"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    if (File.Exists(Server.MapPath("/Files/Products/Parts/" + dr["PartsThumb"].ToString())))
+                                    {
+                                        System.Web.UI.WebControls.Image imgParts = new System.Web.UI.WebControls.Image();
+                                        imgParts.Width = 80;
+                                        imgParts.ImageUrl = "/Files/Products/Parts/" + dr["PartsThumb"].ToString();
+                                        tddatacell.Controls.Add(imgParts);
+                                    }
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["Description"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["Description"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["MSRP"].ToString()) && Convert.ToDecimal(dr["MSRP"].ToString()) > 0)
+                                {
+                                    tddatacell = new TableCell { Text = dr["MSRP"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:right;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "CALL" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:right;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+                                if (!string.IsNullOrEmpty(dr["CAPProp65"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    System.Web.UI.WebControls.ImageButton imgParts = new System.Web.UI.WebControls.ImageButton();
+                                    imgParts.Attributes.Add("runat", "server");
+                                    imgParts.Width = 50;
+                                    imgParts.ImageUrl = "/Images/Warning.png";
+                                    imgParts.ToolTip = dr["CAPProp65"].ToString();
+                                    imgParts.OnClientClick = "javascript:showtext('" + dr["CAPProp65"].ToString() + "')";
+                                    tddatacell.Controls.Add(imgParts);
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+                                if (!string.IsNullOrEmpty(dr["MSRP"].ToString()) && Convert.ToDecimal(dr["MSRP"].ToString()) > 0)
+                                {
+                                    tddatacell = new TableCell { Text = dr["MSRP"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+
+                                    System.Web.UI.HtmlControls.HtmlGenericControl addDiv1 = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+                                    addDiv1.InnerHtml = "<div  style = 'width:220px;' data-widget=" + dr["QProductID"].ToString() + "></div>";
+                                    //  addDiv1.InnerHtml = "<a onclick='Quivers.Catalog.ProductShort(" + dr["QProductID"].ToString() + ");'><div data-widget=" + dr["QProductID"].ToString() + "></div></a><br /><input class='btn btn-default' value='Add To Cart' onclick='Quivers.Catalog.ProductShort(" + dr["QProductID"].ToString() + ");' type='button'>";
+                                    tddatacell.Controls.Add(addDiv1);
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                tblpartsSub.Controls.Add(trdataRow);
+                            }
+                        }
+                    }
+                }
+
+                tdparts.Controls.Add(tblpartsSub);
+                trparts.Controls.Add(tdparts);
+                tblparts.Controls.Add(trparts);
+
+                spareparts.Controls.Add(tblparts);
+
+            }
+            else
+            {
+                Session["SearchResult"] = "Currently there is no Part available for the search. Please try again later.";
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            //
+        }
+    }
+
+    public void ProductSpecificationByPartNoAcc(bool isPart)
+    {
+        Session["CurrentGroup"] = null;
+
+        Table tblparts = new Table();
+        tblparts.Attributes.Add("style", "border:2px solid #3379B7; margin-bottom:0;width:100%;float:left;");
+        TableRow trparts = new TableRow();
+        TableCell tdparts = new TableCell();
+
+        Table tblpartsSub = new Table();
+        tblpartsSub.Attributes.Add("class", "table table-responsive table-striped table-bordered ");
+        tblpartsSub.Attributes.Add("style", "margin-bottom:0;");
+        TableHeaderRow trpartsheaderRow = new TableHeaderRow();
+        trpartsheaderRow.Attributes.Add("style", "background:#3379B7;color:#fff;border:2px solid #3379B7; margin-bottom:0;");
+        TableHeaderCell tdpartsheaderCell = new TableHeaderCell();
+
+        try
+        {
+            string sWhere = string.Empty;
+            string dWhere = string.Empty;
+            string sSQL = string.Empty;
+            string tSql = string.Empty;
+
+            string sPageCode = string.Empty;
+            string sPageName = string.Empty;
+            string sMetaTags = string.Empty;
+            string sShortDescription = string.Empty;
+            string sFullPhrase = string.Empty;
+            DataTable dtProducts = new DataTable();
+            char[] whitespace = new char[] { ' ', '\t', '\'', '\"', '!', '"', '@', '#', '$', '%', '^', '&', '*', '(', ')' };
+            string[] searchArray = null;
+            string sStr = "";           
+
+            try
+            {
+                _productId = (Request.QueryString["PageCode"] != null && Utility.IsNumeric(Request.QueryString["PageCode"])) ? Convert.ToInt32(Request.QueryString["PageCode"]) : 0;
+            }
+            catch (Exception)
+            {
+                _productId = 0;
+            }
+
+            if (isPart)
+            {
+                sStr = txtSearchPart.Value.ToString().Trim();
+
+                if (sStr.Length > 0)
+                {
+                    Session["SearchKeywords"] = sStr;
+
+                    searchArray = sStr.Split(whitespace);
+                    foreach (string Str in searchArray)
+                    {
+                        if (string.IsNullOrEmpty(Str))
+                        {
+                            continue;
+                        }
+
+                        sFullPhrase += Str + " ";
+                    }
+                }
+
+                sSQL = "SELECT pp.*, pw.PartsPageCode, pw.DrawingNo DrawingNo, pw.PartNo, pw.Version, pw.Sort, P.[Description], P.[Image] PartsThumb, isnull(P.MSRP,0) MSRP, isnull(pw.QProductID, 0) QProductID, isnull(m.CAProp65Text,'') CAPProp65 FROM PartsWebfields pw INNER join PartsInfo P ON pw.PartNo = P.Partno and pw.PartNo LIKE '%" + sFullPhrase.Trim() + "%' INNER JOIN (SELECT * FROM  PartsPage WHERE PPC = " + _productId + ") pp ON pp.PartsPC = pw.PartsPageCode  left join MCAProp65 m on  m.CAProp65ID = P.CAProp65ID  order by pw.Sort asc, pw.Version ASC ";
+
+            }
+            else
+            {
+                sSQL = "SELECT pp.*, pw.PartsPageCode, pw.DrawingNo DrawingNo, pw.PartNo, pw.Version, pw.Sort, P.[Description], P.[Image] PartsThumb, isnull(P.MSRP,0) MSRP, isnull(pw.QProductID, 0) QProductID, isnull(m.CAProp65Text,'') CAPProp65 FROM PartsWebfields pw INNER join PartsInfo P ON pw.PartNo = P.Partno INNER JOIN (SELECT * FROM  PartsPage WHERE PPC = " + _productId + ") pp ON pp.PartsPC = pw.PartsPageCode  left join MCAProp65 m on  m.CAProp65ID = P.CAProp65ID  order by pw.Sort asc, pw.Version ASC ";
+
+            }
+
+            DataSet ds = this.GetData(sSQL);
+            specsChrtAcc.Controls.Clear();
+
+            if (ds != null)
+            {
+                foreach (DataTable table in ds.Tables)
+                {
+                    if (table.Rows.Count > 0)
+                    {
+                        tdpartsheaderCell = new TableHeaderCell { Text = "DRAWING NO." };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "PART NO." };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "VERSION" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "Image" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        tdpartsheaderCell.Width = 100;
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "DESCRIPTION" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:left;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "PRICE$" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:right;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "CAProp65" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center;");
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tdpartsheaderCell = new TableHeaderCell { Text = "BUY NOW" };
+                        tdpartsheaderCell.Attributes.Add("style", "text-align:center; width:100px;");
+                        tdpartsheaderCell.Width = 100;
+                        trpartsheaderRow.Controls.Add(tdpartsheaderCell);
+
+                        tblpartsSub.Controls.Add(trpartsheaderRow);
+                        int i = 0;
+                        foreach (DataRow dr in table.Rows)
+                        {
+                            i++;
+                            if (i % 2 == 0)
+                            {
+                                TableRow trdataRow = new TableRow();
+                                TableCell tddatacell = new TableCell();
+                                if (!string.IsNullOrEmpty(dr["DrawingNo"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["DrawingNo"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["PartNo"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["PartNo"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["Version"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["Version"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["PartsThumb"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+                                    if (File.Exists(Server.MapPath("/Files/Products/Parts/" + dr["PartsThumb"].ToString())))
+                                    {
+                                        System.Web.UI.WebControls.Image imgParts = new System.Web.UI.WebControls.Image();
+                                        imgParts.Width = 80;
+                                        imgParts.ImageUrl = "/Files/Products/Parts/" + dr["PartsThumb"].ToString();
+                                        tddatacell.Controls.Add(imgParts);
+                                    }
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["Description"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["Description"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["MSRP"].ToString()) && Convert.ToDecimal(dr["MSRP"].ToString()) > 0)
+                                {
+                                    tddatacell = new TableCell { Text = dr["MSRP"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:right;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "CALL" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:right;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["CAPProp65"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+
+                                    System.Web.UI.WebControls.ImageButton imgParts = new System.Web.UI.WebControls.ImageButton();
+                                    imgParts.Attributes.Add("runat", "server");
+                                    imgParts.Width = 50;
+                                    imgParts.ImageUrl = "/Images/Warning.png";
+                                    imgParts.ToolTip = dr["CAPProp65"].ToString();
+                                    imgParts.OnClientClick = "javascript:showtext('" + dr["CAPProp65"].ToString() + "')";
+                                    tddatacell.Controls.Add(imgParts);
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+                                if (!string.IsNullOrEmpty(dr["MSRP"].ToString()) && Convert.ToDecimal(dr["MSRP"].ToString()) > 0)
+                                {
+                                    tddatacell = new TableCell { Text = dr["MSRP"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:center;");
+
+                                    System.Web.UI.HtmlControls.HtmlGenericControl addDiv = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+                                    addDiv.InnerHtml = "<div  style = 'width:220px;' data-widget=" + dr["QProductID"].ToString() + "></div>";
+                                    //  addDiv.InnerHtml = "<a onclick='Quivers.Catalog.ProductShort(" + dr["QProductID"].ToString() + ");'><div data-widget=" + dr["QProductID"].ToString() + "></div></a><br /><input class='btn btn-default' value='Add To Cart' onclick='Quivers.Catalog.ProductShort(" + dr["QProductID"].ToString() + ");' type='button'>";
+                                    tddatacell.Controls.Add(addDiv);
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#D8E7F4; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                tblpartsSub.Controls.Add(trdataRow);
+                            }
+                            else
+                            {
+                                TableRow trdataRow = new TableRow();
+                                TableCell tddatacell = new TableCell();
+                                if (!string.IsNullOrEmpty(dr["DrawingNo"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["DrawingNo"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["PartNo"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["PartNo"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["Version"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["Version"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["PartsThumb"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    if (File.Exists(Server.MapPath("/Files/Products/Parts/" + dr["PartsThumb"].ToString())))
+                                    {
+                                        System.Web.UI.WebControls.Image imgParts = new System.Web.UI.WebControls.Image();
+                                        imgParts.Width = 80;
+                                        imgParts.ImageUrl = "/Files/Products/Parts/" + dr["PartsThumb"].ToString();
+                                        tddatacell.Controls.Add(imgParts);
+                                    }
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["Description"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = dr["Description"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                if (!string.IsNullOrEmpty(dr["MSRP"].ToString()) && Convert.ToDecimal(dr["MSRP"].ToString()) > 0)
+                                {
+                                    tddatacell = new TableCell { Text = dr["MSRP"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:right;");
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "CALL" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:right;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+                                if (!string.IsNullOrEmpty(dr["CAPProp65"].ToString()))
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+                                    System.Web.UI.WebControls.ImageButton imgParts = new System.Web.UI.WebControls.ImageButton();
+                                    imgParts.Attributes.Add("runat", "server");
+                                    imgParts.Width = 50;
+                                    imgParts.ImageUrl = "/Images/Warning.png";
+                                    imgParts.ToolTip = dr["CAPProp65"].ToString();
+                                    imgParts.OnClientClick = "javascript:showtext('" + dr["CAPProp65"].ToString() + "')";
+                                    tddatacell.Controls.Add(imgParts);
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+                                if (!string.IsNullOrEmpty(dr["MSRP"].ToString()) && Convert.ToDecimal(dr["MSRP"].ToString()) > 0)
+                                {
+                                    tddatacell = new TableCell { Text = dr["MSRP"].ToString() };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:center;");
+
+                                    System.Web.UI.HtmlControls.HtmlGenericControl addDiv1 = new System.Web.UI.HtmlControls.HtmlGenericControl("DIV");
+                                    addDiv1.InnerHtml = "<div  style = 'width:220px;' data-widget=" + dr["QProductID"].ToString() + "></div>";
+                                    //  addDiv1.InnerHtml = "<a onclick='Quivers.Catalog.ProductShort(" + dr["QProductID"].ToString() + ");'><div data-widget=" + dr["QProductID"].ToString() + "></div></a><br /><input class='btn btn-default' value='Add To Cart' onclick='Quivers.Catalog.ProductShort(" + dr["QProductID"].ToString() + ");' type='button'>";
+                                    tddatacell.Controls.Add(addDiv1);
+
+                                    if (tddatacell != null)
+                                    {
+                                        trdataRow.Controls.Add(tddatacell);
+                                    }
+                                }
+                                else
+                                {
+                                    tddatacell = new TableCell { Text = "" };
+                                    tddatacell.Attributes.Add("style", "background:#fff; color:#404040;text-align:left;");
+                                    trdataRow.Controls.Add(tddatacell);
+                                }
+
+                                tblpartsSub.Controls.Add(trdataRow);
+                            }
+                        }
+                    }
+                }
+
+                tdparts.Controls.Add(tblpartsSub);
+                trparts.Controls.Add(tdparts);
+                tblparts.Controls.Add(trparts);
+
+                specsChrtAcc.Controls.Add(tblparts);
+
+            }
+            else
+            {
+                Session["SearchResult"] = "Currently there is no Part available for the search. Please try again later.";
+            }
+
+
+        }
+        catch (Exception ex)
+        {
+            //
+        }
+    }
+
     #endregion functions for accordion
 
     #region events
-    
+
     protected void specsBtn_OnClick(object sender, EventArgs e)
     {
         try
@@ -1540,6 +2348,57 @@ public partial class pages_SparePartDetails : Page
         {
            
         }
+    }
+
+    protected void btnSearchPart_Click(object sender, ImageClickEventArgs e)
+    {
+
+        try
+        {
+            ProductDetailsMultiView.ActiveViewIndex = 0;
+            ProductSpecificationByPartNo(true);
+            ProductSpecificationByPartNoAcc(true);
+
+            specsLi.Attributes.Add("class", specsLi.Attributes["class"].Replace("tabclass", "selectedcss"));
+            documentLi.Attributes.Add("class", documentLi.Attributes["class"].Replace("selectedcss", "tabclass"));
+            faqLi.Attributes.Add("class", faqLi.Attributes["class"].Replace("selectedcss", "tabclass"));
+
+            specsBtn.ForeColor = ColorTranslator.FromHtml("#666666");
+            documentBtn.ForeColor = ColorTranslator.FromHtml("#fff");
+            faqBtn.ForeColor = ColorTranslator.FromHtml("#fff");
+        }
+        catch (Exception)
+        {
+
+        }
+
+       
+    }
+
+    protected void btnSearchPartClear_Click(object sender, ImageClickEventArgs e)
+    {
+
+        try
+        {
+            ProductDetailsMultiView.ActiveViewIndex = 0;
+            txtSearchPart.Value = "";
+            ProductSpecificationByPartNo(false);
+            ProductSpecificationByPartNoAcc(false);
+
+            specsLi.Attributes.Add("class", specsLi.Attributes["class"].Replace("tabclass", "selectedcss"));
+            documentLi.Attributes.Add("class", documentLi.Attributes["class"].Replace("selectedcss", "tabclass"));
+            faqLi.Attributes.Add("class", faqLi.Attributes["class"].Replace("selectedcss", "tabclass"));
+
+            specsBtn.ForeColor = ColorTranslator.FromHtml("#666666");
+            documentBtn.ForeColor = ColorTranslator.FromHtml("#fff");
+            faqBtn.ForeColor = ColorTranslator.FromHtml("#fff");
+        }
+        catch (Exception)
+        {
+
+        }
+
+
     }
 
     #endregion

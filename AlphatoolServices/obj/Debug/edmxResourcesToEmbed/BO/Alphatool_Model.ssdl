@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AlphatoolsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="_SerialNos2020">
+    <Key>
+      <PropertyRef Name="RedID" />
+    </Key>
+    <Property Name="AcctNo" Type="nvarchar" MaxLength="255" />
+    <Property Name="ToolID" Type="nvarchar" MaxLength="255" />
+    <Property Name="ProductCode" Type="nvarchar" MaxLength="255" />
+    <Property Name="Serial" Type="nvarchar" MaxLength="255" />
+    <Property Name="Purchase Date" Type="datetime" />
+    <Property Name="AccountName" Type="nvarchar" MaxLength="255" />
+    <Property Name="RedID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
   <!--Errors Found During Generation:
 warning 6002: The table/view 'Alphatools.dbo.AboutUs' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
   <EntityType Name="AboutUs">
@@ -2370,6 +2382,156 @@ error 6004: The table 'Alphatools.dbo.WebfieldsTP' is referenced by a relationsh
   <!--Errors Found During Generation:
 error 6004: The table 'Alphatools.dbo.WebfieldsTP' is referenced by a relationship, but cannot be found.
         <Association Name="FK_WebfieldsTP_WebPartNo3" />-->
+  <Function Name="dt_addtosourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchSourceSafeINI" Type="varchar" Mode="In" />
+    <Parameter Name="vchProjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_addtosourcecontrol_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchSourceSafeINI" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchProjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_adduserobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_adduserobject_vcs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchProperty" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_checkinobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+    <Parameter Name="txStream1" Type="text" Mode="In" />
+    <Parameter Name="txStream2" Type="text" Mode="In" />
+    <Parameter Name="txStream3" Type="text" Mode="In" />
+  </Function>
+  <Function Name="dt_checkinobject_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+    <Parameter Name="txStream1" Type="text" Mode="In" />
+    <Parameter Name="txStream2" Type="text" Mode="In" />
+    <Parameter Name="txStream3" Type="text" Mode="In" />
+  </Function>
+  <Function Name="dt_checkoutobject" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchComment" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_checkoutobject_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchComment" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iVCSFlags" Type="int" Mode="In" />
+    <Parameter Name="iActionFlag" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_displayoaerror" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iObject" Type="int" Mode="In" />
+    <Parameter Name="iresult" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_displayoaerror_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="iObject" Type="int" Mode="In" />
+    <Parameter Name="iresult" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_droppropertiesbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_dropuserobjectbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_generateansiname" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="name" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_getobjwithprop" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getobjwithprop_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="uvalue" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_vcs" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_getpropertiesbyid_vcs_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="nvarchar" Mode="InOut" />
+  </Function>
+  <Function Name="dt_isundersourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+    <Parameter Name="iWhoToo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_isundersourcecontrol_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="iWhoToo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="dt_removefromsourcecontrol" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_setpropertybyid" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="value" Type="varchar" Mode="In" />
+    <Parameter Name="lvalue" Type="image" Mode="In" />
+  </Function>
+  <Function Name="dt_setpropertybyid_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="property" Type="varchar" Mode="In" />
+    <Parameter Name="uvalue" Type="nvarchar" Mode="In" />
+    <Parameter Name="lvalue" Type="image" Mode="In" />
+  </Function>
+  <Function Name="dt_validateloginparams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_validateloginparams_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="dt_vcsenabled" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_verstamp006" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_verstamp007" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="dt_whocheckedout" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="varchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="varchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="dt_whocheckedout_u" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="chObjectType" Type="char" Mode="In" />
+    <Parameter Name="vchObjectName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchLoginName" Type="nvarchar" Mode="In" />
+    <Parameter Name="vchPassword" Type="nvarchar" Mode="In" />
+  </Function>
   <Function Name="EventCalendarUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
   <Function Name="GetRecordCountsForAllTables" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
@@ -2423,6 +2585,7 @@ error 6004: The table 'Alphatools.dbo.WebfieldsTP' is referenced by a relationsh
   </Function>
   <Function Name="spWebMatInd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="AlphatoolsModelStoreContainer">
+    <EntitySet Name="_SerialNos2020" EntityType="Self._SerialNos2020" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CMSPageRef" EntityType="Self.CMSPageRef" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Collection" EntityType="Self.Collection" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CollectionDupInfo" EntityType="Self.CollectionDupInfo" Schema="dbo" store:Type="Tables" />

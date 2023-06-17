@@ -30,9 +30,10 @@ public partial class MasterPages_ProductDetails : System.Web.UI.MasterPage
         }
         if (txtSearchTop.Value.ToString().Trim().Length > 0)
         {
-            Session["SearchText"] = txtSearchTop.Value.ToString().Trim();           
+            Session["SearchText"] = txtSearchTop.Value.ToString().Trim();
+            txtSearchTop.Attributes.Add("onkeydown", "if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13))  {document.getElementById('ctl00_btnSearchTopN').click();return false;}} else {return true}; ");
+
         }
-        txtSearchTop.Attributes.Add("onkeydown", "if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13))  {document.getElementById('ctl00_btnSearchTopN').click();return false;}} else {return true}; ");
     }
     public void LoadControls()
     {
@@ -381,49 +382,14 @@ public partial class MasterPages_ProductDetails : System.Web.UI.MasterPage
                     sMetaTags += " or pp.MetaTags LIKE '%" + Str + "%'";
                     sShortDescription += " or pt.ShortDescription LIKE '%" + Str + "%'";
                 }
+
+                sSQL = "SELECT * FROM ProductPage pp, MWebGroup mg WHERE pp.WebGroupID = mg.WebGroupId and pp.WebSectionID > 0  and (pp.ProductPageCode IN (SELECT wt.ProductPageCode FROM Webfields wt WHERE wt.ProductPageCode <> 0  and wt.PartNo LIKE '%" + sFullPhrase.Trim() + "%' ) or (pp.PageName like  '%" + sFullPhrase.Trim() + "%' or pp.ProductPageCode like  '%" + sFullPhrase.Trim() + "%'  or pp.MetaTags like  '%" + sFullPhrase.Trim() + "%')  or pp.ProductPageCode IN (SELECT pt.ProductPageCode FROM ProductText pt WHERE pt.ProductPageCode <> 0 and pt.ProductText LIKE '%" + sFullPhrase.Trim() + "%'))";
+
             }
 
 
-            //if (txtSearchTop.Value.ToString().Trim().Length > 0)
-            //{
-            //    tSql = "SELECT * FROM Webfields w WHERE w.PartNo LIKE '%" + sFullPhrase.Trim() + "%'";
-            //    dtProducts = WebUtility.GetRows(tSql);
-            //    if (dtProducts != null && dtProducts.Rows.Count > 0)
-            //    {
-            //        sWhere += " and wt.PartNo LIKE '%" + sFullPhrase.Trim() + "%' ";
-            //    }
-            //    else
-            //    {
-            //        dWhere += " and pt.ShortDescription LIKE '%" + sFullPhrase.Trim() + "%' " + sShortDescription;
-            //    }
 
-            //}
 
-            //if (!string.IsNullOrEmpty(sWhere))
-            //{
-            //    sSQL = "SELECT * FROM ProductPage pp, MWebGroup mg WHERE pp.WebGroupID = mg.WebGroupId  and pp.WebSectionID > 0 ";
-
-            //    if (txtSearchTop.Value.ToString().Trim().Length > 0)
-            //    {
-            //        sSQL += " and (pp.ProductPageCode IN (SELECT wt.ProductPageCode FROM Webfields wt WHERE wt.ProductPageCode <> 0 " + sWhere + " ) or (pp.PageName like  '%" + sFullPhrase + "%' or pp.ProductPageCode like  '%" + sFullPhrase + "%'  or pp.MetaTags like  '%" + sFullPhrase + "%'" + sPageCode + sPageName + sMetaTags + " )  or pp.ProductPageCode IN (SELECT pt.ProductPageCode FROM ProductText pt WHERE pt.ProductPageCode <> 0 " + dWhere + " )) ";
-            //        dtProducts = WebUtility.GetRows(sSQL);
-            //        if (dtProducts != null && dtProducts.Rows.Count > 0)
-            //        {
-            //            txtSearchTop.Value = "";
-            //        }
-            //        else
-            //        {
-            //            sSQL = "SELECT * FROM ProductPage pp, MWebGroup mg WHERE pp.WebGroupID = mg.WebGroupId  and pp.WebSectionID > 0 and pp.ProductPageCode IN (SELECT wt.ProductPageCode FROM Webfields wt WHERE wt.ProductPageCode <> 0 " + sWhere + " )";
-            //            txtSearchTop.Value = "";
-            //        }
-            //    }
-            //}
-            //if (!string.IsNullOrEmpty(dWhere))
-            //{
-            //    sSQL = "SELECT * FROM ProductPage pp, MWebGroup mg WHERE pp.WebGroupID = mg.WebGroupId  and pp.WebSectionID > 0 and  ((pp.PageName like  '%" + sFullPhrase + "%' or pp.ProductPageCode like  '%" + sFullPhrase + "%'  or pp.MetaTags like  '%" + sFullPhrase + "%') or pp.ProductPageCode IN (SELECT pt.ProductPageCode FROM ProductText pt WHERE pt.ProductPageCode <> 0 " + dWhere + " ))";
-            //}
-
-            sSQL = "SELECT * FROM ProductPage pp, MWebGroup mg WHERE pp.WebGroupID = mg.WebGroupId and pp.WebSectionID > 0  and (pp.ProductPageCode IN (SELECT wt.ProductPageCode FROM Webfields wt WHERE wt.ProductPageCode <> 0  and wt.PartNo LIKE '%" + sFullPhrase.Trim() + "%' ) or (pp.PageName like  '%" + sFullPhrase.Trim() + "%' or pp.ProductPageCode like  '%" + sFullPhrase.Trim() + "%'  or pp.MetaTags like  '%" + sFullPhrase.Trim() + "%')  or pp.ProductPageCode IN (SELECT pt.ProductPageCode FROM ProductText pt WHERE pt.ProductPageCode <> 0 and pt.ProductText LIKE '%" + sFullPhrase.Trim() + "%'))";
 
 
             if (sSQL.Length > 0)

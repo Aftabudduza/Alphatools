@@ -1,6 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
   <EntityContainerMapping StorageEntityContainer="AlphatoolsModelStoreContainer" CdmEntityContainer="AlphatoolEntities">
+    <EntitySetMapping Name="C_SerialNos2020">
+      <EntityTypeMapping TypeName="AlphatoolsModel.C_SerialNos2020">
+        <MappingFragment StoreEntitySet="_SerialNos2020">
+          <ScalarProperty Name="AcctNo" ColumnName="AcctNo" />
+          <ScalarProperty Name="ToolID" ColumnName="ToolID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Purchase_Date" ColumnName="Purchase Date" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="RedID" ColumnName="RedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="CMSPageRef">
       <EntityTypeMapping TypeName="AlphatoolsModel.CMSPageRef">
         <MappingFragment StoreEntitySet="CMSPageRef">
@@ -1418,6 +1431,55 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol" FunctionName="AlphatoolsModel.Store.dt_addtosourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol_u" FunctionName="AlphatoolsModel.Store.dt_addtosourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject" FunctionName="AlphatoolsModel.Store.dt_adduserobject" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject_vcs" FunctionName="AlphatoolsModel.Store.dt_adduserobject_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject" FunctionName="AlphatoolsModel.Store.dt_checkinobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject_u" FunctionName="AlphatoolsModel.Store.dt_checkinobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject" FunctionName="AlphatoolsModel.Store.dt_checkoutobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject_u" FunctionName="AlphatoolsModel.Store.dt_checkoutobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror" FunctionName="AlphatoolsModel.Store.dt_displayoaerror" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror_u" FunctionName="AlphatoolsModel.Store.dt_displayoaerror_u" />
+    <FunctionImportMapping FunctionImportName="dt_droppropertiesbyid" FunctionName="AlphatoolsModel.Store.dt_droppropertiesbyid" />
+    <FunctionImportMapping FunctionImportName="dt_dropuserobjectbyid" FunctionName="AlphatoolsModel.Store.dt_dropuserobjectbyid" />
+    <FunctionImportMapping FunctionImportName="dt_generateansiname" FunctionName="AlphatoolsModel.Store.dt_generateansiname" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop" FunctionName="AlphatoolsModel.Store.dt_getobjwithprop" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop_u" FunctionName="AlphatoolsModel.Store.dt_getobjwithprop_u" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid" FunctionName="AlphatoolsModel.Store.dt_getpropertiesbyid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.dt_getpropertiesbyid_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_u" FunctionName="AlphatoolsModel.Store.dt_getpropertiesbyid_u">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.dt_getpropertiesbyid_u_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs" FunctionName="AlphatoolsModel.Store.dt_getpropertiesbyid_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs_u" FunctionName="AlphatoolsModel.Store.dt_getpropertiesbyid_vcs_u" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol" FunctionName="AlphatoolsModel.Store.dt_isundersourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol_u" FunctionName="AlphatoolsModel.Store.dt_isundersourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_removefromsourcecontrol" FunctionName="AlphatoolsModel.Store.dt_removefromsourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid" FunctionName="AlphatoolsModel.Store.dt_setpropertybyid" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid_u" FunctionName="AlphatoolsModel.Store.dt_setpropertybyid_u" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams" FunctionName="AlphatoolsModel.Store.dt_validateloginparams" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams_u" FunctionName="AlphatoolsModel.Store.dt_validateloginparams_u" />
+    <FunctionImportMapping FunctionImportName="dt_vcsenabled" FunctionName="AlphatoolsModel.Store.dt_vcsenabled" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp006" FunctionName="AlphatoolsModel.Store.dt_verstamp006" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp007" FunctionName="AlphatoolsModel.Store.dt_verstamp007" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout" FunctionName="AlphatoolsModel.Store.dt_whocheckedout" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout_u" FunctionName="AlphatoolsModel.Store.dt_whocheckedout_u" />
     <FunctionImportMapping FunctionImportName="EventCalendarUpdate" FunctionName="AlphatoolsModel.Store.EventCalendarUpdate" />
     <FunctionImportMapping FunctionImportName="GetRecordCountsForAllTables" FunctionName="AlphatoolsModel.Store.GetRecordCountsForAllTables">
       <ResultMapping>

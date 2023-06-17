@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="AlphatoolsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="C_SerialNos2020">
+    <Key>
+      <PropertyRef Name="RedID" />
+    </Key>
+    <Property Name="AcctNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ToolID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProductCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Serial" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Purchase_Date" Type="DateTime" Precision="3" />
+    <Property Name="AccountName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RedID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
   <EntityType Name="CMSPageRef">
     <Key>
       <PropertyRef Name="CMSPage" />
@@ -1999,6 +2011,7 @@
     </ReferentialConstraint>
   </Association>
   <EntityContainer Name="AlphatoolEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_SerialNos2020" EntityType="Self.C_SerialNos2020" />
     <EntitySet Name="CMSPageRef" EntityType="Self.CMSPageRef" />
     <EntitySet Name="Collection" EntityType="Self.Collection" />
     <EntitySet Name="CollectionDupInfo" EntityType="Self.CollectionDupInfo" />
@@ -2267,6 +2280,156 @@
       <End Role="WebPartNo" EntitySet="WebPartNo" />
       <End Role="Webfields" EntitySet="Webfields" />
     </AssociationSet>
+    <FunctionImport Name="dt_addtosourcecontrol">
+      <Parameter Name="vchSourceSafeINI" Mode="In" Type="String" />
+      <Parameter Name="vchProjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_addtosourcecontrol_u">
+      <Parameter Name="vchSourceSafeINI" Mode="In" Type="String" />
+      <Parameter Name="vchProjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_adduserobject" />
+    <FunctionImport Name="dt_adduserobject_vcs">
+      <Parameter Name="vchProperty" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkinobject">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+      <Parameter Name="txStream1" Mode="In" Type="String" />
+      <Parameter Name="txStream2" Mode="In" Type="String" />
+      <Parameter Name="txStream3" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkinobject_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+      <Parameter Name="txStream1" Mode="In" Type="String" />
+      <Parameter Name="txStream2" Mode="In" Type="String" />
+      <Parameter Name="txStream3" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkoutobject">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkoutobject_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_displayoaerror">
+      <Parameter Name="iObject" Mode="In" Type="Int32" />
+      <Parameter Name="iresult" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_displayoaerror_u">
+      <Parameter Name="iObject" Mode="In" Type="Int32" />
+      <Parameter Name="iresult" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_droppropertiesbyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_dropuserobjectbyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_generateansiname">
+      <Parameter Name="name" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getobjwithprop" ReturnType="Collection(Int32)">
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getobjwithprop_u" ReturnType="Collection(Int32)">
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="uvalue" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid" ReturnType="Collection(AlphatoolsModel.dt_getpropertiesbyid_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_u" ReturnType="Collection(AlphatoolsModel.dt_getpropertiesbyid_u_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_vcs">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_vcs_u">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_isundersourcecontrol">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iWhoToo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_isundersourcecontrol_u">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iWhoToo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_removefromsourcecontrol" />
+    <FunctionImport Name="dt_setpropertybyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="lvalue" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="dt_setpropertybyid_u">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="uvalue" Mode="In" Type="String" />
+      <Parameter Name="lvalue" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="dt_validateloginparams">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_validateloginparams_u">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_vcsenabled" />
+    <FunctionImport Name="dt_verstamp006" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="dt_verstamp007" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="dt_whocheckedout">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_whocheckedout_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
     <FunctionImport Name="EventCalendarUpdate" />
     <FunctionImport Name="GetRecordCountsForAllTables" ReturnType="Collection(AlphatoolsModel.GetRecordCountsForAllTables_Result)" />
     <FunctionImport Name="Shop1_Drop" />
@@ -2319,6 +2482,18 @@
     </FunctionImport>
     <FunctionImport Name="spWebMatInd" />
   </EntityContainer>
+  <ComplexType Name="dt_getpropertiesbyid_Result">
+    <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="version" Nullable="false" />
+    <Property Type="String" Name="value" Nullable="true" MaxLength="255" />
+    <Property Type="Binary" Name="lvalue" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="dt_getpropertiesbyid_u_Result">
+    <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="version" Nullable="false" />
+    <Property Type="String" Name="uvalue" Nullable="true" MaxLength="255" />
+    <Property Type="Binary" Name="lvalue" Nullable="true" MaxLength="Max" />
+  </ComplexType>
   <ComplexType Name="GetRecordCountsForAllTables_Result">
     <Property Type="String" Name="Owner" Nullable="true" MaxLength="10" />
     <Property Type="String" Name="Table_Name" Nullable="true" MaxLength="25" />

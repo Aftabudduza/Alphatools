@@ -30,7 +30,12 @@ public partial class MasterPages_Home : System.Web.UI.MasterPage
             Session["SearchResult"] = null;
             LoadControls();
         }
-        txtSearchTop.Attributes.Add("onkeydown", "if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13))  {document.getElementById('ctl00_btnSearchTopN').click();return false;}} else {return true}; ");
+
+        if (txtSearchTop.Value.ToString().Trim().Length > 0)
+        {
+            txtSearchTop.Attributes.Add("onkeydown", "if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13))  {document.getElementById('ctl00_btnSearchTopN').click();return false;}} else {return true}; ");
+
+        }
     }
     public void LoadControls()
     {
