@@ -336,7 +336,14 @@ public partial class MasterPages_ProductDetails : System.Web.UI.MasterPage
                 Session["SearchResult"] = "Currently there is no products available for the search. Please try again later.";
             }
 
-            Response.Redirect("~/Pages/ProductPages.aspx", false);
+            if (Session["SearchKeywords"] != null)
+            {
+               // Response.Redirect("~/Pages/SparePartDetails.aspx?PageCode=" + Request.QueryString["PageCode"], false);
+            }
+            else
+            {
+                Response.Redirect("~/Pages/ProductPages.aspx", false);
+            }
         }
         catch (Exception ex)
         {
@@ -504,7 +511,15 @@ public partial class MasterPages_ProductDetails : System.Web.UI.MasterPage
                 Session["SearchResult"] = "Currently there is no products available for the search. Please try again later.";
             }
 
-            Response.Redirect("~/Pages/ProductPages.aspx", false);
+           if(Session["SearchKeywords"] != null)
+            {
+              //Response.Redirect("~/Pages/SparePartDetails.aspx?PageCode=" + Request.QueryString["PageCode"], false);
+            }
+            else
+            {
+                Response.Redirect("~/Pages/ProductPages.aspx", false);
+            }
+           
 
         }
         catch (Exception ex)

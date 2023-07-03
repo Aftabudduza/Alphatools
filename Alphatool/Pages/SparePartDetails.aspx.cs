@@ -23,6 +23,7 @@ public partial class pages_SparePartDetails : Page
         if (!IsPostBack)
         {
             Session["ButtonText"] = null;
+            //Session["SearchKeywords"] = null;
             loadSEOContent();
             try
             {
@@ -56,12 +57,25 @@ public partial class pages_SparePartDetails : Page
                 ProductDocumentationAccordion(Convert.ToInt32(Session["productId"]));
                 ProductFaqsAccordion(Convert.ToInt32(Session["productId"]));
             }
-            if (txtSearchPart.Value.ToString().Trim().Length > 0)
-            {
-                txtSearchPart.Attributes.Add("onkeydown", "if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13))  {document.getElementById('Body_btnSearchPart').click();return false;}} else {return true}; ");
 
-            }
+        }
 
+        if (txtSearchPart.Value.ToString().Trim().Length > 0 || Session["SearchKeywords"] != null)
+        {
+            Session["SearchKeywords"] = txtSearchPart.Value.ToString().Trim();
+            //  txtSearchPart.Attributes.Add("onkeydown", "if(event.which || event.keyCode){if ((event.which == 13) || (event.keyCode == 13))  {document.getElementById('Body_btnSearchPart').click();return false;}} else {return true}; ");
+
+            ProductDetailsMultiView.ActiveViewIndex = 0;
+            ProductSpecificationByPartNo(true);
+            ProductSpecificationByPartNoAcc(true);
+
+            specsLi.Attributes.Add("class", specsLi.Attributes["class"].Replace("tabclass", "selectedcss"));
+            documentLi.Attributes.Add("class", documentLi.Attributes["class"].Replace("selectedcss", "tabclass"));
+            faqLi.Attributes.Add("class", faqLi.Attributes["class"].Replace("selectedcss", "tabclass"));
+
+            specsBtn.ForeColor = ColorTranslator.FromHtml("#666666");
+            documentBtn.ForeColor = ColorTranslator.FromHtml("#fff");
+            faqBtn.ForeColor = ColorTranslator.FromHtml("#fff");
         }
 
 
@@ -1446,7 +1460,7 @@ public partial class pages_SparePartDetails : Page
             DataSet ds = this.GetData(sSQL);
             spareparts.Controls.Clear();
 
-            if (ds != null)
+            if (ds != null && ds.Tables.Count > 0)
             {
                 foreach (DataTable table in ds.Tables)
                 {
@@ -1812,6 +1826,12 @@ public partial class pages_SparePartDetails : Page
             }
             else
             {
+                tdparts.Controls.Add(tblpartsSub);
+                trparts.Controls.Add(tdparts);
+                tblparts.Controls.Add(trparts);
+
+                spareparts.Controls.Add(tblparts);
+
                 Session["SearchResult"] = "Currently there is no Part available for the search. Please try again later.";
             }
 
@@ -1897,7 +1917,7 @@ public partial class pages_SparePartDetails : Page
             DataSet ds = this.GetData(sSQL);
             specsChrtAcc.Controls.Clear();
 
-            if (ds != null)
+            if (ds != null && ds.Tables.Count > 0)
             {
                 foreach (DataTable table in ds.Tables)
                 {
@@ -2265,6 +2285,12 @@ public partial class pages_SparePartDetails : Page
             }
             else
             {
+                tdparts.Controls.Add(tblpartsSub);
+                trparts.Controls.Add(tdparts);
+                tblparts.Controls.Add(trparts);
+
+                specsChrtAcc.Controls.Add(tblparts);
+
                 Session["SearchResult"] = "Currently there is no Part available for the search. Please try again later.";
             }
 
