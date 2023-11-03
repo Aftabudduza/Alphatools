@@ -1,0 +1,94 @@
+					<ul id="sectionNavigation">
+						<%
+							Dim strConnect_Section As New Data.SqlClient.SqlConnection
+							strConnect_Section.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+							strConnect_Section.Open()
+							
+							Dim strSQL_Section As String
+							Dim numCurrentSectionID As Integer = 0
+							Dim numCurrentGroupID As Integer = 0
+							Dim flgNewGroup As Boolean = False
+							Dim flgFirstGroup As Boolean = False
+					
+							strSQL_Section = "SELECT MWebSection.WebSectionSort, MWebSection.WebSectionID, MWebGroup.WebGroupSort, MWebGroup.WebGroupID, MWebSection.WebSection, MWebGroup.WebGroup " & _
+							 "FROM MWebSection " & _
+							 "INNER JOIN ProductPage ON MWebSection.WebSectionID = ProductPage.WebSectionID " & _
+							 "INNER JOIN MWebGroup ON ProductPage.WebGroupID = MWebGroup.WebGroupID " & _
+						"WHERE MWebSection.WebSectionID < 80 " & _
+							 "GROUP BY MWebSection.WebSectionSort, MWebSection.WebSectionID, MWebGroup.WebGroupSort, MWebGroup.WebGroupID, MWebSection.WebSection, MWebGroup.WebGroup " & _
+							 "ORDER BY MWebSection.WebSectionSort, MWebSection.WebSectionID, MWebGroup.WebGroupSort, MWebGroup.WebGroupID "
+		
+							Dim strDr_Section As Data.SqlClient.SqlDataReader
+							Dim strCMD_Section As New Data.SqlClient.SqlCommand(strSQL_Section, strConnect_Section)
+							strDr_Section = strCMD_Section.ExecuteReader()
+
+							Do While strDr_Section.Read
+								If numCurrentSectionID <> CInt(strDr_Section.Item("WebSectionID")) Then
+									If flgNewGroup Then
+										flgNewGroup = False
+											%>
+											</ul>
+											<%
+										End If
+										If numCurrentSectionID <> 0 Then
+											%>
+											</li>
+											<%
+										End If
+										%>
+										<li<%=iif((strDr_Section.item("WebSectionID").tostring.trim = request("id")), " class=""" & getsectionclassname(cint(strDr_Section.item("WebSectionID").tostring.trim)) & """", "") %>>
+										<a href="/Section.aspx?ID=<%=strDr_Section.Item("WebSectionID").ToString.Trim%>"<%=IIf(Len(strDr_Section.Item("WebSection").ToString.Trim) > 20, " class=""long""", "")%>>
+											<%=strDr_Section.Item("WebSection").ToString.Trim%>
+										</a>
+									<%
+									End If
+									If (strDr_Section.Item("WebSectionID").ToString.Trim = Request("ID")) Then
+										If Not flgNewGroup Then
+											flgNewGroup = True
+											flgFirstGroup = True
+											%>
+											<ul>
+											<%
+											End If
+											If numCurrentGroupID <> CInt(strDr_Section.Item("WebGroupID")) Then
+												Dim strFirstGroup As String
+												If flgFirstGroup Then
+													strFirstGroup = "class=""top"""
+													flgFirstGroup = False
+												Else
+													strFirstGroup = ""
+												End If
+											%>
+											<li <%=strFirstGroup%>>
+												<a href="/Group.aspx?ID=<%=strDr_Section.Item("WebGroupID").ToString.Trim%>">
+													<%=strDr_Section.Item("WebGroup").ToString.Trim%>
+												</a>
+											</li>
+										<%
+										End If
+										Dim numTempSectionID As Integer = numCurrentSectionID
+										numCurrentGroupID = CInt(strDr_Section.Item("WebGroupID"))
+										numCurrentSectionID = CInt(strDr_Section.Item("WebSectionID"))
+									Else
+										numCurrentGroupID = CInt(strDr_Section.Item("WebGroupID"))
+										numCurrentSectionID = CInt(strDr_Section.Item("WebSectionID"))
+									End If
+								Loop
+								strDr_Section.Close()
+								strConnect_Section.Close()
+								%>
+						
+								<%
+								If flgNewGroup Then
+									%>
+									</ul>
+									<%
+								End If
+							%>
+						<li>
+							<a href="/EducationalMaterials.aspx" title="Educational Materials" class="long">Educational Materials</a>
+						</li>
+						<li>
+							<a href="/NewProducts.aspx" title="New Products">New Products</a>
+						</li>
+					</ul>

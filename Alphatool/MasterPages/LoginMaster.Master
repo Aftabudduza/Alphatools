@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="LoginMaster.master.cs" Inherits="MasterPages_LoginMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <title>Alpha Professional Tools®</title>
+    <!-- BOOTSTRAP CORE STYLE  -->
+    <!-- FONT AWESOME ICONS  -->
+    <link href="../Content/AlphaToolContent/html/assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLE  -->
+    <link href="../Content/AlphaToolContent/html/assets/css/style.css" rel="stylesheet" />
+    <!-- HTML5 Shiv and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="../Content/LoginPageContent/bootstrap.min.css" rel="stylesheet" />
+    <!-- Uniform Stylesheet -->
+    <link href="../Content/LoginPageContent/uniform.default.css" rel="stylesheet" />
+    <!-- Plugin Stylsheets first to ease overrides -->
+    <!-- End Plugin Stylesheets -->
+    <!-- Main Layout Stylesheet -->
+    <link href="../Content/LoginPageContent/assets/css/fonts/icomoon/style.css" rel="stylesheet" />
+    <link href="../Content/LoginPageContent/assets/css/login.css" rel="stylesheet" />
+    <link href="../Content/LoginPageContent/zocial.css" rel="stylesheet" />
+
+    <style type="text/css">
+        .input-validation-error {
+            border: 1px solid #ff0000;
+            background-color: #ffeeee;
+        }
+
+        .field-validation-error {
+            color: #ff0000;
+        }
+
+        header {
+            background: none !important;
+        }
+    </style>
+      <script type="text/javascript" src="https://secure.smart-company-vision.com/js/267165.js" ></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%-- <form id="form1" runat="server">--%>
+    <div>
+        <asp:ContentPlaceHolder ID="Body" runat="server">
+        </asp:ContentPlaceHolder>
+        
+        
+        <script src="../Scripts/jquery.validate.min.js"></script>
+        <script src="../Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <!-- CORE JQUERY SCRIPTS -->
+        <script src="../Content/AlphaToolContent/html/assets/js/jquery-1.11.1.js"></script>
+        <!-- BOOTSTRAP SCRIPTS  -->
+        <!-- Core Scripts -->
+        <script src="../Content/LoginPageContent/assets/libs/jquery-1.8.3.js"></script>
+        <script src="../Content/LoginPageContent/assets/libs/jquery.placeholder.min.js"></script>
+        <!-- Login Script -->
+        <script src="../Content/LoginPageContent/assets/login.js"></script>
+        <!-- Validation -->
+        <script src="../Content/LoginPageContent/jquery.validate.min.js"></script>
+        <!-- Uniform Script -->
+        <script src="../Content/LoginPageContent/jquery.uniform.min.js"></script>
+
+         <noscript><img alt="" src="https://secure.smart-company-vision.com/267165.png" style="display:none;" /></noscript>
+
+    </div>
+    <%-- </form>--%>
+	<!-- Start of LiveChat (www.livechatinc.com<http://www.livechatinc.com>) code -->
+
+            <script type="text/javascript">
+
+              window.__lc = window.__lc || {};
+
+              window.__lc.license = 12228435;
+
+              (function() {
+
+                var lc = document.createElement('script'); lc.type = 'text/javascript'; lc.async = true;
+
+                lc.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdn.livechatinc.com/tracking.js';
+
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(lc, s);
+
+              })();
+
+            </script>
+
+            <noscript>
+
+            <a href="https://www.livechatinc.com/chat-with/12228435/" rel="nofollow">Chat with us</a>,
+
+            powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a>
+
+            </noscript>
+
+            <!-- End of LiveChat code -->
+
+</body>
+</html>

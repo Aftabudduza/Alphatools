@@ -1,0 +1,37 @@
+﻿body { 
+	width:100%; 
+}
+ 
+
+        .Waitmodal
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            z-index: 99;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+            -moz-opacity: 0.8;
+            min-height: 1200px;
+            width: 1920px;
+        }
+
+        .Waitloading
+        {
+            font-family: Arial;
+            font-size: 10pt;
+            border: 5px solid #67CFF5;
+            width: 200px;
+            height: 115px;
+            display: none;
+            position: fixed;
+            background-color: White;
+            z-index: 999;
+        }
+
+        .input-group-addon input[type="submit"] {
+            background: rgba(0, 0, 0, 0) url("/Images/search2.png") no-repeat scroll 0 0;
+            border: medium none;
+            cursor: pointer;  
+        }

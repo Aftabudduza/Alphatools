@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2fed7decbc874887856d20fe7f926c2a" Name="Diagram1">
+        <EntityTypeShape EntityType="AlphatoolsModel.C_SerialNos2020" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.CMSPageRef" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Collection" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.CollectionDupInfo" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.CollectionEmail" Width="1.5" PointX="10.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.dtproperties" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.HomeBanners" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.HomeProducts" Width="1.5" PointX="14.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.LinksType" Width="1.5" PointX="8.75" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MAdvisoryType" Width="1.5" PointX="3" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MApplication" Width="1.5" PointX="6" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MCAProp65" Width="1.5" PointX="14.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MContact" Width="1.5" PointX="11" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MFlyer" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MIndustry" Width="1.5" PointX="15.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MLibrary" Width="1.5" PointX="3.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MMaintenanceCard" Width="1.5" PointX="0.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MManual" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MMaterial" Width="1.5" PointX="15.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MMsds" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MNetTitle" Width="1.5" PointX="6" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MOtherRef1" Width="1.5" PointX="16.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MOtherRef2" Width="1.5" PointX="16.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MOtherRef3" Width="1.5" PointX="16.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MOtherReference" Width="1.5" PointX="0.75" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MPageGroup" Width="1.5" PointX="0.75" PointY="23.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MPageSection" Width="1.5" PointX="0.75" PointY="25.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MPartsList" Width="1.5" PointX="17.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MPartUsage" Width="1.5" PointX="6" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MPPCIndustry" Width="1.5" PointX="17.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MPPCIndustrySectionGroupPages" Width="1.5" PointX="14.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MPPCIndustrySectionGroupSpareParts" Width="1.5" PointX="16.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MProcess" Width="1.5" PointX="6" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MRegion" Width="1.5" PointX="8.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MTechNote" Width="1.5" PointX="0.75" PointY="28.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MTerritory" Width="1.5" PointX="8.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MWebGroup" Width="1.5" PointX="0.75" PointY="30.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MWebSection" Width="1.5" PointX="0.75" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MWebTitle" Width="1.5" PointX="0.75" PointY="39.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.NetPriceInfo" Width="1.5" PointX="8.25" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.PartsInfo" Width="1.5" PointX="18.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.PartsPage" Width="1.5" PointX="10.75" PointY="18.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.PressRelease" Width="1.5" PointX="13.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductAdvisory" Width="1.5" PointX="5.25" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductFields" Width="1.5" PointX="18.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductFieldsOLD" Width="1.5" PointX="19.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductFieldsPending" Width="1.5" PointX="19.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductInfo" Width="1.5" PointX="18.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductPage" Width="1.5" PointX="3" PointY="14.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductRegistration" Width="1.5" PointX="20.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductRelatedText" Width="1.5" PointX="20.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductRelatedTextNew" Width="1.5" PointX="20.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductText" Width="1.5" PointX="5.25" PointY="23.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.sysdiagrams" Width="1.5" PointX="21.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.TNTechNote" Width="1.5" PointX="5.25" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Video" Width="1.5" PointX="6" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Webfields" Width="1.5" PointX="8.25" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Webfields2" Width="1.5" PointX="21.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.WebPartNo" Width="1.5" PointX="6" PointY="31.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.AboutUs" Width="1.5" PointX="12.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Affiliations" Width="1.5" PointX="14.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Catalogs" Width="1.5" PointX="22.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.DealerInfo" Width="1.5" PointX="22.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.EducationalMaterial" Width="1.5" PointX="5.25" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.EmailSignup" Width="1.5" PointX="22.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Employment" Width="1.5" PointX="22.75" PointY="19.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.EventCalendar" Width="1.5" PointX="20.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Links" Width="1.5" PointX="11" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MDealerWebSiteType" Width="1.5" PointX="22.75" PointY="22.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Members" Width="1.5" PointX="23.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MetalProducts" Width="1.5" PointX="23.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.MProductRegModel" Width="1.5" PointX="24.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.NewProducts" Width="1.5" PointX="5.25" PointY="38" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.PartsWebfields" Width="1.5" PointX="10.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Policies" Width="1.5" PointX="24.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductBulletins" Width="1.5" PointX="12.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductBullets" Width="1.5" PointX="24.75" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductPage_Snippets" Width="1.5" PointX="14.75" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ProductVideo" Width="1.5" PointX="8.25" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.RequestADealerInfo" Width="1.5" PointX="24.75" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Shop_Description" Width="1.5" PointX="24.75" PointY="23.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.Shopatron" Width="1.5" PointX="25.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ShopIntlCatData" Width="1.5" PointX="25.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ShopIntlCatDataTP" Width="1.5" PointX="26.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ShopIntlProductData" Width="1.5" PointX="26.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ShopIntlProductDataTP" Width="1.5" PointX="16.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ShopIntlSpecUpload" Width="1.5" PointX="7.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ShopWebFields" Width="1.5" PointX="18.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.TechnicalLibrary" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.WhatIsNew" Width="1.5" PointX="20.75" PointY="26.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ONYX_AlphaWebOnyx_dbo_ProductText" Width="1.5" PointX="26.75" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.ONYX_AlphaWebOnyx_dbo_ProductText1" Width="1.5" PointX="26.75" PointY="25.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.VIEWProductPageNoProductText" Width="1.5" PointX="27.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.VIEWProductPageProductText" Width="1.5" PointX="28.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.VIEWWebfieldsIndustry" Width="1.5" PointX="9.75" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.VIEWWebfieldsMaterial" Width="1.5" PointX="28.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AlphatoolsModel.VIEWWebfieldsUsageProcessApplication" Width="1.5" PointX="11.75" PointY="28.75" IsExpanded="true" />
+        <AssociationConnector Association="AlphatoolsModel.FK_Links_LinksType" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductAdvisory_MAdvisoryType" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_Webfields_MApplication" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_MContact_MRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_MContact_MTerritory" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_PressRelease_MContact" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MFlyer" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MFlyer" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MLibrary" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MMaintenanceCard" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MMaintenanceCard" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MManual" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MManual" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MMsds" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MMsds" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_NetPriceInfo_MNetTitle" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MOtherReference" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MOtherReference" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_NetPriceInfo_MPageGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MPageGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_NetPriceInfo_MPageSection" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MPageSection" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_Webfields_MPartUsage" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_Webfields_MProcess" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_PressRelease_MRegion" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MTechNote" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MTechNote" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_PressRelease_MTerritory" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MWebGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MWebGroup" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MWebSection" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TechnicalLibrary_MWebSection" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductPage_MWebTitle" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_NetPriceList_ProductPageCode" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductAdvisory_ProductPage" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_EducationalProducts_ProductPage" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_NewProducts_ProductPage" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductText_ProductPage" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductVideo_ProductPage" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_TNTechNote_ProductPage" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_Webfields_ProductPage" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_ProductVideo_Video" ManuallyRouted="false" />
+        <AssociationConnector Association="AlphatoolsModel.FK_Webfields_WebPartNo" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

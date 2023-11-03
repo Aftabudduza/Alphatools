@@ -1,0 +1,126 @@
+﻿<%@ Page Language="vb" Explicit="true" Strict="true" AutoEventWireup="false" Debug="true" %>
+<%@Import NameSpace="AlphaTools"%>
+<%@Import NameSpace="AlphaTools.GlobalDeclarations"%>
+<%@ Register TagPrefix="adi" TagName="ProductSearch" Src="~/Controls/ProductSearch.ascx" %>
+<%@ Register TagPrefix="adi" TagName="SectionNavigation" Src="~/Controls/SectionNavigation.ascx" %>
+<script runat="server">
+    Dim strSQL As String
+    Dim objConnection As New Data.SqlClient.SqlConnection
+    Dim objCommand As Data.SqlClient.SqlCommand
+    Dim objDataReader As Data.SqlClient.SqlDataReader
+    Dim strQueryString As String = ""
+    Dim strCurrentWebGroupID As Integer = 0
+    Dim strCurrentProductPageCode As String = ""
+    Dim numIndex As Integer = 0
+    Dim numIncrementPage As Integer = 1
+    Dim numIncrementItemsOnThisPage As Integer = 0
+    Dim numUniqueItemsOnThisPage As Integer = 0
+    Dim numIncrementTotal As Integer = 0
+    Dim flgSame As Boolean = True
+    Dim numPage As String
+
+    Private Sub Page_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Me.Load
+    
+        Dim strEmail As String = Request("Email")
+            
+        If strEmail <> "" Then
+            strSQL = strSQL & "MembersGhines.Email = '" & MakeSQLSafe(strEmail) & "' AND "
+            strQueryString = strQueryString & "&Email=" & strEmail
+        End If
+
+        If strSQL <> "" Then
+            strSQL = "WHERE " & Left(strSQL, (Len(strSQL) - 4))
+        End If
+
+        strSQL = "SELECT Email " & _
+         "FROM MembersGhines " & _
+         strSQL
+        
+        'Response.Write(strSQL)
+        objConnection.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+        objConnection.Open()
+    		
+        objCommand = New Data.SqlClient.SqlCommand(strSQL, objConnection)
+        objDataReader = objCommand.ExecuteReader()
+
+        If objDataReader.HasRows Then
+            Response.Redirect("http://www.alpha-tools.com/files/members/ghinespublic/")
+            Response.End()
+        Else
+            Response.Redirect("MembersGhines2.aspx")
+            Response.End()
+        End If
+        
+    End Sub
+	
+Private Sub Page_Unload(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Unload
+    CleanUp()
+End Sub
+
+Protected Sub Page_Error(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Error
+    CleanUp()
+End Sub
+    
+Private Sub CleanUp()
+    If (objDataReader Is Nothing) = False Then
+        objDataReader.Close()
+        objDataReader.Dispose()
+        objDataReader = Nothing
+    End If
+		
+    If (objCommand Is Nothing) = False Then
+        objCommand.Dispose()
+        objCommand = Nothing
+    End If
+
+    If (objConnection Is Nothing) = False Then
+        objConnection.Close()
+        objConnection.Dispose()
+        objConnection = Nothing
+    End If
+End Sub
+</script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+	<title>Alpha Professional Tools</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<link rel="Stylesheet" type="text/css" href="/includes/screen.css" media="screen" />
+</head>
+<body class="listing">
+	<div id="bodyContainer">
+		<div id="bodyWrapper">
+			<div id="header">
+				<dl>
+					<dt>
+						<a href="/index.aspx"><img src="/images/alphatools_sub_logo.gif" class="logo" alt="Alpha Professional Tools&reg; | Cutting, Drilling, Grinding, Polishing & Profiling Tools" /></a>
+					</dt>
+					<dd>
+						<h1>
+							<a href="/index.aspx">Providing Better Solutions to the Professional</a>
+						</h1>
+					</dd>									
+				</dl>
+				<h2>Search for Ghines Member</h2>
+				<div id="banner"><img src="/images/banner_left_generic.jpg" alt="Quality Tools for Professionals | Tools for Cutting, Drilling, Grinding, Polishing & Profiling" /><img src="/images/banner_middle_generic.gif" alt="Quality Tools for Professionals | Tools for Cutting, Drilling, Grinding, Polishing & Profiling" /><img src="/images/banner_right_generic.jpg" alt="Quality Tools for Professionals | Tools for Cutting, Drilling, Grinding, Polishing & Profiling" style="width: 552px; height: 144px;" /></div>
+			</div>
+			<div id="busStmnt">
+				<!--#include virtual="includes/busStmnt.htm"-->
+				<a href="/ProductSearch.aspx" class="productSearchLink">Product Search &gt;</a>
+				<!--<a href="">Members &gt;&gt;</a>-->
+			</div>
+			<div id="contentContainer">
+				<div id="leftNavigation">
+					<adi:SectionNavigation runat="server" />
+					<!--#include virtual="includes/nav_main.htm"-->
+				</div>
+				<div id="content">
+				
+			    </div>
+<%--				<adi:MemberGSearchResults runat="server" />
+--%>			</div>
+			<!--#include virtual="includes/footer.htm"-->
+		</div>
+	</div>
+</body>
+</html>

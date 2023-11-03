@@ -1,0 +1,181 @@
+				<div id="productSearch">
+					<h3>Product Search <!--&or;--></h3>
+					<p>Select one or more critieria.</p>
+					<form method="post" action="/SearchResults.aspx">
+						<dl>
+							<dt>
+								<label for="PartNumber" title="Part Number">Part Number:</label>
+							</dt>
+							<dd>
+								<input id="PartNumber" name="PartNumber" type="text" value="<%=Request("PartNumber")%>" />
+							</dd>
+							<dt>
+								<label for="ProductName" title="Product Name">Product Name:</label>
+							</dt>
+							<dd>
+								<input id="ProductName" name="ProductName" type="text" value="<%=Request("ProductName")%>" />
+							</dd>
+							<dt>
+								<label for="Process" title="Process">Process:</label>
+							</dt>
+							<dd>
+								<select name="Process" id="Process">
+									<option value="">-Search All-</option>
+<%
+
+	Dim strConnect_Search As New Data.SqlClient.SqlConnection
+	strConnect_Search.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+	strConnect_Search.Open()
+
+		Dim strSQL_Search As String
+		Dim numCurrentSectionID_Search As Integer = 0
+
+		strSQL_Search = "SELECT * " & _
+		   "FROM MProcess " & _
+		   "WHERE ProcessID <> 0"
+
+		Dim strDr_Search As Data.SqlClient.SqlDataReader 
+		Dim strCMD_Search As New Data.SqlClient.SqlCommand(strSQL_Search, strConnect_Search)
+		strDr_Search = strCMD_Search.ExecuteReader()
+
+		Do While strDr_Search.Read
+			%>
+			<option value="<%=strDr_Search.Item("ProcessID").ToString.Trim%>" <%=IIf((strDr_Search.Item("ProcessID").ToString.Trim = Request("Process")),"selected","")%>>
+					<%=strDr_Search.Item("Process").ToString.Trim%>
+			</option>
+			<%
+		Loop
+		strDr_Search.Close()
+		strConnect_Search.Close()
+%>
+
+								</select>
+							</dd>
+							<dt>
+								<label for="Usage" title="Usage">Usage:</label>
+							</dt>
+							<dd>
+								<select id="Usage" name="Usage">
+									<option value="">-Search All-</option>
+<%
+	strConnect_Search.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+	strConnect_Search.Open()
+
+	numCurrentSectionID_Search = 0
+
+	strSQL_Search = "SELECT * " & _
+	   "FROM MPartUsage " & _
+	   "WHERE PartUsageID <> 0"
+
+	strCMD_Search = New Data.SqlClient.SqlCommand(strSQL_Search, strConnect_Search)
+	strDr_Search = strCMD_Search.ExecuteReader()
+
+	Do While strDr_Search.Read
+		%>
+		<option value="<%=strDr_Search.Item("PartUsageID").ToString.Trim%>" <%=IIf((strDr_Search.Item("PartUsageID").ToString.Trim = Request("Usage")),"selected","")%>>
+				<%=strDr_Search.Item("PartUsage").ToString.Trim%>
+		</option>
+		<%
+	Loop
+	strDr_Search.Close()
+	strConnect_Search.Close()
+	%>
+								</select>
+							</dd>
+							<dt>
+								<label for="Material" title="Material">Material:</label>
+							</dt>
+							<dd>
+								<select id="Material" name="Material">
+									<option value="">-Search All-</option>
+<%
+	strConnect_Search.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+	strConnect_Search.Open()
+
+	numCurrentSectionID_Search = 0
+
+	strSQL_Search = "SELECT * " & _
+	   "FROM MMaterial"
+
+	strCMD_Search = New Data.SqlClient.SqlCommand(strSQL_Search, strConnect_Search)
+	strDr_Search = strCMD_Search.ExecuteReader()
+
+	Do While strDr_Search.Read
+		%>
+		<option value="<%=strDr_Search.Item("MaterialCode").ToString.Trim%>" <%=IIf((strDr_Search.Item("MaterialCode").ToString.Trim = Request("Material")),"selected","")%>>
+				<%=strDr_Search.Item("Material").ToString.Trim%>
+		</option>
+		<%
+	Loop
+	strDr_Search.Close()
+	strConnect_Search.Close()
+%>
+								</select>
+							</dd>
+							<dt>
+								<label for="IndustryGroup" title="Industry Group">Industry Group:</label>
+							</dt>
+							<dd>
+								<select id="IndustryGroup" name="IndustryGroup">
+									<option value="">-Search All-</option>
+<%
+	strConnect_Search.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+	strConnect_Search.Open()
+
+	numCurrentSectionID_Search = 0
+
+	strSQL_Search = "SELECT * " & _
+	   "FROM MIndustry"
+
+	strCMD_Search = New Data.SqlClient.SqlCommand(strSQL_Search, strConnect_Search)
+	strDr_Search = strCMD_Search.ExecuteReader()
+
+	Do While strDr_Search.Read
+		%>
+		<option value="<%=strDr_Search.Item("IndustryCode").ToString.Trim%>" <%=IIf((strDr_Search.Item("IndustryCode").ToString.Trim = Request("IndustryGroup")),"selected","")%>>
+				<%=strDr_Search.Item("Industry").ToString.Trim%>
+		</option>
+		<%
+	Loop
+	strDr_Search.Close()
+	strConnect_Search.Close()
+%>
+								</select>
+							</dd>
+							<dt>
+								<label for="Application" title="Application">Application:</label>
+							</dt>
+							<dd>
+								<select id="Application" name="Application">
+									<option value="">-Search All-</option>
+<%
+	strConnect_Search.ConnectionString = ConfigurationManager.ConnectionStrings("AlphaWebConnectionString").ConnectionString
+	strConnect_Search.Open()
+
+	numCurrentSectionID_Search = 0
+
+	strSQL_Search = "SELECT * " & _
+	   "FROM MApplication " & _
+	   "WHERE ApplicationID <> 0"
+
+	strCMD_Search = New Data.SqlClient.SqlCommand(strSQL_Search, strConnect_Search)
+	strDr_Search = strCMD_Search.ExecuteReader()
+
+	Do While strDr_Search.Read
+		%>
+		<option value="<%=strDr_Search.Item("ApplicationID").ToString.Trim%>" <%=IIf((strDr_Search.Item("ApplicationID").ToString.Trim = Request("Application")),"selected","")%>>
+				<%=strDr_Search.Item("Application").ToString.Trim%>
+		</option>
+		<%
+	Loop
+	strDr_Search.Close()
+	strConnect_Search.Close()
+%>
+								</select>
+							</dd>
+						</dl>
+						<input class="image" type="image" name="Submit" value="Submit" src="/images/productsearch_submitbutton.gif" title="Submit" style="width: 67px; height: 18px;" />
+					</form>
+                
+                    
+				</div>

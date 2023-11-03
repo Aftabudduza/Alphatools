@@ -1,0 +1,474 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49333695-A537-484A-9FD2-4B33E4CB31F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlphatoolServices</RootNamespace>
+    <AssemblyName>AlphatoolServices</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphatoolServices">
+      <HintPath>..\Alphatool\Bin\AlphatoolServices.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\Alphatool\Bin\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BO\AboutUs.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Affiliations.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Alphatool_Model.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alphatool_Model.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Alphatool_Model.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Alphatool_Model.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Alphatool_Model.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Catalogs.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\CMSPageRef.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Collection.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\CollectionDupInfo.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\CollectionEmail.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\C_SerialNos2020.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\DealerInfo.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\dtproperties.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\dt_getpropertiesbyid_Result.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\dt_getpropertiesbyid_u_Result.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\EducationalMaterial.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\EmailSignup.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Employment.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\EventCalendar.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\GetRecordCountsForAllTables_Result.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\HomeBanners.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\HomeCarousel.cs" />
+    <Compile Include="BO\HomeProducts.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Links.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\LinksType.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MAdvisoryType.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MApplication.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MCAProp65.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MContact.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MDealerWebSiteType.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Members.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MetalProducts.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MFlyer.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MIndustry.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MLibrary.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MMaintenanceCard.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MManual.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MMaterial.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MMsds.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MNetTitle.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MOtherRef1.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MOtherRef2.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MOtherRef3.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MOtherReference.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MPageGroup.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MPageSection.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MPartsList.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MPartUsage.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MPPCIndustry.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MPPCIndustrySectionGroupPages.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MPPCIndustrySectionGroupSpareParts.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MProcess.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MProductRegModel.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MRegion.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MTechNote.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MTerritory.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MWebGroup.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MWebSection.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\MWebTitle.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\NetPriceInfo.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\NewProducts.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ONYX_AlphaWebOnyx_dbo_ProductText.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ONYX_AlphaWebOnyx_dbo_ProductText1.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\PartsInfo.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\PartsPage.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\PartsWebfields.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Policies.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\PressRelease.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductAdvisory.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductBulletins.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductBullets.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductFields.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductFieldsOLD.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductFieldsPending.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductInfo.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductPage.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductPage_Snippets.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductRegistration.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductRelatedText.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductRelatedTextNew.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductText.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ProductVideo.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\RequestADealerInfo.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Shop4_Extract_Result.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Shopatron.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ShopIntlCatData.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ShopIntlCatDataTP.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ShopIntlProductData.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ShopIntlProductDataTP.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ShopIntlSpecUpload.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\ShopWebFields.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Shop_Description.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\spTNChartTemp4_Result.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\spTNChart_Result.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\spVideoTemplate_Result.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\sysdiagrams.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\TechnicalLibrary.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\TNTechNote.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\TNTechNoteFAQ.cs" />
+    <Compile Include="BO\Video.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\VIEWProductPageNoProductText.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\VIEWProductPageProductText.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\VIEWWebfieldsIndustry.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\VIEWWebfieldsMaterial.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\VIEWWebfieldsUsageProcessApplication.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Webfields.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\Webfields2.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\WebPartNo.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="BO\WhatIsNew.cs">
+      <DependentUpon>Alphatool_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DA\AffiliationsDA.cs" />
+    <Compile Include="DA\BaseDA.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DA\CMSPageRefDA.cs" />
+    <Compile Include="DA\MPartsListDA.cs" />
+    <Compile Include="DA\MOtherRef3DA.cs" />
+    <Compile Include="DA\MOtherRef2DA.cs" />
+    <Compile Include="DA\MOtherRef1DA.cs" />
+    <Compile Include="DA\EmailSignupDA.cs" />
+    <Compile Include="DA\MPPCIndustrySectionGroupSparePartsDA.cs" />
+    <Compile Include="DA\PartsInfoDA.cs" />
+    <Compile Include="DA\PartsPageDA.cs" />
+    <Compile Include="DA\PartsWebfieldsDA.cs" />
+    <Compile Include="DA\WhatIsNewDA.cs" />
+    <Compile Include="DA\LinksDA.cs" />
+    <Compile Include="DA\MetalProductsDA.cs" />
+    <Compile Include="DA\ProductBulletinsDA.cs" />
+    <Compile Include="DA\EventCalendarDA.cs" />
+    <Compile Include="DA\EducationalMaterialDA.cs" />
+    <Compile Include="DA\NewProductsDA.cs" />
+    <Compile Include="DA\ProductRegistrationDA.cs" />
+    <Compile Include="DA\RequestADealerInfoDA.cs" />
+    <Compile Include="DA\ProductBulletsDA.cs" />
+    <Compile Include="DA\ProductRelatedTextDA.cs" />
+    <Compile Include="DA\ProductInfoDA.cs" />
+    <Compile Include="DA\WebfieldsDA.cs" />
+    <Compile Include="DA\VideoDA.cs" />
+    <Compile Include="DA\ProductVideoDA.cs" />
+    <Compile Include="DA\MFlyerDA.cs" />
+    <Compile Include="DA\MManualDA.cs" />
+    <Compile Include="DA\MOtherReferenceDA.cs" />
+    <Compile Include="DA\MMaintenanceCardDA.cs" />
+    <Compile Include="DA\MTechNoteDA.cs" />
+    <Compile Include="DA\MMsdsDA.cs" />
+    <Compile Include="DA\ProductTextDA.cs" />
+    <Compile Include="DA\MPPCIndustrySectionGroupPagesDA.cs" />
+    <Compile Include="DA\MWebGroypDA.cs" />
+    <Compile Include="DA\ProductPageDA.cs" />
+    <Compile Include="DA\MembersDA.cs" />
+    <Compile Include="DA\MPPCIndustryDA.cs" />
+    <Compile Include="DA\MWebSectionDA.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\MyEntities.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Utility\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="BO\Alphatool_Model.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Alphatool_Model.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="BO\Alphatool_Model.edmx.diagram">
+      <DependentUpon>Alphatool_Model.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
+    <Folder Include="bin\Release\" />
+    <Folder Include="obj\Debug\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BO\Alphatool_Model.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Alphatool_Model.edmx</DependentUpon>
+      <LastGenOutput>Alphatool_Model.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="BO\Alphatool_Model.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Alphatool_Model.edmx</DependentUpon>
+      <LastGenOutput>Alphatool_Model.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

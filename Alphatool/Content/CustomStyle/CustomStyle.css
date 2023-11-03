@@ -1,0 +1,197 @@
+﻿/*
+Author: Go To Consulting
+Author URL: http://www.gotoconsulting.com
+Author e-mail: info@gotoconsulting.com
+Created: May 2016
+*/
+
+.Logoutbar {
+    margin: 0 5px;
+}
+
+.LogoutHeaderBackground {
+    background-color: #f1f1f1;
+}
+
+/*#login-dp {
+    background-color: #fff;
+    left: -96px;
+    min-width: 250px;
+    overflow: hidden;
+    padding: 14px 14px 0;
+    z-index: 99999;
+}*/
+
+.login-dp {
+    background-color: #fff;
+    text-align: right;
+    float: right;
+    /*min-width: 250px;*/
+    overflow: hidden;
+    padding: 14px 14px 0;
+    z-index: 99999;
+}
+
+.dropdown1>a:before {
+	font-family: 'FontAwesome';
+	content: "\f107";
+	position: absolute;
+	left: auto;
+	top: 15px;
+	right: 6px;
+	line-height: 1;
+	color: #d1d1d1;
+}
+
+.page-head-line {
+    border-bottom: 2px solid #f0677c;
+    color: #f0677c;
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 0 !important;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/*.panel-default > .panel-heading1 {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    color: #333;
+}*/
+
+/*.panel-heading1 {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    color: #333;
+}*/
+
+.bradcam-panel {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #f5f5f5;
+    -webkit-border-image: none;
+    -moz-border-image: none;
+    -ms-border-image: none;
+    -o-border-image: none;
+    border-image: none;
+
+    border-style: solid;
+    border-width: 1px;
+    -webkit-box-shadow: 0 1px 1px #000000;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    -ms-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px #000000;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.bradcam-panel-default {
+    border-color: #ddd;
+}
+
+.bradcam-panel-default > .bradcam-panel-heading {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+    color: #337ab7;
+}
+
+.bradcam-link {
+    color: #31b0d5
+}
+
+.CMS-radio-input {
+    margin-left: 20px;
+    font-family: "Open Sans",sans-serif;
+    font-size: 14px;
+}
+
+.pageTopheader {
+    background-color: #f1f1f1;
+    color: #f3764f;
+    padding: 10px;
+    text-align: right;
+}
+
+.logoutbrSpanColor {
+    color: #f3764f;
+}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    /*border-top: 1px solid #f3f3f3;*/
+    padding: 8px 15px;
+    vertical-align: middle;
+}
+
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"] {
+    margin-left: 5px;
+    position: absolute;
+}
+
+.sidebarborder {
+    background: none repeat scroll 0 0 #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+    width: 174px;
+}
+
+.wizarbtn {
+    background: none repeat scroll 0 0 #a9a9a9;
+    border: 1px solid #e84c3d;
+    border-radius: 5px;
+    box-shadow: -1px 1px 4px -3px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.wizarbtnStnext {
+    background: none repeat scroll 0 0 #e84c3d;
+    border: 1px solid #f8ad94;
+    border-radius: 5px;
+    box-shadow: -1px 1px 4px -3px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.stepstyle {
+    padding: 25px;
+}
+
+.tbl_Wizzad {
+    float: left;
+    margin-bottom: 20px;
+    margin-top: 35px;
+}
+
+/*div#productDocuments div#first {
+    background: rgba(0, 0, 0, 0) url("/Images/product_documents_left_bg.gif") no-repeat scroll left center;
+    padding: 8px 3px 2px 15px;
+}
+
+div.cutting div.productDocument a:hover {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg_cutting.gif") no-repeat scroll 0 0;
+}
+
+div.productDocument a {
+    background: rgba(0, 0, 0, 0) url("/images/productlink_bg.gif") no-repeat scroll 0 0;
+    color: #80807e;
+    display: block;
+    font-size: 11px;
+    font-weight: bold;
+    height: 40px;
+    padding-top: 7px;
+    text-decoration: none;
+    width: 58px;
+}*/
+
+
+

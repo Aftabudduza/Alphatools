@@ -1,0 +1,61 @@
+﻿<%@ Page Title="Alpha Professional Tools® :: Technical Library" Language="C#" MasterPageFile="~/MasterPages/Home.master" AutoEventWireup="true" CodeFile="LibraryTechAcademy.aspx.cs" Inherits="Pages_Sitemap" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
+    <style>
+        #cont ul li a {
+            color: #337ab7 !important;
+            text-decoration: underline;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="Server">
+    <div class="page-intro">
+        <ol id="Breadcrumb" class="breadcrumb" runat="server">
+            <li><i class="fa fa-home pr-10"></i>
+                <a href="/Default.aspx">Home</a></li>
+            <li class="active">Technical Library</li>
+        </ol>
+    </div>
+
+    <section class="main-container" style="margin-top: 0px;">
+       <div class="row">
+                <div class="main col-md-12">
+                  <h2 class="page-title margin-top-clear" id="productTitle" runat="server">Alpha® Tech Academy </h2>
+                    <a target="_blank" href="http://www.adobe.com/products/acrobat/readstep2.html">
+                        <img width="32" height="32" title="Download Adobe Acrobat free to view these documents" alt="Download Adobe Acrobat free to view these documents" src="/Images/pdficon_large.gif" style="float: left; margin: 0px 10px 20px 0;"></a>
+                   <table width="875" border="0" cellspacing="1" cellpadding="1">
+  <tr>
+    <td width="672"><p>
+                    Below are links for instructional videos and podcasts for the Alpha® product line. These materials are continually updated, as well as additional being added to help you keep current with the changing trends and applications. For additional questions, please contact our technical department at 800-648-7229 or via e-mail at <a href="mailto:technical@alpha-tools.com">technical@alpha-tools.com</a>. </p></td>
+    <td width="168"><img src="../Images/AlphaTechAcademy.jpg" width="144" height="81" alt="TechAcademy" longdesc="http://www.alpha-tools.com" /></td>
+  </tr>
+  <tr>
+     </tr>
+</table>
+
+                    <p style="text-align: center;">
+                        <a target="_self" href="#1">Videos</a> | 
+                        <a target="_self" href="#2">Podcasts</a> | 
+                  </p>
+         </div>
+                     <div id="cont" class="main col-md-12" style="padding-left: 20%;">
+                       <%-- <div id="1" class="table table-responsive">
+                            <h3 style="color: #337ab7;">Tech Notes</h3>
+                                <div id="techNoteDiv" runat="server"></div>
+                        </div>
+                        <hr/>--%>
+                        <div id="1" class="table table-responsive">
+                            <h3 style="color: #337ab7;">Videos</h3>
+                                <div id="msdsDiv" runat="server"></div>
+                        </div>
+                        <hr/>
+                        <div id="2" class="table table-responsive">
+                            <h3 style="color: #337ab7;">Podcasts</h3>
+                                <div id="manualDiv" runat="server"></div>
+                      
+                      </div>
+                </div>
+            </div>
+    </section>
+</asp:Content>
+

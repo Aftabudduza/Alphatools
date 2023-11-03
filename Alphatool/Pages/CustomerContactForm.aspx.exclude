@@ -1,0 +1,625 @@
+﻿<%@ Page Title="Alpha Professional Tools® :: Customer Contact Information Form" Language="C#" MasterPageFile="~/MasterPages/Home.master" AutoEventWireup="true" CodeFile="CustomerContactForm.aspx.cs" Async="true" Inherits="pages_CustomerContactForm" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:PlaceHolder runat="server" ID="metaTags" />
+    <style type="text/css">
+        .control-group {
+            float: left;
+            width: 90%;
+            padding: 5px 0;
+        }
+
+        label {
+            float: left;
+            width: 30%;
+            font-weight: normal;
+        }
+
+        .span6 {
+            float: left;
+            width: 50%;
+        }
+
+        .controls {
+            float: left;
+            width: 60%;
+        }
+
+        .required {
+            color: red;
+        }
+        @media screen and (min-width: 320px) and (max-width: 640px) {
+            label {
+                float: left;
+                font-weight: normal;
+                width: 100% !important;
+            }
+
+            .span6 {
+                float: left;
+                width: 88%;
+            }
+
+            .controls {
+                float: left;
+                width: 100% !important;
+            }
+
+            .btn {
+                margin-left: 18% !important;
+                min-width: 0;
+
+            }
+        }
+    .p {font-family: sans-serif; font-weight: normal; font-size: 11pt; }
+.s1 {font-family: sans-serif; font-weight: normal; font-size: 7pt; }
+    .s6 {font-family: sans-serif; font-weight: normal; font-size: 10pt; }
+    .controls1 {            float: left;
+            width: 60%;
+}
+.controls1 {                float: left;
+                width: 100% !important;
+}
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
+   <div class="page-intro">
+        <ol class="breadcrumb">
+                <li><i class="fa fa-home pr-10"></i>
+                    <a href="/Default.aspx">Home</a></li>
+                <li class="active">Customer Contact Information Form</li>
+     </ol>
+</div>
+    <section class="main-container" style="margin-top: 0px;">
+         <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <span class="title"> <h3>Customer Contact Information Form</h3>
+                            </span>
+                        </div>
+                        <div class="panel-body">
+                             <asp:ToolkitScriptManager ID="ScriptManager1" runat="server">
+                    </asp:ToolkitScriptManager>
+                            <p>Alpha<sup>&reg;</sup></span> has implemented technologies to reduce the amount a printed materials such as sales order confirmations, invoices, statements, etc. and are now sending these items via e-mail.  Please complete this form to ensure these items are sent to the appropriate personnel in your company as well as for those who require access to our Members’ section to obtain document copies and artwork.</p>
+                            <ul>
+                            <li><strong>SOC</strong> - Sales Order Confirmations – From Alpha<sup>&reg;</sup> </span>Customer Service &amp; Tool Department Contacts
+                           </li> 
+                           <li> <strong>RMA</strong> - Return Merchandise Authorizations (RMAs) - From Alpha® Customer Service &amp; Tool Department Contacts</li>
+                           <li><strong>INV </strong>- Invoices and Statements - From Alpha<sup>&reg;</sup> Accounting Contacts</li>
+                           <li><strong>DPP</strong> - Dealer Program, Pricing Information and Promotions – To Receive Dealer Information and Promotions</li>
+                           <li><strong>WEB</strong> - Website Access for Dealer Information/Artwork - Members’ Section Access</li>
+                           <li><strong>ART</strong> - Website Access for Artwork ONLY - Members’ Section Artwork ONLY</li>
+                         </ul>
+<div style="width:95%; padding:10px;">
+  <p><strong>Please be sure the information is complete before submitting the request.</strong></p></div>
+ <Table><table width="744" border="1" cellspacing="0" >
+<TR>
+<TD width="147">
+<P>Company Name: </P>
+</TD>
+<TD width="323">
+<P>&nbsp; </P>
+<TD width="123">
+<P>Account No: </P>
+</TD>
+
+<TD width="124">
+<P>&nbsp; </P>
+</TD>
+</TR>
+</Table>
+
+<P align="right"><em>*Please Check All That Apply</em></P><table border="1" cellspacing="0" >
+<TR>
+<TD>
+<P>CONTACT NAME </P>
+</TD>
+
+<TD>
+<P>TITLE </P>
+</TD>
+
+<TD>
+<P>PHONE </P>
+</TD>
+
+<TD>
+<P>E-MAIL ADDRESS </P>
+</TD>
+
+<TD>
+<P align="center">SOC </P>
+</TD>
+
+<TD>
+<P align="center">RMA </P>
+</TD>
+
+<TD>
+<P align="center">INV </P>
+</TD>
+
+<TD>
+<P align="center">DPP </P>
+</TD>
+
+<TD>
+<P align="center">WEB </P>
+</TD>
+
+<TD>
+<P align="center">ART </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+
+<TR>
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P>&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+
+<TD>
+<P align="center">&nbsp; </P>
+</TD>
+</TR>
+</Table>
+ <p class="s6">Any questions should be directed to our main office at 800-648-7229 - <span style=" color: #00F;">Thank you for your support and joining us in our efforts.</span></p>
+ <div class="control-group clearfix" style="border: none;">
+                                    <div class="control-group">
+                                        <label class="control-label" for="input20">Company</label>
+                                      <div class="controls">
+                                        <asp:TextBox runat="server" ID="txtName" CssClass="span6"></asp:TextBox>
+                                        </div>
+   </div>
+                                     <div class="control-group">
+                                        <label class="control-label" for="input20"> Contact Name </label>
+                                       <div class="controls">
+                                         <asp:TextBox runat="server" ID="txtCompanyName" CssClass="span6"></asp:TextBox>
+                                        </div>
+                                    </div>
+</div>
+<div class="control-group clearfix" style="border: none;">
+  <div class="control-group">
+                                        <label class="control-label" for="input15">Title</label>
+    <div class="controls">
+      <asp:TextBox runat="server" ID="txtAddress1" CssClass="span6"></asp:TextBox>
+      </div>
+                                    </div>
+</div>
+                                <div class="control-group">
+                                        <label class="control-label" for="input20"> Phone</label>
+                                      <div class="controls">
+                                        <asp:TextBox runat="server" ID="txtWorkPhone" CssClass="span6"></asp:TextBox>
+                                      </div>
+                                      <div class="control-group clearfix" style="border: none;">
+                                    <div class="control-group">
+                                        <label class="control-label" for="input20">Email</label>
+                                      <div class="controls">
+                                        <asp:TextBox runat="server" ID="txtEmail" CssClass="span6"></asp:TextBox>
+                                      </div>
+                                  </div>   
+                                    
+                                    </div> 
+                                   <div class="control-group"></div>
+                                  <div class="form-actions">
+                          <asp:Button ID="btnSubmit" Text="Submit" runat="server"  style="margin-left:25%;" OnClick="btnSubmit_Click"  CssClass="btn btn-primary" />
+</div>
+</div>               
+                     </div>
+                </div>
+            </div>
+    </section>
+</asp:Content>
+
+
