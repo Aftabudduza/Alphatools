@@ -13,11 +13,11 @@
                     <li><a href="#"></a></li>  
                 </ul>
             </div>
-            <div class="row">
+            <div class="row">   
                 <div class="col-md-10 col-md-offset-1">
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="footer-content">
-                            <h4>Company Overview</h4>
+                            <h4>Company Overview</h4>   
                             <nav>
                                 <ul class="nav nav-pills nav-stacked">  
                                     <li><a href="../Pages/AboutUs.aspx">About Us</a></li>
@@ -27,7 +27,7 @@
                                     <li><a target="_blank" href="../Pages/Quivers.aspx">Quivers Ecommerce</a></li>
                                     <li><a target="_blank" href="../Pages/socialmedia.aspx">Social Media</a></li>
                                     <li><a target="_blank" href="mailto: alphaweb@alpha-tools.com">Webmaster</a></li>
-                                    <%--<li><a href="../Pages/Sitemap.aspx">Sitemap</a></li>--%>
+                                    <li><a href="../Pages/Sitemap.aspx">Sitemap</a></li>
                                     
                                 </ul>
                             </nav>
@@ -39,13 +39,13 @@
                             <nav>
                                 <ul class="nav nav-pills nav-stacked">
                                     <li><a href="../Pages/ContactUs.aspx">Contact Us</a></li>
-                                    <%--<li><a href="../WhatsNew.aspx">What's New</a></li>
---%>
+                                    <li><a href="../WhatsNew.aspx">What's New</a></li>
+
                                     <li><a href="../Pages/Library.aspx#6">Flyers</a></li>
                                     <li><a href="../Pages/Library.aspx#5">Other References</a></li>
                                     <li><a href="../Pages/EmailSignUp.aspx">Join our Mailing List</a></li>
-                                    <li><a href="../Pages/BecomeADist.aspx">Become a Distributor</a></li>
-                                    <li><a href="../Pages/RequestADist.aspx">Find A Distributor</a></li>
+                                    <li><a href="../Pages/BecomeADistributor.aspx">Become a Distributor</a></li>
+                                    <li><a href="../Pages/RequestADealerInfo.aspx">Find A Dealer</a></li>
                                     <li><a href="../Pages/ShopLocation.aspx">Shop Location</a></li>
                                 </ul>
                             </nav>
@@ -56,7 +56,7 @@
                             <h4>Product Support</h4>
                             <nav>
                                 <ul class="nav nav-pills nav-stacked">
-                                    <li><a href="../Pages/ProductReg.aspx">Product Registration</a></li>
+                                    <li><a href="../Pages/ProductRegistration.aspx">Product Registration</a></li>
                                     <li><a href="../ProductBulletins.aspx">Product Bulletins</a></li>
                                     <li><a href="../Pages/RepairCenters.aspx">Tool Repair Centers</a></li>
                                     <li><a href="../Pages/Library.aspx#2">Safety Data Sheets</a></li>
@@ -64,7 +64,7 @@
                                     <li><a href="../Pages/Library.aspx#4">Maintenance Cards</a></li>
                                     <li><a href="../Pages/Library.aspx#8">Parts Lists</a></li>
                                     <li><a href="../Pages/FAQ.aspx">FAQs</a></li>
-                                   
+                                    <li><a href="../Pages/TechAcademy.aspx">Media Library</a></li>
 
                                 </ul>
                             </nav>
@@ -75,15 +75,15 @@
                             <h4>Resources</h4>
                             <nav>
                                 <ul class="nav nav-pills nav-stacked">
-                                     <li><a href="../Pages/TechAcademy.aspx">Media Library</a></li><li><a href="../ProductCatalogs.aspx">Catalogs</a></li>
+                                    <li><a href="../ProductCatalogs.aspx">Catalogs</a></li>
                                     <li><a href="../Calendar.aspx">Calendar</a></li>
                                     <li><a href="../LinksAndAffiliations.aspx">Links & Affiliations</a></li>
-                                   <%-- <li><a href="../Pages/MoistureCalculator.aspx">Calculators</a></li>
+                                    <li><a href="../Pages/MoistureCalculator.aspx">Calculators</a></li>
                                     <li><a href="../EducationalMaterials.aspx">Educational Materials</a></li>
-                                     <li><a href="../Pages/Account/Login.aspx">Member's Login</a></li>
-                                    <li><a href="../members.aspx">Member Login</a></li>--%>
+                                    <%-- <li><a href="../Pages/Account/Login.aspx">Member's Login</a></li>--%>
+                                    <li><a href="../members.aspx">Member Login</a></li>
                                     <li><a target="_blank" href="../Pages/ProductSpareParts.aspx?SectionId=120">Parts Direct</a></li>
-                                    <li><a href="../Pages/QuickOrder.aspx">Order Spare Parts</a></li>
+                                    <li><a href="../Pages/QuickOrder.aspx">Quick Order</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -107,7 +107,7 @@
                                 <li class="linkedin"><a target="_blank" href="https://www.linkedin.com/company/alpha-professional-tools" style="border:0px;"><img src="../Images/in.png" /></a></li>
                                 <li class="twitter"><a target="_blank" href="http://www.twitter.com/alphaprotools" style="border:0px;"><img src="../Images/twitter.png" /></a></li>
                                 <li class="Youtube"><a target="_blank" href="https://www.youtube.com/user/alphamedia" style="border:0px;"><img src="../Images/yt.png" /></a></li>
-                               <%-- <li class="googleplus"><a target="_blank" href="https://plus.google.com/113239087275763146558" style="border:0px;"><img src="../Images/gplus.png" /></a></li>--%>
+                                <li class="googleplus"><a target="_blank" href="https://plus.google.com/113239087275763146558" style="border:0px;"><img src="../Images/gplus.png" /></a></li>
 
 
                             </ul>
@@ -127,7 +127,7 @@
 
                         </div>
                         <div class="col-md-2" style="text-align: center; cellpadding: 2px;">
-                            <input type="button" class="btn btn-default" value="ORDER SPARE PARTS" onclick="document.location.href = '../Pages/QuickOrder.aspx.aspx'"> </div>        </div>
+                            <input type="button" class="btn btn-default" value="Member Log in" onclick="document.location.href = '../members.aspx'"> </div>        </div>
                     <div class="col-md-2">
                         <a href="../Pages/TechAcademy.aspx">
                             <img style="background-color: #f1f1f1;border-color: #f1f1f1;padding-top: 25px;max-width: 160px;height: 65px;" alt="" src="../Images/AlphaTechAcademy.jpg" />
@@ -158,15 +158,15 @@
                         <img src="../Content/AlphaToolContent/images/icons/email.png" style="display: inline;"></a>
                     <a href="https://saleslogix.alpha-tools.com/slxclient" target="_blank">
                         <img src="../Content/AlphaToolContent/images/icons/saleslogix.png" style="display: inline; margin-left: 10px; margin-right: 10px;">
-                    </a><a href="https://www.salesnow.com/log-in" target="_blank">
-                                        <img src="../Content/AlphaToolContent/images/icons/salesNow.png" style="display:inline;" /></a>
+                    </a><%--<a href="https://saleslogix.alpha-tools.com/slxmobile" target="_blank">
+                                        <img src="../Content/AlphaToolContent/images/icons/saleslogixmobile.png" style="display:inline;" /></a>--%>
                     <a href="https://breeze.softtimeonline.com" target="_blank">
                         <img src="../Content/AlphaToolContent/images/icons/softtime.png" style="display: inline; margin-left: 10px; margin-right: 10px;" /></a>
                     <a href="https://www.concursolutions.com/" target="_blank">
                         <img src="../Content/AlphaToolContent/images/icons/concur.png" style="display: inline; margin-left: 6px; margin-right: 6px;" /></a>
                 </div>
                 <div class="col-md-5">
-                    <p>16 Park Dr Ste 9, Franklin, NJ 07416-9758 | 800-648-7229 | <a href="mailto:info@alpha-tools.com">E-mail Us</p>
+                    <p>103 Bauer Drive, Oakland, NJ 07436-3102 | 800-648-7229 | <a href="mailto:info@alpha-tools.com">E-mail Us</p>
                 </div>
             </div>
         </div>
