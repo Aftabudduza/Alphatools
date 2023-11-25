@@ -1,0 +1,1674 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="AlphatoolsModelStoreContainer" CdmEntityContainer="AlphatoolEntities">
+    <EntitySetMapping Name="C_SerialNos2020">
+      <EntityTypeMapping TypeName="AlphatoolsModel.C_SerialNos2020">
+        <MappingFragment StoreEntitySet="_SerialNos2020">
+          <ScalarProperty Name="AcctNo" ColumnName="AcctNo" />
+          <ScalarProperty Name="ToolID" ColumnName="ToolID" />
+          <ScalarProperty Name="ProductCode" ColumnName="ProductCode" />
+          <ScalarProperty Name="Serial" ColumnName="Serial" />
+          <ScalarProperty Name="Purchase_Date" ColumnName="Purchase Date" />
+          <ScalarProperty Name="AccountName" ColumnName="AccountName" />
+          <ScalarProperty Name="RedID" ColumnName="RedID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CMSPageRef">
+      <EntityTypeMapping TypeName="AlphatoolsModel.CMSPageRef">
+        <MappingFragment StoreEntitySet="CMSPageRef">
+          <ScalarProperty Name="CMSPage" ColumnName="CMSPage" />
+          <ScalarProperty Name="WebsiteID" ColumnName="WebsiteID" />
+          <ScalarProperty Name="CMSContent" ColumnName="CMSContent" />
+          <ScalarProperty Name="CMSTitle" ColumnName="CMSTitle" />
+          <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+          <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+          <ScalarProperty Name="EditorName" ColumnName="EditorName" />
+          <ScalarProperty Name="AffiliateID" ColumnName="AffiliateID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CMSCategoryId" ColumnName="CMSCategoryId" />
+          <ScalarProperty Name="CMSVersion" ColumnName="CMSVersion" />
+          <ScalarProperty Name="Live" ColumnName="Live" />
+          <ScalarProperty Name="PageURL" ColumnName="PageURL" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+          <ScalarProperty Name="MetaTag" ColumnName="MetaTag" />
+          <ScalarProperty Name="IsFooter" ColumnName="IsFooter" />
+          <ScalarProperty Name="IsLeftMenu" ColumnName="IsLeftMenu" />
+          <ScalarProperty Name="LeftMenuOrder" ColumnName="LeftMenuOrder" />
+          <ScalarProperty Name="FooterMenuOrder" ColumnName="FooterMenuOrder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Collection">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Collection">
+        <MappingFragment StoreEntitySet="Collection">
+          <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneWork" ColumnName="PhoneWork" />
+          <ScalarProperty Name="PhoneHome" ColumnName="PhoneHome" />
+          <ScalarProperty Name="PhoneMobile" ColumnName="PhoneMobile" />
+          <ScalarProperty Name="SelectedBtnIn" ColumnName="SelectedBtnIn" />
+          <ScalarProperty Name="SelectedBtnDate" ColumnName="SelectedBtnDate" />
+          <ScalarProperty Name="Answer1" ColumnName="Answer1" />
+          <ScalarProperty Name="Answer2" ColumnName="Answer2" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CollectionDupInfo">
+      <EntityTypeMapping TypeName="AlphatoolsModel.CollectionDupInfo">
+        <MappingFragment StoreEntitySet="CollectionDupInfo">
+          <ScalarProperty Name="CollectionID" ColumnName="CollectionID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Company" ColumnName="Company" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PhoneWork" ColumnName="PhoneWork" />
+          <ScalarProperty Name="PhoneHome" ColumnName="PhoneHome" />
+          <ScalarProperty Name="PhoneMobile" ColumnName="PhoneMobile" />
+          <ScalarProperty Name="SelectedBtnIn" ColumnName="SelectedBtnIn" />
+          <ScalarProperty Name="SelectedBtnDate" ColumnName="SelectedBtnDate" />
+          <ScalarProperty Name="Answer1" ColumnName="Answer1" />
+          <ScalarProperty Name="Answer2" ColumnName="Answer2" />
+          <ScalarProperty Name="PromoCode" ColumnName="PromoCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CollectionEmail">
+      <EntityTypeMapping TypeName="AlphatoolsModel.CollectionEmail">
+        <MappingFragment StoreEntitySet="CollectionEmail">
+          <ScalarProperty Name="SelectedBtnIn" ColumnName="SelectedBtnIn" />
+          <ScalarProperty Name="EmailForward" ColumnName="EmailForward" />
+          <ScalarProperty Name="CollectionDescription" ColumnName="CollectionDescription" />
+          <ScalarProperty Name="Question1" ColumnName="Question1" />
+          <ScalarProperty Name="Question2" ColumnName="Question2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="dtproperties">
+      <EntityTypeMapping TypeName="AlphatoolsModel.dtproperties">
+        <MappingFragment StoreEntitySet="dtproperties">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="objectid" ColumnName="objectid" />
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomeBanners">
+      <EntityTypeMapping TypeName="AlphatoolsModel.HomeBanners">
+        <MappingFragment StoreEntitySet="HomeBanners">
+          <ScalarProperty Name="HomeBannerNo" ColumnName="HomeBannerNo" />
+          <ScalarProperty Name="HBName" ColumnName="HBName" />
+          <ScalarProperty Name="HBImage" ColumnName="HBImage" />
+          <ScalarProperty Name="HBLink" ColumnName="HBLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HomeProducts">
+      <EntityTypeMapping TypeName="AlphatoolsModel.HomeProducts">
+        <MappingFragment StoreEntitySet="HomeProducts">
+          <ScalarProperty Name="HomeProductsNo" ColumnName="HomeProductsNo" />
+          <ScalarProperty Name="HPName" ColumnName="HPName" />
+          <ScalarProperty Name="HPImage" ColumnName="HPImage" />
+          <ScalarProperty Name="HPLink" ColumnName="HPLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LinksType">
+      <EntityTypeMapping TypeName="AlphatoolsModel.LinksType">
+        <MappingFragment StoreEntitySet="LinksType">
+          <ScalarProperty Name="LinkType" ColumnName="LinkType" />
+          <ScalarProperty Name="LinkTypeDescription" ColumnName="LinkTypeDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MAdvisoryType">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MAdvisoryType">
+        <MappingFragment StoreEntitySet="MAdvisoryType">
+          <ScalarProperty Name="AdvisoryType" ColumnName="AdvisoryType" />
+          <ScalarProperty Name="AdvisoryDescription" ColumnName="AdvisoryDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MApplication">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MApplication">
+        <MappingFragment StoreEntitySet="MApplication">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="Application" ColumnName="Application" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MCAProp65">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MCAProp65">
+        <MappingFragment StoreEntitySet="MCAProp65">
+          <ScalarProperty Name="CAProp65ID" ColumnName="CAProp65ID" />
+          <ScalarProperty Name="Chemical" ColumnName="Chemical" />
+          <ScalarProperty Name="CAProp65Text" ColumnName="CAProp65Text" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="CancerChemical" ColumnName="CancerChemical" />
+          <ScalarProperty Name="DevelopmentalChemical" ColumnName="DevelopmentalChemical" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MContact">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MContact">
+        <MappingFragment StoreEntitySet="MContact">
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+          <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ContactTitle" ColumnName="ContactTitle" />
+          <ScalarProperty Name="ContactLastName" ColumnName="ContactLastName" />
+          <ScalarProperty Name="ContactFirstName" ColumnName="ContactFirstName" />
+          <ScalarProperty Name="ContactMobile" ColumnName="ContactMobile" />
+          <ScalarProperty Name="ContactEmail" ColumnName="ContactEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MFlyer">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MFlyer">
+        <MappingFragment StoreEntitySet="MFlyer">
+          <ScalarProperty Name="FlyerID" ColumnName="FlyerID" />
+          <ScalarProperty Name="FLyerDescription" ColumnName="FLyerDescription" />
+          <ScalarProperty Name="FlyerLink" ColumnName="FlyerLink" />
+          <ScalarProperty Name="FlyerNumber" ColumnName="FlyerNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MIndustry">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MIndustry">
+        <MappingFragment StoreEntitySet="MIndustry">
+          <ScalarProperty Name="IndustryCode" ColumnName="IndustryCode" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MLibrary">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MLibrary">
+        <MappingFragment StoreEntitySet="MLibrary">
+          <ScalarProperty Name="LibraryTypeID" ColumnName="LibraryTypeID" />
+          <ScalarProperty Name="LibraryDescription" ColumnName="LibraryDescription" />
+          <ScalarProperty Name="LibraryMemo" ColumnName="LibraryMemo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MMaintenanceCard">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MMaintenanceCard">
+        <MappingFragment StoreEntitySet="MMaintenanceCard">
+          <ScalarProperty Name="MaintenanceCardID" ColumnName="MaintenanceCardID" />
+          <ScalarProperty Name="MaintenanceCardDescription" ColumnName="MaintenanceCardDescription" />
+          <ScalarProperty Name="MaintenanceCardLink" ColumnName="MaintenanceCardLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MManual">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MManual">
+        <MappingFragment StoreEntitySet="MManual">
+          <ScalarProperty Name="ManualID" ColumnName="ManualID" />
+          <ScalarProperty Name="ManualDescription" ColumnName="ManualDescription" />
+          <ScalarProperty Name="ManualLink" ColumnName="ManualLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MMaterial">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MMaterial">
+        <MappingFragment StoreEntitySet="MMaterial">
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MMsds">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MMsds">
+        <MappingFragment StoreEntitySet="MMsds">
+          <ScalarProperty Name="MSDSID" ColumnName="MSDSID" />
+          <ScalarProperty Name="MSDSDescription" ColumnName="MSDSDescription" />
+          <ScalarProperty Name="MSDSLink" ColumnName="MSDSLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MNetTitle">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MNetTitle">
+        <MappingFragment StoreEntitySet="MNetTitle">
+          <ScalarProperty Name="NetTitleID" ColumnName="NetTitleID" />
+          <ScalarProperty Name="NetTitle" ColumnName="NetTitle" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOtherRef1">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MOtherRef1">
+        <MappingFragment StoreEntitySet="MOtherRef1">
+          <ScalarProperty Name="OtherRef1ID" ColumnName="OtherRef1ID" />
+          <ScalarProperty Name="OtherRef1Description" ColumnName="OtherRef1Description" />
+          <ScalarProperty Name="OtherRef1Link" ColumnName="OtherRef1Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOtherRef2">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MOtherRef2">
+        <MappingFragment StoreEntitySet="MOtherRef2">
+          <ScalarProperty Name="OtherRef2ID" ColumnName="OtherRef2ID" />
+          <ScalarProperty Name="OtherRef2Description" ColumnName="OtherRef2Description" />
+          <ScalarProperty Name="OtherRef2Link" ColumnName="OtherRef2Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOtherRef3">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MOtherRef3">
+        <MappingFragment StoreEntitySet="MOtherRef3">
+          <ScalarProperty Name="OtherRef3ID" ColumnName="OtherRef3ID" />
+          <ScalarProperty Name="OtherRef3Description" ColumnName="OtherRef3Description" />
+          <ScalarProperty Name="OtherRef3Link" ColumnName="OtherRef3Link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MOtherReference">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MOtherReference">
+        <MappingFragment StoreEntitySet="MOtherReference">
+          <ScalarProperty Name="OtherReferenceID" ColumnName="OtherReferenceID" />
+          <ScalarProperty Name="OtherReferenceDescription" ColumnName="OtherReferenceDescription" />
+          <ScalarProperty Name="OtherReferenceLink" ColumnName="OtherReferenceLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPageGroup">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MPageGroup">
+        <MappingFragment StoreEntitySet="MPageGroup">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="PageGroup" ColumnName="PageGroup" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPageSection">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MPageSection">
+        <MappingFragment StoreEntitySet="MPageSection">
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="PageSection" ColumnName="PageSection" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPartsList">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MPartsList">
+        <MappingFragment StoreEntitySet="MPartsList">
+          <ScalarProperty Name="MPartsListID" ColumnName="MPartsListID" />
+          <ScalarProperty Name="MPartsListDescription" ColumnName="MPartsListDescription" />
+          <ScalarProperty Name="MPartsListLink" ColumnName="MPartsListLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPartUsage">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MPartUsage">
+        <MappingFragment StoreEntitySet="MPartUsage">
+          <ScalarProperty Name="PartUsageID" ColumnName="PartUsageID" />
+          <ScalarProperty Name="PartUsage" ColumnName="PartUsage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPPCIndustry">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MPPCIndustry">
+        <MappingFragment StoreEntitySet="MPPCIndustry">
+          <ScalarProperty Name="PPCIndustry" ColumnName="PPCIndustry" />
+          <ScalarProperty Name="PPCIndustryName" ColumnName="PPCIndustryName" />
+          <ScalarProperty Name="PPCIndustryNotes" ColumnName="PPCIndustryNotes" />
+          <ScalarProperty Name="PPCIndustryImage" ColumnName="PPCIndustryImage" />
+          <ScalarProperty Name="PPCIndustryLink" ColumnName="PPCIndustryLink" />
+          <ScalarProperty Name="IndustrySort" ColumnName="IndustrySort" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPPCIndustrySectionGroupPages">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MPPCIndustrySectionGroupPages">
+        <MappingFragment StoreEntitySet="MPPCIndustrySectionGroupPages">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MPPCInductryId" ColumnName="MPPCInductryId" />
+          <ScalarProperty Name="MWebSectionId" ColumnName="MWebSectionId" />
+          <ScalarProperty Name="MWebGroupId" ColumnName="MWebGroupId" />
+          <ScalarProperty Name="PPCIndustryLink" ColumnName="PPCIndustryLink" />
+          <ScalarProperty Name="WebSectionSort" ColumnName="WebSectionSort" />
+          <ScalarProperty Name="WebGroupSort" ColumnName="WebGroupSort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MPPCIndustrySectionGroupSpareParts">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MPPCIndustrySectionGroupSpareParts">
+        <MappingFragment StoreEntitySet="MPPCIndustrySectionGroupSpareParts">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="MPPCInductryId" ColumnName="MPPCInductryId" />
+          <ScalarProperty Name="MWebSectionId" ColumnName="MWebSectionId" />
+          <ScalarProperty Name="MWebGroupId" ColumnName="MWebGroupId" />
+          <ScalarProperty Name="PPCIndustryLink" ColumnName="PPCIndustryLink" />
+          <ScalarProperty Name="WebSectionSort" ColumnName="WebSectionSort" />
+          <ScalarProperty Name="WebGroupSort" ColumnName="WebGroupSort" />
+          <ScalarProperty Name="PartsPageCode" ColumnName="PartsPageCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MProcess">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MProcess">
+        <MappingFragment StoreEntitySet="MProcess">
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MRegion">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MRegion">
+        <MappingFragment StoreEntitySet="MRegion">
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="RegionName" ColumnName="RegionName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTechNote">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MTechNote">
+        <MappingFragment StoreEntitySet="MTechNote">
+          <ScalarProperty Name="TechNoteID" ColumnName="TechNoteID" />
+          <ScalarProperty Name="TechNoteDescription" ColumnName="TechNoteDescription" />
+          <ScalarProperty Name="TechNoteLink" ColumnName="TechNoteLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MTerritory">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MTerritory">
+        <MappingFragment StoreEntitySet="MTerritory">
+          <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+          <ScalarProperty Name="TerritoryName" ColumnName="TerritoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MWebGroup">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MWebGroup">
+        <MappingFragment StoreEntitySet="MWebGroup">
+          <ScalarProperty Name="WebGroupID" ColumnName="WebGroupID" />
+          <ScalarProperty Name="WebGroupSort" ColumnName="WebGroupSort" />
+          <ScalarProperty Name="WebGroup" ColumnName="WebGroup" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MWebSection">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MWebSection">
+        <MappingFragment StoreEntitySet="MWebSection">
+          <ScalarProperty Name="WebSectionID" ColumnName="WebSectionID" />
+          <ScalarProperty Name="WebSectionSort" ColumnName="WebSectionSort" />
+          <ScalarProperty Name="WebSection" ColumnName="WebSection" />
+          <ScalarProperty Name="WebDescription" ColumnName="WebDescription" />
+          <ScalarProperty Name="WebOverview" ColumnName="WebOverview" />
+          <ScalarProperty Name="WebSectionAltTag" ColumnName="WebSectionAltTag" />
+          <ScalarProperty Name="WebSectionTitleTag" ColumnName="WebSectionTitleTag" />
+          <ScalarProperty Name="WebSectionMemo" ColumnName="WebSectionMemo" />
+          <ScalarProperty Name="WebSectionMetaTag" ColumnName="WebSectionMetaTag" />
+          <ScalarProperty Name="WebSectionImage" ColumnName="WebSectionImage" />
+          <ScalarProperty Name="WebSectionLink" ColumnName="WebSectionLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="WebSectionIcon" ColumnName="WebSectionIcon" />
+          <ScalarProperty Name="MetaTitle" ColumnName="MetaTitle" />
+          <ScalarProperty Name="MetaKeywords" ColumnName="MetaKeywords" />
+          <ScalarProperty Name="MetaDescription" ColumnName="MetaDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MWebTitle">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MWebTitle">
+        <MappingFragment StoreEntitySet="MWebTitle">
+          <ScalarProperty Name="WebTitleID" ColumnName="WebTitleID" />
+          <ScalarProperty Name="WebTitleSort" ColumnName="WebTitleSort" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NetPriceInfo">
+      <EntityTypeMapping TypeName="AlphatoolsModel.NetPriceInfo">
+        <MappingFragment StoreEntitySet="NetPriceInfo">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="NetPriceDescription" ColumnName="NetPriceDescription" />
+          <ScalarProperty Name="NetTitleID" ColumnName="NetTitleID" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="SORT1_Section" ColumnName="SORT1_Section" />
+          <ScalarProperty Name="SORT2_Group" ColumnName="SORT2_Group" />
+          <ScalarProperty Name="SORT3_Title" ColumnName="SORT3_Title" />
+          <ScalarProperty Name="SORT4_Part" ColumnName="SORT4_Part" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartsInfo">
+      <EntityTypeMapping TypeName="AlphatoolsModel.PartsInfo">
+        <MappingFragment StoreEntitySet="PartsInfo">
+          <ScalarProperty Name="Partno" ColumnName="Partno" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="MSRP" ColumnName="MSRP" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="PkgDimensions" ColumnName="PkgDimensions" />
+          <ScalarProperty Name="QProductID" ColumnName="QProductID" />
+          <ScalarProperty Name="CAProp65ID" ColumnName="CAProp65ID" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="CommodityCode" ColumnName="CommodityCode" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartsPage">
+      <EntityTypeMapping TypeName="AlphatoolsModel.PartsPage">
+        <MappingFragment StoreEntitySet="PartsPage">
+          <ScalarProperty Name="PartsPC" ColumnName="PartsPC" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="BannerName" ColumnName="BannerName" />
+          <ScalarProperty Name="WebSectionID" ColumnName="WebSectionID" />
+          <ScalarProperty Name="WebGroupID" ColumnName="WebGroupID" />
+          <ScalarProperty Name="imgTool" ColumnName="imgTool" />
+          <ScalarProperty Name="ImgSchematic" ColumnName="ImgSchematic" />
+          <ScalarProperty Name="PDFSchematic" ColumnName="PDFSchematic" />
+          <ScalarProperty Name="PPC" ColumnName="PPC" />
+          <ScalarProperty Name="ManualID" ColumnName="ManualID" />
+          <ScalarProperty Name="MaintenanceCardID" ColumnName="MaintenanceCardID" />
+          <ScalarProperty Name="PartsList" ColumnName="PartsList" />
+          <ScalarProperty Name="OtherRef" ColumnName="OtherRef" />
+          <ScalarProperty Name="OtherRef1" ColumnName="OtherRef1" />
+          <ScalarProperty Name="OtherRef2" ColumnName="OtherRef2" />
+          <ScalarProperty Name="OtherRef3" ColumnName="OtherRef3" />
+          <ScalarProperty Name="ThumbNail" ColumnName="ThumbNail" />
+          <ScalarProperty Name="AltPPC" ColumnName="AltPPC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PressRelease">
+      <EntityTypeMapping TypeName="AlphatoolsModel.PressRelease">
+        <MappingFragment StoreEntitySet="PressRelease">
+          <ScalarProperty Name="PressReleaseID" ColumnName="PressReleaseID" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="PRTitle" ColumnName="PRTitle" />
+          <ScalarProperty Name="PRDescription" ColumnName="PRDescription" />
+          <ScalarProperty Name="PRBlurb" ColumnName="PRBlurb" />
+          <ScalarProperty Name="PRFooter" ColumnName="PRFooter" />
+          <ScalarProperty Name="PRImage" ColumnName="PRImage" />
+          <ScalarProperty Name="PRLink" ColumnName="PRLink" />
+          <ScalarProperty Name="TerritoryID" ColumnName="TerritoryID" />
+          <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+          <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductAdvisory">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductAdvisory">
+        <MappingFragment StoreEntitySet="ProductAdvisory">
+          <ScalarProperty Name="ProductAdvisoryID" ColumnName="ProductAdvisoryID" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="AdvisoryType" ColumnName="AdvisoryType" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="AdvisoryTitle" ColumnName="AdvisoryTitle" />
+          <ScalarProperty Name="AdvisoryDescription" ColumnName="AdvisoryDescription" />
+          <ScalarProperty Name="AdvisoryImage" ColumnName="AdvisoryImage" />
+          <ScalarProperty Name="AdvistoryLink" ColumnName="AdvistoryLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductFields">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductFields">
+        <MappingFragment StoreEntitySet="ProductFields">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="QProductID" ColumnName="QProductID" />
+          <ScalarProperty Name="PkgDimensions" ColumnName="PkgDimensions" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="PartUsageID" ColumnName="PartUsageID" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="CAProp65ID" ColumnName="CAProp65ID" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="CommodityCode" ColumnName="CommodityCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductFieldsOLD">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductFieldsOLD">
+        <MappingFragment StoreEntitySet="ProductFieldsOLD">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="QProductID" ColumnName="QProductID" />
+          <ScalarProperty Name="PkgDimensions" ColumnName="PkgDimensions" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="PartUsageID" ColumnName="PartUsageID" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="CAProp65ID" ColumnName="CAProp65ID" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="CommodityCode" ColumnName="CommodityCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductFieldsPending">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductFieldsPending">
+        <MappingFragment StoreEntitySet="ProductFieldsPending">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="QProductID" ColumnName="QProductID" />
+          <ScalarProperty Name="PkgDimensions" ColumnName="PkgDimensions" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="PartUsageID" ColumnName="PartUsageID" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="CAProp65ID" ColumnName="CAProp65ID" />
+          <ScalarProperty Name="CountryOrigin" ColumnName="CountryOrigin" />
+          <ScalarProperty Name="CommodityCode" ColumnName="CommodityCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductInfo">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductInfo">
+        <MappingFragment StoreEntitySet="ProductInfo">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartSize" ColumnName="PartSize" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+          <ScalarProperty Name="PartMaxRPMs" ColumnName="PartMaxRPMs" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Arbors" ColumnName="Arbors" />
+          <ScalarProperty Name="Shape" ColumnName="Shape" />
+          <ScalarProperty Name="RecommendedFor" ColumnName="RecommendedFor" />
+          <ScalarProperty Name="Threads" ColumnName="Threads" />
+          <ScalarProperty Name="ForUseOn" ColumnName="ForUseOn" />
+          <ScalarProperty Name="Finish" ColumnName="Finish" />
+          <ScalarProperty Name="Grit" ColumnName="Grit" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="DepthOfCut" ColumnName="DepthOfCut" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="BondType" ColumnName="BondType" />
+          <ScalarProperty Name="Container" ColumnName="Container" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PiecesPerCase" ColumnName="PiecesPerCase" />
+          <ScalarProperty Name="MSRP" ColumnName="MSRP" />
+          <ScalarProperty Name="CatalogPageNo" ColumnName="CatalogPageNo" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+          <ScalarProperty Name="OrbitDiameter" ColumnName="OrbitDiameter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPage">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductPage">
+        <MappingFragment StoreEntitySet="ProductPage">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="BannerName" ColumnName="BannerName" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="WebSectionID" ColumnName="WebSectionID" />
+          <ScalarProperty Name="WebGroupID" ColumnName="WebGroupID" />
+          <ScalarProperty Name="WebTitleID" ColumnName="WebTitleID" />
+          <ScalarProperty Name="TechNoteID" ColumnName="TechNoteID" />
+          <ScalarProperty Name="MSDSID" ColumnName="MSDSID" />
+          <ScalarProperty Name="ManualID" ColumnName="ManualID" />
+          <ScalarProperty Name="MaintenanceCardID" ColumnName="MaintenanceCardID" />
+          <ScalarProperty Name="OtherReferenceID" ColumnName="OtherReferenceID" />
+          <ScalarProperty Name="FlyerID" ColumnName="FlyerID" />
+          <ScalarProperty Name="DataSheet" ColumnName="DataSheet" />
+          <ScalarProperty Name="Thumb1" ColumnName="Thumb1" />
+          <ScalarProperty Name="Thumb2" ColumnName="Thumb2" />
+          <ScalarProperty Name="Thumb3" ColumnName="Thumb3" />
+          <ScalarProperty Name="Thumb4" ColumnName="Thumb4" />
+          <ScalarProperty Name="ThumbNail" ColumnName="ThumbNail" />
+          <ScalarProperty Name="AdditionalItem" ColumnName="AdditionalItem" />
+          <ScalarProperty Name="Video1" ColumnName="Video1" />
+          <ScalarProperty Name="SpecChart" ColumnName="SpecChart" />
+          <ScalarProperty Name="GritChart" ColumnName="GritChart" />
+          <ScalarProperty Name="PictureLayout" ColumnName="PictureLayout" />
+          <ScalarProperty Name="ChartLayout" ColumnName="ChartLayout" />
+          <ScalarProperty Name="Thumb5" ColumnName="Thumb5" />
+          <ScalarProperty Name="Thumb6" ColumnName="Thumb6" />
+          <ScalarProperty Name="Thumb7" ColumnName="Thumb7" />
+          <ScalarProperty Name="Thumb8" ColumnName="Thumb8" />
+          <ScalarProperty Name="Thumb9" ColumnName="Thumb9" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="OtherRef1" ColumnName="OtherRef1" />
+          <ScalarProperty Name="OtherRef2" ColumnName="OtherRef2" />
+          <ScalarProperty Name="OtherRef3" ColumnName="OtherRef3" />
+          <ScalarProperty Name="PartsList" ColumnName="PartsList" />
+          <ScalarProperty Name="CatalogPageNo" ColumnName="CatalogPageNo" />
+          <ScalarProperty Name="MetaTags" ColumnName="MetaTags" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductRegistration">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductRegistration">
+        <MappingFragment StoreEntitySet="ProductRegistration">
+          <ScalarProperty Name="PRid" ColumnName="PRid" />
+          <ScalarProperty Name="ModelNo" ColumnName="ModelNo" />
+          <ScalarProperty Name="SerialNo" ColumnName="SerialNo" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postal" ColumnName="Postal" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Telephone" ColumnName="Telephone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="PurchaseDate" ColumnName="PurchaseDate" />
+          <ScalarProperty Name="Dealer" ColumnName="Dealer" />
+          <ScalarProperty Name="Purpose" ColumnName="Purpose" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+          <ScalarProperty Name="CurDate" ColumnName="CurDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductRelatedText">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductRelatedText">
+        <MappingFragment StoreEntitySet="ProductRelatedText">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="RelatedText" ColumnName="RelatedText" />
+          <ScalarProperty Name="Current" ColumnName="Current" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductRelatedTextNew">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductRelatedTextNew">
+        <MappingFragment StoreEntitySet="ProductRelatedTextNew">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="ProdRelatedText" ColumnName="ProdRelatedText" />
+          <ScalarProperty Name="Current" ColumnName="Current" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductText">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductText">
+        <MappingFragment StoreEntitySet="ProductText">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="ProductText1" ColumnName="ProductText" />
+          <ScalarProperty Name="TechTip" ColumnName="TechTip" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="RelatedProduct" ColumnName="RelatedProduct" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="ShortDescription2" ColumnName="ShortDescription2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="AlphatoolsModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TNTechNote">
+      <EntityTypeMapping TypeName="AlphatoolsModel.TNTechNote">
+        <MappingFragment StoreEntitySet="TNTechNote">
+          <ScalarProperty Name="TNID" ColumnName="TNID" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="ProductPageOrderID" ColumnName="ProductPageOrderID" />
+          <ScalarProperty Name="TNBlurb" ColumnName="TNBlurb" />
+          <ScalarProperty Name="TNHowID" ColumnName="TNHowID" />
+          <ScalarProperty Name="TNHelpID" ColumnName="TNHelpID" />
+          <ScalarProperty Name="TNFAQID" ColumnName="TNFAQID" />
+          <ScalarProperty Name="TNImage" ColumnName="TNImage" />
+          <ScalarProperty Name="TNSpecChart" ColumnName="TNSpecChart" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Video">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Video">
+        <MappingFragment StoreEntitySet="Video">
+          <ScalarProperty Name="VideoID" ColumnName="VideoID" />
+          <ScalarProperty Name="WebSection" ColumnName="WebSection" />
+          <ScalarProperty Name="VCurrentYN" ColumnName="VCurrentYN" />
+          <ScalarProperty Name="Video720x480" ColumnName="Video720x480" />
+          <ScalarProperty Name="VideoMP4" ColumnName="VideoMP4" />
+          <ScalarProperty Name="VideoName" ColumnName="VideoName" />
+          <ScalarProperty Name="VideoDescription" ColumnName="VideoDescription" />
+          <ScalarProperty Name="VideoLink2" ColumnName="VideoLink2" />
+          <ScalarProperty Name="VUploadDate" ColumnName="VUploadDate" />
+          <ScalarProperty Name="VStopDate" ColumnName="VStopDate" />
+          <ScalarProperty Name="VideoText" ColumnName="VideoText" />
+          <ScalarProperty Name="Vimage" ColumnName="Vimage" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="Updated" ColumnName="Updated" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="VideoLink" ColumnName="VideoLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Webfields">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Webfields">
+        <MappingFragment StoreEntitySet="Webfields">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="PartUsageID" ColumnName="PartUsageID" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="SORT4_Part" ColumnName="SORT4_Part" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ShopLink" ColumnName="ShopLink" />
+          <ScalarProperty Name="ShopImage" ColumnName="ShopImage" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="QProductID" ColumnName="QProductID" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Webfields2">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Webfields2">
+        <MappingFragment StoreEntitySet="Webfields2">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="PartUsageID" ColumnName="PartUsageID" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="SORT4_Part" ColumnName="SORT4_Part" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ShopLink" ColumnName="ShopLink" />
+          <ScalarProperty Name="ShopImage" ColumnName="ShopImage" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="QProductID" ColumnName="QProductID" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WebPartNo">
+      <EntityTypeMapping TypeName="AlphatoolsModel.WebPartNo">
+        <MappingFragment StoreEntitySet="WebPartNo">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AboutUs">
+      <EntityTypeMapping TypeName="AlphatoolsModel.AboutUs">
+        <MappingFragment StoreEntitySet="AboutUs">
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="AboutUsPDF" ColumnName="AboutUsPDF" />
+          <ScalarProperty Name="AboutUsVideo" ColumnName="AboutUsVideo" />
+          <ScalarProperty Name="AboutUsLink" ColumnName="AboutUsLink" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Affiliations">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Affiliations">
+        <MappingFragment StoreEntitySet="Affiliations">
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="AffiliateName" ColumnName="AffiliateName" />
+          <ScalarProperty Name="AffiliateLogo" ColumnName="AffiliateLogo" />
+          <ScalarProperty Name="AffiliateLink" ColumnName="AffiliateLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Catalogs">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Catalogs">
+        <MappingFragment StoreEntitySet="Catalogs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="CatalogName" ColumnName="CatalogName" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="Filename" ColumnName="Filename" />
+          <ScalarProperty Name="PDFSize" ColumnName="PDFSize" />
+          <ScalarProperty Name="ZipSize" ColumnName="ZipSize" />
+          <ScalarProperty Name="FileZipped" ColumnName="FileZipped" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DealerInfo">
+      <EntityTypeMapping TypeName="AlphatoolsModel.DealerInfo">
+        <MappingFragment StoreEntitySet="DealerInfo">
+          <ScalarProperty Name="DealerID" ColumnName="DealerID" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="AccountNo" ColumnName="AccountNo" />
+          <ScalarProperty Name="DealerLogoID" ColumnName="DealerLogoID" />
+          <ScalarProperty Name="SLXAccountID" ColumnName="SLXAccountID" />
+          <ScalarProperty Name="DateUpdated" ColumnName="DateUpdated" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="PricingInfo" ColumnName="PricingInfo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EducationalMaterial">
+      <EntityTypeMapping TypeName="AlphatoolsModel.EducationalMaterial">
+        <MappingFragment StoreEntitySet="EducationalMaterial">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="EdProductDescription" ColumnName="EdProductDescription" />
+          <ScalarProperty Name="EdProductTitle" ColumnName="EdProductTitle" />
+          <ScalarProperty Name="EdProductSummary" ColumnName="EdProductSummary" />
+          <ScalarProperty Name="EdProductPhoto" ColumnName="EdProductPhoto" />
+          <ScalarProperty Name="EdProductPDF" ColumnName="EdProductPDF" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmailSignup">
+      <EntityTypeMapping TypeName="AlphatoolsModel.EmailSignup">
+        <MappingFragment StoreEntitySet="EmailSignup">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employment">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Employment">
+        <MappingFragment StoreEntitySet="Employment">
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="EmployTitle" ColumnName="EmployTitle" />
+          <ScalarProperty Name="EmployBlurb" ColumnName="EmployBlurb" />
+          <ScalarProperty Name="EmployeeEmailLink" ColumnName="EmployeeEmailLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EventCalendar">
+      <EntityTypeMapping TypeName="AlphatoolsModel.EventCalendar">
+        <MappingFragment StoreEntitySet="EventCalendar">
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="EventTitle" ColumnName="EventTitle" />
+          <ScalarProperty Name="EventBlurb" ColumnName="EventBlurb" />
+          <ScalarProperty Name="EventDetailPDF" ColumnName="EventDetailPDF" />
+          <ScalarProperty Name="EventLogo" ColumnName="EventLogo" />
+          <ScalarProperty Name="EventLink" ColumnName="EventLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Links">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Links">
+        <MappingFragment StoreEntitySet="Links">
+          <ScalarProperty Name="LinkType" ColumnName="LinkType" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="LinkName" ColumnName="LinkName" />
+          <ScalarProperty Name="LinkLogo" ColumnName="LinkLogo" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MDealerWebSiteType">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MDealerWebSiteType">
+        <MappingFragment StoreEntitySet="MDealerWebSiteType">
+          <ScalarProperty Name="DealerWebSiteType" ColumnName="DealerWebSiteType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Members">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Members">
+        <MappingFragment StoreEntitySet="Members">
+          <ScalarProperty Name="Account" ColumnName="Account" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="CredentialSentDate" ColumnName="CredentialSentDate" />
+          <ScalarProperty Name="LastUpdated" ColumnName="LastUpdated" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetalProducts">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MetalProducts">
+        <MappingFragment StoreEntitySet="MetalProducts">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="MetalProductDescription" ColumnName="MetalProductDescription" />
+          <ScalarProperty Name="MetalProductTitle" ColumnName="MetalProductTitle" />
+          <ScalarProperty Name="MetalProductSummary" ColumnName="MetalProductSummary" />
+          <ScalarProperty Name="MetalProductPhoto" ColumnName="MetalProductPhoto" />
+          <ScalarProperty Name="MetalProductPDF" ColumnName="MetalProductPDF" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MProductRegModel">
+      <EntityTypeMapping TypeName="AlphatoolsModel.MProductRegModel">
+        <MappingFragment StoreEntitySet="MProductRegModel">
+          <ScalarProperty Name="ProductModel" ColumnName="ProductModel" />
+          <ScalarProperty Name="ModelDescription" ColumnName="ModelDescription" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NewProducts">
+      <EntityTypeMapping TypeName="AlphatoolsModel.NewProducts">
+        <MappingFragment StoreEntitySet="NewProducts">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="NewProductDescription" ColumnName="NewProductDescription" />
+          <ScalarProperty Name="NewProductTitle" ColumnName="NewProductTitle" />
+          <ScalarProperty Name="NewProductSummary" ColumnName="NewProductSummary" />
+          <ScalarProperty Name="NewProductPhoto" ColumnName="NewProductPhoto" />
+          <ScalarProperty Name="NewProductPDF" ColumnName="NewProductPDF" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PartsWebfields">
+      <EntityTypeMapping TypeName="AlphatoolsModel.PartsWebfields">
+        <MappingFragment StoreEntitySet="PartsWebfields">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartsPageCode" ColumnName="PartsPageCode" />
+          <ScalarProperty Name="Version" ColumnName="Version" />
+          <ScalarProperty Name="DrawingNo" ColumnName="DrawingNo" />
+          <ScalarProperty Name="Sort" ColumnName="Sort" />
+          <ScalarProperty Name="QProductID" ColumnName="QProductID" />
+          <ScalarProperty Name="Barcode" ColumnName="Barcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Policies">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Policies">
+        <MappingFragment StoreEntitySet="Policies">
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="PolicyHeader" ColumnName="PolicyHeader" />
+          <ScalarProperty Name="PolicySection" ColumnName="PolicySection" />
+          <ScalarProperty Name="Policy" ColumnName="Policy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductBulletins">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductBulletins">
+        <MappingFragment StoreEntitySet="ProductBulletins">
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="BulletinTitle" ColumnName="BulletinTitle" />
+          <ScalarProperty Name="BulletinDescription" ColumnName="BulletinDescription" />
+          <ScalarProperty Name="BulletinPDF" ColumnName="BulletinPDF" />
+          <ScalarProperty Name="BulletinLogo" ColumnName="BulletinLogo" />
+          <ScalarProperty Name="BulletinInfoLink" ColumnName="BulletinInfoLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductBullets">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductBullets">
+        <MappingFragment StoreEntitySet="ProductBullets">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="PBID" ColumnName="PBID" />
+          <ScalarProperty Name="PBOrderID" ColumnName="PBOrderID" />
+          <ScalarProperty Name="PBText" ColumnName="PBText" />
+          <ScalarProperty Name="PBLinks" ColumnName="PBLinks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductPage_Snippets">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductPage_Snippets">
+        <MappingFragment StoreEntitySet="ProductPage-Snippets">
+          <ScalarProperty Name="PPC" ColumnName="PPC" />
+          <ScalarProperty Name="SnipText1" ColumnName="SnipText1" />
+          <ScalarProperty Name="Meta" ColumnName="Meta" />
+          <ScalarProperty Name="Keywords" ColumnName="Keywords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductVideo">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ProductVideo">
+        <MappingFragment StoreEntitySet="ProductVideo">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="VideoID" ColumnName="VideoID" />
+          <ScalarProperty Name="Vorder" ColumnName="Vorder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RequestADealerInfo">
+      <EntityTypeMapping TypeName="AlphatoolsModel.RequestADealerInfo">
+        <MappingFragment StoreEntitySet="RequestADealerInfo">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="Address1" ColumnName="Address1" />
+          <ScalarProperty Name="Address2" ColumnName="Address2" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="Postal" ColumnName="Postal" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="WorkPhone" ColumnName="WorkPhone" />
+          <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Promocode" ColumnName="Promocode" />
+          <ScalarProperty Name="Profession" ColumnName="Profession" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CurDate" ColumnName="CurDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shop_Description">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Shop_Description">
+        <MappingFragment StoreEntitySet="Shop_Description">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="Type1" ColumnName="Type1" />
+          <ScalarProperty Name="Spec1" ColumnName="Spec1" />
+          <ScalarProperty Name="Detail1" ColumnName="Detail1" />
+          <ScalarProperty Name="Type2" ColumnName="Type2" />
+          <ScalarProperty Name="Spec2" ColumnName="Spec2" />
+          <ScalarProperty Name="Detail2" ColumnName="Detail2" />
+          <ScalarProperty Name="Type3" ColumnName="Type3" />
+          <ScalarProperty Name="Spec3" ColumnName="Spec3" />
+          <ScalarProperty Name="Detail3" ColumnName="Detail3" />
+          <ScalarProperty Name="Type4" ColumnName="Type4" />
+          <ScalarProperty Name="Spec4" ColumnName="Spec4" />
+          <ScalarProperty Name="Detail4" ColumnName="Detail4" />
+          <ScalarProperty Name="Type5" ColumnName="Type5" />
+          <ScalarProperty Name="Spec5" ColumnName="Spec5" />
+          <ScalarProperty Name="Detail5" ColumnName="Detail5" />
+          <ScalarProperty Name="Type6" ColumnName="Type6" />
+          <ScalarProperty Name="Spec6" ColumnName="Spec6" />
+          <ScalarProperty Name="Detail6" ColumnName="Detail6" />
+          <ScalarProperty Name="Type7" ColumnName="Type7" />
+          <ScalarProperty Name="Spec7" ColumnName="Spec7" />
+          <ScalarProperty Name="Detail7" ColumnName="Detail7" />
+          <ScalarProperty Name="Type8" ColumnName="Type8" />
+          <ScalarProperty Name="Spec8" ColumnName="Spec8" />
+          <ScalarProperty Name="Detail8" ColumnName="Detail8" />
+          <ScalarProperty Name="Type9" ColumnName="Type9" />
+          <ScalarProperty Name="Spec9" ColumnName="Spec9" />
+          <ScalarProperty Name="Detail9" ColumnName="Detail9" />
+          <ScalarProperty Name="Type10" ColumnName="Type10" />
+          <ScalarProperty Name="Spec10" ColumnName="Spec10" />
+          <ScalarProperty Name="Detail10" ColumnName="Detail10" />
+          <ScalarProperty Name="Type11" ColumnName="Type11" />
+          <ScalarProperty Name="Spec11" ColumnName="Spec11" />
+          <ScalarProperty Name="Detail11" ColumnName="Detail11" />
+          <ScalarProperty Name="Type12" ColumnName="Type12" />
+          <ScalarProperty Name="Spec12" ColumnName="Spec12" />
+          <ScalarProperty Name="Detail12" ColumnName="Detail12" />
+          <ScalarProperty Name="Type13" ColumnName="Type13" />
+          <ScalarProperty Name="Spec13" ColumnName="Spec13" />
+          <ScalarProperty Name="Detail13" ColumnName="Detail13" />
+          <ScalarProperty Name="Type14" ColumnName="Type14" />
+          <ScalarProperty Name="Spec14" ColumnName="Spec14" />
+          <ScalarProperty Name="Detail14" ColumnName="Detail14" />
+          <ScalarProperty Name="Type15" ColumnName="Type15" />
+          <ScalarProperty Name="Spec15" ColumnName="Spec15" />
+          <ScalarProperty Name="Detail15" ColumnName="Detail15" />
+          <ScalarProperty Name="Type16" ColumnName="Type16" />
+          <ScalarProperty Name="Spec16" ColumnName="Spec16" />
+          <ScalarProperty Name="Detail16" ColumnName="Detail16" />
+          <ScalarProperty Name="Type17" ColumnName="Type17" />
+          <ScalarProperty Name="Spec17" ColumnName="Spec17" />
+          <ScalarProperty Name="Detail17" ColumnName="Detail17" />
+          <ScalarProperty Name="Type18" ColumnName="Type18" />
+          <ScalarProperty Name="Spec18" ColumnName="Spec18" />
+          <ScalarProperty Name="Detail18" ColumnName="Detail18" />
+          <ScalarProperty Name="Type19" ColumnName="Type19" />
+          <ScalarProperty Name="Spec19" ColumnName="Spec19" />
+          <ScalarProperty Name="Detail19" ColumnName="Detail19" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Shopatron">
+      <EntityTypeMapping TypeName="AlphatoolsModel.Shopatron">
+        <MappingFragment StoreEntitySet="Shopatron">
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="ShopTitle" ColumnName="ShopTitle" />
+          <ScalarProperty Name="ShopBlurb" ColumnName="ShopBlurb" />
+          <ScalarProperty Name="ShopLink" ColumnName="ShopLink" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopIntlCatData">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ShopIntlCatData">
+        <MappingFragment StoreEntitySet="ShopIntlCatData">
+          <ScalarProperty Name="MFG_PART_NUMBER___af6ac23849fa72f624786667e0fc1b73" ColumnName="MFG_PART_NUMBER – af6ac23849fa72f624786667e0fc1b73" />
+          <ScalarProperty Name="TOOLBAR_CATEGORY" ColumnName="TOOLBAR_CATEGORY" />
+          <ScalarProperty Name="SUB_CATEGORY1" ColumnName="SUB_CATEGORY1" />
+          <ScalarProperty Name="SUB_CATEGORY2" ColumnName="SUB_CATEGORY2" />
+          <ScalarProperty Name="SUB_CATEGORY3" ColumnName="SUB_CATEGORY3" />
+          <ScalarProperty Name="SUB_CATEGORY4" ColumnName="SUB_CATEGORY4" />
+          <ScalarProperty Name="CATEGORYRANK" ColumnName="CATEGORYRANK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopIntlCatDataTP">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ShopIntlCatDataTP">
+        <MappingFragment StoreEntitySet="ShopIntlCatDataTP">
+          <ScalarProperty Name="MFG_PART_NUMBER___af6ac23849fa72f624786667e0fc1b73" ColumnName="MFG_PART_NUMBER – af6ac23849fa72f624786667e0fc1b73" />
+          <ScalarProperty Name="TOOLBAR_CATEGORY" ColumnName="TOOLBAR_CATEGORY" />
+          <ScalarProperty Name="SUB_CATEGORY1" ColumnName="SUB_CATEGORY1" />
+          <ScalarProperty Name="SUB_CATEGORY2" ColumnName="SUB_CATEGORY2" />
+          <ScalarProperty Name="SUB_CATEGORY3" ColumnName="SUB_CATEGORY3" />
+          <ScalarProperty Name="SUB_CATEGORY4" ColumnName="SUB_CATEGORY4" />
+          <ScalarProperty Name="CATEGORYRANK" ColumnName="CATEGORYRANK" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopIntlProductData">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ShopIntlProductData">
+        <MappingFragment StoreEntitySet="ShopIntlProductData">
+          <ScalarProperty Name="NAME___0570ef7f82aa34ce168e112e9ec4e125" ColumnName="NAME – 0570ef7f82aa34ce168e112e9ec4e125" />
+          <ScalarProperty Name="UPC_CODE" ColumnName="UPC_CODE" />
+          <ScalarProperty Name="MFG_PART_NUMBER" ColumnName="MFG_PART_NUMBER" />
+          <ScalarProperty Name="SHORT_DESCRIPTION" ColumnName="SHORT_DESCRIPTION" />
+          <ScalarProperty Name="LONG_DESCRIPTION" ColumnName="LONG_DESCRIPTION" />
+          <ScalarProperty Name="AVAILABILITY" ColumnName="AVAILABILITY" />
+          <ScalarProperty Name="RETAIL_PRICE" ColumnName="RETAIL_PRICE" />
+          <ScalarProperty Name="MAP_PRICE" ColumnName="MAP_PRICE" />
+          <ScalarProperty Name="MFG_OFFER_PRICE" ColumnName="MFG_OFFER_PRICE" />
+          <ScalarProperty Name="AVG_DEALER_MARGIN" ColumnName="AVG_DEALER_MARGIN" />
+          <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME1" ColumnName="ADDITIONAL_IMG_NAME1" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE1" ColumnName="ADDITIONAL_IMG_FILE1" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME2" ColumnName="ADDITIONAL_IMG_NAME2" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE2" ColumnName="ADDITIONAL_IMG_FILE2" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME3" ColumnName="ADDITIONAL_IMG_NAME3" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE3" ColumnName="ADDITIONAL_IMG_FILE3" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME4" ColumnName="ADDITIONAL_IMG_NAME4" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE4" ColumnName="ADDITIONAL_IMG_FILE4" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME5" ColumnName="ADDITIONAL_IMG_NAME5" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE5" ColumnName="ADDITIONAL_IMG_FILE5" />
+          <ScalarProperty Name="SPEC_TYPE1" ColumnName="SPEC_TYPE1" />
+          <ScalarProperty Name="SPEC_NAME1" ColumnName="SPEC_NAME1" />
+          <ScalarProperty Name="SPEC_DESCRIPTION1" ColumnName="SPEC_DESCRIPTION1" />
+          <ScalarProperty Name="SPEC_TYPE2" ColumnName="SPEC_TYPE2" />
+          <ScalarProperty Name="SPEC_NAME2" ColumnName="SPEC_NAME2" />
+          <ScalarProperty Name="SPEC_DESCRIPTION2" ColumnName="SPEC_DESCRIPTION2" />
+          <ScalarProperty Name="SPEC_TYPE3" ColumnName="SPEC_TYPE3" />
+          <ScalarProperty Name="SPEC_NAME3" ColumnName="SPEC_NAME3" />
+          <ScalarProperty Name="SPEC_DESCRIPTION3" ColumnName="SPEC_DESCRIPTION3" />
+          <ScalarProperty Name="SPEC_TYPE4" ColumnName="SPEC_TYPE4" />
+          <ScalarProperty Name="SPEC_NAME4" ColumnName="SPEC_NAME4" />
+          <ScalarProperty Name="SPEC_DESCRIPTION4" ColumnName="SPEC_DESCRIPTION4" />
+          <ScalarProperty Name="SPEC_TYPE5" ColumnName="SPEC_TYPE5" />
+          <ScalarProperty Name="SPEC_NAME5" ColumnName="SPEC_NAME5" />
+          <ScalarProperty Name="SPEC_DESCRIPTION5" ColumnName="SPEC_DESCRIPTION5" />
+          <ScalarProperty Name="LEAD_TIME" ColumnName="LEAD_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopIntlProductDataTP">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ShopIntlProductDataTP">
+        <MappingFragment StoreEntitySet="ShopIntlProductDataTP">
+          <ScalarProperty Name="NAME___0570ef7f82aa34ce168e112e9ec4e125" ColumnName="NAME – 0570ef7f82aa34ce168e112e9ec4e125" />
+          <ScalarProperty Name="UPC_CODE" ColumnName="UPC_CODE" />
+          <ScalarProperty Name="MFG_PART_NUMBER" ColumnName="MFG_PART_NUMBER" />
+          <ScalarProperty Name="SHORT_DESCRIPTION" ColumnName="SHORT_DESCRIPTION" />
+          <ScalarProperty Name="LONG_DESCRIPTION" ColumnName="LONG_DESCRIPTION" />
+          <ScalarProperty Name="AVAILABILITY" ColumnName="AVAILABILITY" />
+          <ScalarProperty Name="RETAIL_PRICE" ColumnName="RETAIL_PRICE" />
+          <ScalarProperty Name="MAP_PRICE" ColumnName="MAP_PRICE" />
+          <ScalarProperty Name="MFG_OFFER_PRICE" ColumnName="MFG_OFFER_PRICE" />
+          <ScalarProperty Name="AVG_DEALER_MARGIN" ColumnName="AVG_DEALER_MARGIN" />
+          <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME1" ColumnName="ADDITIONAL_IMG_NAME1" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE1" ColumnName="ADDITIONAL_IMG_FILE1" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME2" ColumnName="ADDITIONAL_IMG_NAME2" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE2" ColumnName="ADDITIONAL_IMG_FILE2" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME3" ColumnName="ADDITIONAL_IMG_NAME3" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE3" ColumnName="ADDITIONAL_IMG_FILE3" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME4" ColumnName="ADDITIONAL_IMG_NAME4" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE4" ColumnName="ADDITIONAL_IMG_FILE4" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME5" ColumnName="ADDITIONAL_IMG_NAME5" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE5" ColumnName="ADDITIONAL_IMG_FILE5" />
+          <ScalarProperty Name="SPEC_TYPE1" ColumnName="SPEC_TYPE1" />
+          <ScalarProperty Name="SPEC_NAME1" ColumnName="SPEC_NAME1" />
+          <ScalarProperty Name="SPEC_DESCRIPTION1" ColumnName="SPEC_DESCRIPTION1" />
+          <ScalarProperty Name="SPEC_TYPE2" ColumnName="SPEC_TYPE2" />
+          <ScalarProperty Name="SPEC_NAME2" ColumnName="SPEC_NAME2" />
+          <ScalarProperty Name="SPEC_DESCRIPTION2" ColumnName="SPEC_DESCRIPTION2" />
+          <ScalarProperty Name="SPEC_TYPE3" ColumnName="SPEC_TYPE3" />
+          <ScalarProperty Name="SPEC_NAME3" ColumnName="SPEC_NAME3" />
+          <ScalarProperty Name="SPEC_DESCRIPTION3" ColumnName="SPEC_DESCRIPTION3" />
+          <ScalarProperty Name="SPEC_TYPE4" ColumnName="SPEC_TYPE4" />
+          <ScalarProperty Name="SPEC_NAME4" ColumnName="SPEC_NAME4" />
+          <ScalarProperty Name="SPEC_DESCRIPTION4" ColumnName="SPEC_DESCRIPTION4" />
+          <ScalarProperty Name="SPEC_TYPE5" ColumnName="SPEC_TYPE5" />
+          <ScalarProperty Name="SPEC_NAME5" ColumnName="SPEC_NAME5" />
+          <ScalarProperty Name="SPEC_DESCRIPTION5" ColumnName="SPEC_DESCRIPTION5" />
+          <ScalarProperty Name="LEAD_TIME" ColumnName="LEAD_TIME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopIntlSpecUpload">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ShopIntlSpecUpload">
+        <MappingFragment StoreEntitySet="ShopIntlSpecUpload">
+          <ScalarProperty Name="part_number___522f29b472827380188d8806fe15260a" ColumnName="part_number – 522f29b472827380188d8806fe15260a" />
+          <ScalarProperty Name="spec_type__text__hidden__global_image__unique_image__file_" ColumnName="spec_type (text, hidden, global_image, unique_image, file)" />
+          <ScalarProperty Name="spec_name" ColumnName="spec_name" />
+          <ScalarProperty Name="spec_description" ColumnName="spec_description" />
+          <ScalarProperty Name="spec_file_name" ColumnName="spec_file_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ShopWebFields">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ShopWebFields">
+        <MappingFragment StoreEntitySet="ShopWebFields">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="PartUsageID" ColumnName="PartUsageID" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="SORT4_Part" ColumnName="SORT4_Part" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="ShopLink" ColumnName="ShopLink" />
+          <ScalarProperty Name="ShopImage" ColumnName="ShopImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TechnicalLibrary">
+      <EntityTypeMapping TypeName="AlphatoolsModel.TechnicalLibrary">
+        <MappingFragment StoreEntitySet="TechnicalLibrary">
+          <ScalarProperty Name="LibraryTypeID" ColumnName="LibraryTypeID" />
+          <ScalarProperty Name="WebSectionID" ColumnName="WebSectionID" />
+          <ScalarProperty Name="WebGroupID" ColumnName="WebGroupID" />
+          <ScalarProperty Name="TechNoteID" ColumnName="TechNoteID" />
+          <ScalarProperty Name="MSDSID" ColumnName="MSDSID" />
+          <ScalarProperty Name="ManualID" ColumnName="ManualID" />
+          <ScalarProperty Name="MaintenanceCardID" ColumnName="MaintenanceCardID" />
+          <ScalarProperty Name="OtherReferenceID" ColumnName="OtherReferenceID" />
+          <ScalarProperty Name="FlyerID" ColumnName="FlyerID" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+          <ScalarProperty Name="PartsListID" ColumnName="PartsListID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WhatIsNew">
+      <EntityTypeMapping TypeName="AlphatoolsModel.WhatIsNew">
+        <MappingFragment StoreEntitySet="WhatIsNew">
+          <ScalarProperty Name="DatePosted" ColumnName="DatePosted" />
+          <ScalarProperty Name="DateListed" ColumnName="DateListed" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Blurb" ColumnName="Blurb" />
+          <ScalarProperty Name="DetailPDF" ColumnName="DetailPDF" />
+          <ScalarProperty Name="CurrentYN" ColumnName="CurrentYN" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ONYX_AlphaWebOnyx_dbo_ProductText">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ONYX_AlphaWebOnyx_dbo_ProductText">
+        <MappingFragment StoreEntitySet="ONYX_AlphaWebOnyx_dbo_ProductText">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="ProductText" ColumnName="ProductText" />
+          <ScalarProperty Name="TechTip" ColumnName="TechTip" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="RelatedProduct" ColumnName="RelatedProduct" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ONYX_AlphaWebOnyx_dbo_ProductText1">
+      <EntityTypeMapping TypeName="AlphatoolsModel.ONYX_AlphaWebOnyx_dbo_ProductText1">
+        <MappingFragment StoreEntitySet="ONYX_AlphaWebOnyx_dbo_ProductText1">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="ProductText" ColumnName="ProductText" />
+          <ScalarProperty Name="TechTip" ColumnName="TechTip" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="RelatedProduct" ColumnName="RelatedProduct" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWProductPageNoProductText">
+      <EntityTypeMapping TypeName="AlphatoolsModel.VIEWProductPageNoProductText">
+        <MappingFragment StoreEntitySet="VIEWProductPageNoProductText">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="CatalogPageNo" ColumnName="CatalogPageNo" />
+          <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="TechNote" ColumnName="TechNote" />
+          <ScalarProperty Name="MSDS" ColumnName="MSDS" />
+          <ScalarProperty Name="DataSheet" ColumnName="DataSheet" />
+          <ScalarProperty Name="Thumb1" ColumnName="Thumb1" />
+          <ScalarProperty Name="Thumb2" ColumnName="Thumb2" />
+          <ScalarProperty Name="Thumb3" ColumnName="Thumb3" />
+          <ScalarProperty Name="Thumb4" ColumnName="Thumb4" />
+          <ScalarProperty Name="ReferralItems" ColumnName="ReferralItems" />
+          <ScalarProperty Name="Video1" ColumnName="Video1" />
+          <ScalarProperty Name="Video2" ColumnName="Video2" />
+          <ScalarProperty Name="PictureLayout" ColumnName="PictureLayout" />
+          <ScalarProperty Name="ChartLayout" ColumnName="ChartLayout" />
+          <ScalarProperty Name="LongDescription" ColumnName="LongDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWProductPageProductText">
+      <EntityTypeMapping TypeName="AlphatoolsModel.VIEWProductPageProductText">
+        <MappingFragment StoreEntitySet="VIEWProductPageProductText">
+          <ScalarProperty Name="ProductPageCode" ColumnName="ProductPageCode" />
+          <ScalarProperty Name="PageName" ColumnName="PageName" />
+          <ScalarProperty Name="ShortDescription" ColumnName="ShortDescription" />
+          <ScalarProperty Name="ProductText" ColumnName="ProductText" />
+          <ScalarProperty Name="TechTip" ColumnName="TechTip" />
+          <ScalarProperty Name="Notes" ColumnName="Notes" />
+          <ScalarProperty Name="Features" ColumnName="Features" />
+          <ScalarProperty Name="RelatedProduct" ColumnName="RelatedProduct" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWWebfieldsIndustry">
+      <EntityTypeMapping TypeName="AlphatoolsModel.VIEWWebfieldsIndustry">
+        <MappingFragment StoreEntitySet="VIEWWebfieldsIndustry">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="IndustryCode" ColumnName="IndustryCode" />
+          <ScalarProperty Name="Industry" ColumnName="Industry" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWWebfieldsMaterial">
+      <EntityTypeMapping TypeName="AlphatoolsModel.VIEWWebfieldsMaterial">
+        <MappingFragment StoreEntitySet="VIEWWebfieldsMaterial">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="MaterialCode" ColumnName="MaterialCode" />
+          <ScalarProperty Name="Material" ColumnName="Material" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VIEWWebfieldsUsageProcessApplication">
+      <EntityTypeMapping TypeName="AlphatoolsModel.VIEWWebfieldsUsageProcessApplication">
+        <MappingFragment StoreEntitySet="VIEWWebfieldsUsageProcessApplication">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartUsage" ColumnName="PartUsage" />
+          <ScalarProperty Name="Process" ColumnName="Process" />
+          <ScalarProperty Name="Application" ColumnName="Application" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol" FunctionName="AlphatoolsModel.Store.dt_addtosourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_addtosourcecontrol_u" FunctionName="AlphatoolsModel.Store.dt_addtosourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject" FunctionName="AlphatoolsModel.Store.dt_adduserobject" />
+    <FunctionImportMapping FunctionImportName="dt_adduserobject_vcs" FunctionName="AlphatoolsModel.Store.dt_adduserobject_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject" FunctionName="AlphatoolsModel.Store.dt_checkinobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkinobject_u" FunctionName="AlphatoolsModel.Store.dt_checkinobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject" FunctionName="AlphatoolsModel.Store.dt_checkoutobject" />
+    <FunctionImportMapping FunctionImportName="dt_checkoutobject_u" FunctionName="AlphatoolsModel.Store.dt_checkoutobject_u" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror" FunctionName="AlphatoolsModel.Store.dt_displayoaerror" />
+    <FunctionImportMapping FunctionImportName="dt_displayoaerror_u" FunctionName="AlphatoolsModel.Store.dt_displayoaerror_u" />
+    <FunctionImportMapping FunctionImportName="dt_droppropertiesbyid" FunctionName="AlphatoolsModel.Store.dt_droppropertiesbyid" />
+    <FunctionImportMapping FunctionImportName="dt_dropuserobjectbyid" FunctionName="AlphatoolsModel.Store.dt_dropuserobjectbyid" />
+    <FunctionImportMapping FunctionImportName="dt_generateansiname" FunctionName="AlphatoolsModel.Store.dt_generateansiname" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop" FunctionName="AlphatoolsModel.Store.dt_getobjwithprop" />
+    <FunctionImportMapping FunctionImportName="dt_getobjwithprop_u" FunctionName="AlphatoolsModel.Store.dt_getobjwithprop_u" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid" FunctionName="AlphatoolsModel.Store.dt_getpropertiesbyid">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.dt_getpropertiesbyid_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="value" ColumnName="value" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_u" FunctionName="AlphatoolsModel.Store.dt_getpropertiesbyid_u">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.dt_getpropertiesbyid_u_Result">
+          <ScalarProperty Name="property" ColumnName="property" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="uvalue" ColumnName="uvalue" />
+          <ScalarProperty Name="lvalue" ColumnName="lvalue" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs" FunctionName="AlphatoolsModel.Store.dt_getpropertiesbyid_vcs" />
+    <FunctionImportMapping FunctionImportName="dt_getpropertiesbyid_vcs_u" FunctionName="AlphatoolsModel.Store.dt_getpropertiesbyid_vcs_u" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol" FunctionName="AlphatoolsModel.Store.dt_isundersourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_isundersourcecontrol_u" FunctionName="AlphatoolsModel.Store.dt_isundersourcecontrol_u" />
+    <FunctionImportMapping FunctionImportName="dt_removefromsourcecontrol" FunctionName="AlphatoolsModel.Store.dt_removefromsourcecontrol" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid" FunctionName="AlphatoolsModel.Store.dt_setpropertybyid" />
+    <FunctionImportMapping FunctionImportName="dt_setpropertybyid_u" FunctionName="AlphatoolsModel.Store.dt_setpropertybyid_u" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams" FunctionName="AlphatoolsModel.Store.dt_validateloginparams" />
+    <FunctionImportMapping FunctionImportName="dt_validateloginparams_u" FunctionName="AlphatoolsModel.Store.dt_validateloginparams_u" />
+    <FunctionImportMapping FunctionImportName="dt_vcsenabled" FunctionName="AlphatoolsModel.Store.dt_vcsenabled" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp006" FunctionName="AlphatoolsModel.Store.dt_verstamp006" />
+    <FunctionImportMapping FunctionImportName="dt_verstamp007" FunctionName="AlphatoolsModel.Store.dt_verstamp007" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout" FunctionName="AlphatoolsModel.Store.dt_whocheckedout" />
+    <FunctionImportMapping FunctionImportName="dt_whocheckedout_u" FunctionName="AlphatoolsModel.Store.dt_whocheckedout_u" />
+    <FunctionImportMapping FunctionImportName="EventCalendarUpdate" FunctionName="AlphatoolsModel.Store.EventCalendarUpdate" />
+    <FunctionImportMapping FunctionImportName="GetRecordCountsForAllTables" FunctionName="AlphatoolsModel.Store.GetRecordCountsForAllTables">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.GetRecordCountsForAllTables_Result">
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="Table_Name" ColumnName="Table Name" />
+          <ScalarProperty Name="Record_Count" ColumnName="Record Count" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="Shop1_Drop" FunctionName="AlphatoolsModel.Store.Shop1_Drop" />
+    <FunctionImportMapping FunctionImportName="Shop2_Fetch" FunctionName="AlphatoolsModel.Store.Shop2_Fetch" />
+    <FunctionImportMapping FunctionImportName="Shop3_Data" FunctionName="AlphatoolsModel.Store.Shop3_Data" />
+    <FunctionImportMapping FunctionImportName="Shop3_PartData" FunctionName="AlphatoolsModel.Store.Shop3_PartData" />
+    <FunctionImportMapping FunctionImportName="Shop4_Extract" FunctionName="AlphatoolsModel.Store.Shop4_Extract">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.Shop4_Extract_Result">
+          <ScalarProperty Name="NAME___0570ef7f82aa34ce168e112e9ec4e125" ColumnName="NAME – 0570ef7f82aa34ce168e112e9ec4e125" />
+          <ScalarProperty Name="UPC_CODE" ColumnName="UPC_CODE" />
+          <ScalarProperty Name="MFG_PART_NUMBER" ColumnName="MFG_PART_NUMBER" />
+          <ScalarProperty Name="SHORT_DESCRIPTION" ColumnName="SHORT_DESCRIPTION" />
+          <ScalarProperty Name="LONG_DESCRIPTION" ColumnName="LONG_DESCRIPTION" />
+          <ScalarProperty Name="AVAILABILITY" ColumnName="AVAILABILITY" />
+          <ScalarProperty Name="RETAIL_PRICE" ColumnName="RETAIL_PRICE" />
+          <ScalarProperty Name="MAP_PRICE" ColumnName="MAP_PRICE" />
+          <ScalarProperty Name="MFG_OFFER_PRICE" ColumnName="MFG_OFFER_PRICE" />
+          <ScalarProperty Name="AVG_DEALER_MARGIN" ColumnName="AVG_DEALER_MARGIN" />
+          <ScalarProperty Name="IMAGE" ColumnName="IMAGE" />
+          <ScalarProperty Name="ACTIVE" ColumnName="ACTIVE" />
+          <ScalarProperty Name="WEIGHT" ColumnName="WEIGHT" />
+          <ScalarProperty Name="LENGTH" ColumnName="LENGTH" />
+          <ScalarProperty Name="HEIGHT" ColumnName="HEIGHT" />
+          <ScalarProperty Name="WIDTH" ColumnName="WIDTH" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME1" ColumnName="ADDITIONAL_IMG_NAME1" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE1" ColumnName="ADDITIONAL_IMG_FILE1" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME2" ColumnName="ADDITIONAL_IMG_NAME2" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE2" ColumnName="ADDITIONAL_IMG_FILE2" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME3" ColumnName="ADDITIONAL_IMG_NAME3" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE3" ColumnName="ADDITIONAL_IMG_FILE3" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME4" ColumnName="ADDITIONAL_IMG_NAME4" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE4" ColumnName="ADDITIONAL_IMG_FILE4" />
+          <ScalarProperty Name="ADDITIONAL_IMG_NAME5" ColumnName="ADDITIONAL_IMG_NAME5" />
+          <ScalarProperty Name="ADDITIONAL_IMG_FILE5" ColumnName="ADDITIONAL_IMG_FILE5" />
+          <ScalarProperty Name="SPEC_TYPE1" ColumnName="SPEC_TYPE1" />
+          <ScalarProperty Name="SPEC_NAME1" ColumnName="SPEC_NAME1" />
+          <ScalarProperty Name="SPEC_DESCRIPTION1" ColumnName="SPEC_DESCRIPTION1" />
+          <ScalarProperty Name="SPEC_TYPE2" ColumnName="SPEC_TYPE2" />
+          <ScalarProperty Name="SPEC_NAME2" ColumnName="SPEC_NAME2" />
+          <ScalarProperty Name="SPEC_DESCRIPTION2" ColumnName="SPEC_DESCRIPTION2" />
+          <ScalarProperty Name="SPEC_TYPE3" ColumnName="SPEC_TYPE3" />
+          <ScalarProperty Name="SPEC_NAME3" ColumnName="SPEC_NAME3" />
+          <ScalarProperty Name="SPEC_DESCRIPTION3" ColumnName="SPEC_DESCRIPTION3" />
+          <ScalarProperty Name="SPEC_TYPE4" ColumnName="SPEC_TYPE4" />
+          <ScalarProperty Name="SPEC_NAME4" ColumnName="SPEC_NAME4" />
+          <ScalarProperty Name="SPEC_DESCRIPTION4" ColumnName="SPEC_DESCRIPTION4" />
+          <ScalarProperty Name="SPEC_TYPE5" ColumnName="SPEC_TYPE5" />
+          <ScalarProperty Name="SPEC_NAME5" ColumnName="SPEC_NAME5" />
+          <ScalarProperty Name="SPEC_DESCRIPTION5" ColumnName="SPEC_DESCRIPTION5" />
+          <ScalarProperty Name="LEAD_TIME" ColumnName="LEAD_TIME" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="AlphatoolsModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="AlphatoolsModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="AlphatoolsModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="AlphatoolsModel.Store.sp_helpdiagramdefinition" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="AlphatoolsModel.Store.sp_helpdiagrams" />
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="AlphatoolsModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="AlphatoolsModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="spDeleteDupCollection" FunctionName="AlphatoolsModel.Store.spDeleteDupCollection" />
+    <FunctionImportMapping FunctionImportName="spTNChart" FunctionName="AlphatoolsModel.Store.spTNChart">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.spTNChart_Result">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartSize" ColumnName="PartSize" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+          <ScalarProperty Name="PartMaxRPMs" ColumnName="PartMaxRPMs" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Arbors" ColumnName="Arbors" />
+          <ScalarProperty Name="Shape" ColumnName="Shape" />
+          <ScalarProperty Name="RecommendedFor" ColumnName="RecommendedFor" />
+          <ScalarProperty Name="Threads" ColumnName="Threads" />
+          <ScalarProperty Name="ForUseOn" ColumnName="ForUseOn" />
+          <ScalarProperty Name="Finish" ColumnName="Finish" />
+          <ScalarProperty Name="Grit" ColumnName="Grit" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="DepthOfCut" ColumnName="DepthOfCut" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="BondType" ColumnName="BondType" />
+          <ScalarProperty Name="Container" ColumnName="Container" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PiecesPerCase" ColumnName="PiecesPerCase" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spTNChartTemp" FunctionName="AlphatoolsModel.Store.spTNChartTemp" />
+    <FunctionImportMapping FunctionImportName="spTNChartTemp4" FunctionName="AlphatoolsModel.Store.spTNChartTemp4">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.spTNChartTemp4_Result">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartSize" ColumnName="PartSize" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+          <ScalarProperty Name="PartMaxRPMs" ColumnName="PartMaxRPMs" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Arbors" ColumnName="Arbors" />
+          <ScalarProperty Name="Shape" ColumnName="Shape" />
+          <ScalarProperty Name="RecommendedFor" ColumnName="RecommendedFor" />
+          <ScalarProperty Name="Threads" ColumnName="Threads" />
+          <ScalarProperty Name="ForUseOn" ColumnName="ForUseOn" />
+          <ScalarProperty Name="Finish" ColumnName="Finish" />
+          <ScalarProperty Name="Grit" ColumnName="Grit" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="DepthOfCut" ColumnName="DepthOfCut" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="BondType" ColumnName="BondType" />
+          <ScalarProperty Name="Container" ColumnName="Container" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PiecesPerCase" ColumnName="PiecesPerCase" />
+          <ScalarProperty Name="PartNoValue" ColumnName="PartNoValue" />
+          <ScalarProperty Name="iPartSize" ColumnName="iPartSize" />
+          <ScalarProperty Name="iDiameter" ColumnName="iDiameter" />
+          <ScalarProperty Name="iThickness" ColumnName="iThickness" />
+          <ScalarProperty Name="iPartMaxRPMs" ColumnName="iPartMaxRPMs" />
+          <ScalarProperty Name="iType" ColumnName="iType" />
+          <ScalarProperty Name="iArbors" ColumnName="iArbors" />
+          <ScalarProperty Name="iShape" ColumnName="iShape" />
+          <ScalarProperty Name="iRecommendedFor" ColumnName="iRecommendedFor" />
+          <ScalarProperty Name="iThreads" ColumnName="iThreads" />
+          <ScalarProperty Name="iForUseOn" ColumnName="iForUseOn" />
+          <ScalarProperty Name="iFinish" ColumnName="iFinish" />
+          <ScalarProperty Name="iGrit" ColumnName="iGrit" />
+          <ScalarProperty Name="iColor" ColumnName="iColor" />
+          <ScalarProperty Name="iDepthOfCut" ColumnName="iDepthOfCut" />
+          <ScalarProperty Name="iQty" ColumnName="iQty" />
+          <ScalarProperty Name="iBondType" ColumnName="iBondType" />
+          <ScalarProperty Name="iContainer" ColumnName="iContainer" />
+          <ScalarProperty Name="iDescription" ColumnName="iDescription" />
+          <ScalarProperty Name="iPiecesPerCase" ColumnName="iPiecesPerCase" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spVideoTemplate" FunctionName="AlphatoolsModel.Store.spVideoTemplate">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AlphatoolsModel.spVideoTemplate_Result">
+          <ScalarProperty Name="PartNo" ColumnName="PartNo" />
+          <ScalarProperty Name="PartSize" ColumnName="PartSize" />
+          <ScalarProperty Name="Diameter" ColumnName="Diameter" />
+          <ScalarProperty Name="Thickness" ColumnName="Thickness" />
+          <ScalarProperty Name="PartMaxRPMs" ColumnName="PartMaxRPMs" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Arbors" ColumnName="Arbors" />
+          <ScalarProperty Name="Shape" ColumnName="Shape" />
+          <ScalarProperty Name="RecommendedFor" ColumnName="RecommendedFor" />
+          <ScalarProperty Name="Threads" ColumnName="Threads" />
+          <ScalarProperty Name="ForUseOn" ColumnName="ForUseOn" />
+          <ScalarProperty Name="Finish" ColumnName="Finish" />
+          <ScalarProperty Name="Grit" ColumnName="Grit" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="DepthOfCut" ColumnName="DepthOfCut" />
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="BondType" ColumnName="BondType" />
+          <ScalarProperty Name="Container" ColumnName="Container" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PiecesPerCase" ColumnName="PiecesPerCase" />
+          <ScalarProperty Name="PartNoValue" ColumnName="PartNoValue" />
+          <ScalarProperty Name="iPartSize" ColumnName="iPartSize" />
+          <ScalarProperty Name="iDiameter" ColumnName="iDiameter" />
+          <ScalarProperty Name="iThickness" ColumnName="iThickness" />
+          <ScalarProperty Name="iPartMaxRPMs" ColumnName="iPartMaxRPMs" />
+          <ScalarProperty Name="iType" ColumnName="iType" />
+          <ScalarProperty Name="iArbors" ColumnName="iArbors" />
+          <ScalarProperty Name="iShape" ColumnName="iShape" />
+          <ScalarProperty Name="iRecommendedFor" ColumnName="iRecommendedFor" />
+          <ScalarProperty Name="iThreads" ColumnName="iThreads" />
+          <ScalarProperty Name="iForUseOn" ColumnName="iForUseOn" />
+          <ScalarProperty Name="iFinish" ColumnName="iFinish" />
+          <ScalarProperty Name="iGrit" ColumnName="iGrit" />
+          <ScalarProperty Name="iColor" ColumnName="iColor" />
+          <ScalarProperty Name="iDepthOfCut" ColumnName="iDepthOfCut" />
+          <ScalarProperty Name="iQty" ColumnName="iQty" />
+          <ScalarProperty Name="iBondType" ColumnName="iBondType" />
+          <ScalarProperty Name="iContainer" ColumnName="iContainer" />
+          <ScalarProperty Name="iDescription" ColumnName="iDescription" />
+          <ScalarProperty Name="iPiecesPerCase" ColumnName="iPiecesPerCase" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spWebMatInd" FunctionName="AlphatoolsModel.Store.spWebMatInd" />
+  </EntityContainerMapping>
+</Mapping>

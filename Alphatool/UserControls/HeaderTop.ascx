@@ -6,16 +6,16 @@
         border: 0 none !important;
         background: 0 none !important;
         box-shadow: 0 0 0 rgba(0, 0, 0, 0.03) !important;
-        
     }
+
     .iconB {
         background: 0 none !important;
         border: 0 none !important;
         float: left;
         margin: -55% -30% 0 70%;
         box-shadow: 0 0 0 rgba(0, 0, 0, 0.03) !important;
-
     }
+
     .dropdown-menu {
         top: 90% !important;
     }
@@ -31,7 +31,7 @@
             <li><a href="../Pages/Employment.aspx">Careers </a></li>
         </ul>
     </li>
-    
+
     <li class="dropdown"><a title="Calendar" href="../Pages/Calendar.aspx">Calendar</a>
 
     </li>
@@ -51,5 +51,14 @@
     <li class="dropdown">
         <a href="../Pages/ContactUs.aspx" title="Contact Us">Contact Us</a>
     </li>
+    <li class="dropdown">
+        <a id="" style="background-color: #337ab7; color: white; border-radius: 10px; text-align: center;"
+            href="../Pages/ShopLocation.aspx">Buy Now</a>
+    </li>
+
+
 </ul>
+
+
+
 

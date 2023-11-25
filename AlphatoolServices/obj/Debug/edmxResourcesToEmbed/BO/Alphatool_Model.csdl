@@ -1,0 +1,2652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlphatoolsModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityType Name="C_SerialNos2020">
+    <Key>
+      <PropertyRef Name="RedID" />
+    </Key>
+    <Property Name="AcctNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ToolID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProductCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Serial" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Purchase_Date" Type="DateTime" Precision="3" />
+    <Property Name="AccountName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="RedID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+  </EntityType>
+  <EntityType Name="CMSPageRef">
+    <Key>
+      <PropertyRef Name="CMSPage" />
+      <PropertyRef Name="CMSVersion" />
+    </Key>
+    <Property Name="CMSPage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="WebsiteID" Type="Int32" />
+    <Property Name="CMSContent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CMSTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateCreated" Type="DateTime" Precision="3" />
+    <Property Name="DateModified" Type="DateTime" Precision="3" />
+    <Property Name="EditorName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AffiliateID" Type="Int32" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="CMSCategoryId" Type="Int32" />
+    <Property Name="CMSVersion" Type="Int32" Nullable="false" />
+    <Property Name="Live" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="PageURL" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MetaTitle" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="MetaKeywords" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="MetaDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+    <Property Name="MetaTag" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="IsFooter" Type="Int16" />
+    <Property Name="IsLeftMenu" Type="Int16" />
+    <Property Name="LeftMenuOrder" Type="Int32" />
+    <Property Name="FooterMenuOrder" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Collection">
+    <Key>
+      <PropertyRef Name="CollectionID" />
+    </Key>
+    <Property Name="CollectionID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneWork" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneHome" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneMobile" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="SelectedBtnIn" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SelectedBtnDate" Type="DateTime" Precision="3" />
+    <Property Name="Answer1" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Answer2" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="PromoCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CollectionDupInfo">
+    <Key>
+      <PropertyRef Name="CollectionID" />
+    </Key>
+    <Property Name="CollectionID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Address1" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="Address2" Type="String" MaxLength="64" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="PostalCode" Type="String" MaxLength="24" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneWork" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneHome" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="PhoneMobile" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="SelectedBtnIn" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SelectedBtnDate" Type="DateTime" Precision="3" />
+    <Property Name="Answer1" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Answer2" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="PromoCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="CollectionEmail">
+    <Key>
+      <PropertyRef Name="SelectedBtnIn" />
+    </Key>
+    <Property Name="SelectedBtnIn" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="EmailForward" Type="String" MaxLength="128" FixedLength="false" Unicode="false" />
+    <Property Name="CollectionDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Question1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Question2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="dtproperties">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="property" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="objectid" Type="Int32" />
+    <Property Name="property" Type="String" MaxLength="64" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="value" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="uvalue" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="lvalue" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="version" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HomeBanners">
+    <Key>
+      <PropertyRef Name="HomeBannerNo" />
+    </Key>
+    <Property Name="HomeBannerNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="HBName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HBImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HBLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="Sort" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="HomeProducts">
+    <Key>
+      <PropertyRef Name="HomeProductsNo" />
+    </Key>
+    <Property Name="HomeProductsNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="HPName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HPImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HPLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="Sort" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="LinksType">
+    <Key>
+      <PropertyRef Name="LinkType" />
+    </Key>
+    <Property Name="LinkType" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LinkTypeDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Links" Relationship="Self.FK_Links_LinksType" FromRole="LinksType" ToRole="Links" />
+  </EntityType>
+  <EntityType Name="MAdvisoryType">
+    <Key>
+      <PropertyRef Name="AdvisoryType" />
+    </Key>
+    <Property Name="AdvisoryType" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="AdvisoryDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductAdvisory" Relationship="Self.FK_ProductAdvisory_MAdvisoryType" FromRole="MAdvisoryType" ToRole="ProductAdvisory" />
+  </EntityType>
+  <EntityType Name="MApplication">
+    <Key>
+      <PropertyRef Name="ApplicationID" />
+    </Key>
+    <Property Name="ApplicationID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Application" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Webfields" Relationship="Self.FK_Webfields_MApplication" FromRole="MApplication" ToRole="Webfields" />
+  </EntityType>
+  <EntityType Name="MCAProp65">
+    <Key>
+      <PropertyRef Name="CAProp65ID" />
+    </Key>
+    <Property Name="CAProp65ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Chemical" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CAProp65Text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Notes" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CancerChemical" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DevelopmentalChemical" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MContact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TerritoryID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="RegionID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ContactTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ContactLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ContactEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MRegion" Relationship="Self.FK_MContact_MRegion" FromRole="MContact" ToRole="MRegion" />
+    <NavigationProperty Name="MTerritory" Relationship="Self.FK_MContact_MTerritory" FromRole="MContact" ToRole="MTerritory" />
+    <NavigationProperty Name="PressRelease" Relationship="Self.FK_PressRelease_MContact" FromRole="MContact" ToRole="PressRelease" />
+  </EntityType>
+  <EntityType Name="MFlyer">
+    <Key>
+      <PropertyRef Name="FlyerID" />
+    </Key>
+    <Property Name="FlyerID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="FLyerDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FlyerLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FlyerNumber" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MFlyer" FromRole="MFlyer" ToRole="ProductPage" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MFlyer" FromRole="MFlyer" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MIndustry">
+    <Key>
+      <PropertyRef Name="IndustryCode" />
+    </Key>
+    <Property Name="IndustryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Industry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MLibrary">
+    <Key>
+      <PropertyRef Name="LibraryTypeID" />
+    </Key>
+    <Property Name="LibraryTypeID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="LibraryDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="LibraryMemo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MLibrary" FromRole="MLibrary" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MMaintenanceCard">
+    <Key>
+      <PropertyRef Name="MaintenanceCardID" />
+    </Key>
+    <Property Name="MaintenanceCardID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MaintenanceCardDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MaintenanceCardLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MMaintenanceCard" FromRole="MMaintenanceCard" ToRole="ProductPage" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MMaintenanceCard" FromRole="MMaintenanceCard" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MManual">
+    <Key>
+      <PropertyRef Name="ManualID" />
+    </Key>
+    <Property Name="ManualID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ManualDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ManualLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MManual" FromRole="MManual" ToRole="ProductPage" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MManual" FromRole="MManual" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MMaterial">
+    <Key>
+      <PropertyRef Name="MaterialCode" />
+    </Key>
+    <Property Name="MaterialCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="Material" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MMsds">
+    <Key>
+      <PropertyRef Name="MSDSID" />
+    </Key>
+    <Property Name="MSDSID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MSDSDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MSDSLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MMsds" FromRole="MMsds" ToRole="ProductPage" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MMsds" FromRole="MMsds" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MNetTitle">
+    <Key>
+      <PropertyRef Name="NetTitleID" />
+    </Key>
+    <Property Name="NetTitleID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="NetTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NetPriceInfo" Relationship="Self.FK_NetPriceInfo_MNetTitle" FromRole="MNetTitle" ToRole="NetPriceInfo" />
+  </EntityType>
+  <EntityType Name="MOtherRef1">
+    <Key>
+      <PropertyRef Name="OtherRef1ID" />
+    </Key>
+    <Property Name="OtherRef1ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OtherRef1Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OtherRef1Link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MOtherRef2">
+    <Key>
+      <PropertyRef Name="OtherRef2ID" />
+    </Key>
+    <Property Name="OtherRef2ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OtherRef2Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OtherRef2Link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MOtherRef3">
+    <Key>
+      <PropertyRef Name="OtherRef3ID" />
+    </Key>
+    <Property Name="OtherRef3ID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OtherRef3Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OtherRef3Link" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MOtherReference">
+    <Key>
+      <PropertyRef Name="OtherReferenceID" />
+    </Key>
+    <Property Name="OtherReferenceID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="OtherReferenceDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="OtherReferenceLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MOtherReference" FromRole="MOtherReference" ToRole="ProductPage" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MOtherReference" FromRole="MOtherReference" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MPageGroup">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PageGroup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NetPriceInfo" Relationship="Self.FK_NetPriceInfo_MPageGroup" FromRole="MPageGroup" ToRole="NetPriceInfo" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MPageGroup" FromRole="MPageGroup" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="MPageSection">
+    <Key>
+      <PropertyRef Name="SectionID" />
+    </Key>
+    <Property Name="SectionID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PageSection" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="NetPriceInfo" Relationship="Self.FK_NetPriceInfo_MPageSection" FromRole="MPageSection" ToRole="NetPriceInfo" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MPageSection" FromRole="MPageSection" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="MPartsList">
+    <Key>
+      <PropertyRef Name="MPartsListID" />
+    </Key>
+    <Property Name="MPartsListID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="MPartsListDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MPartsListLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MPartUsage">
+    <Key>
+      <PropertyRef Name="PartUsageID" />
+    </Key>
+    <Property Name="PartUsageID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PartUsage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Webfields" Relationship="Self.FK_Webfields_MPartUsage" FromRole="MPartUsage" ToRole="Webfields" />
+  </EntityType>
+  <EntityType Name="MPPCIndustry">
+    <Key>
+      <PropertyRef Name="PPCIndustry" />
+    </Key>
+    <Property Name="PPCIndustry" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PPCIndustryName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PPCIndustryNotes" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PPCIndustryImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PPCIndustryLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IndustrySort" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MetaTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetaKeywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetaDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MPPCIndustrySectionGroupPages">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MPPCInductryId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MWebSectionId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MWebGroupId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PPCIndustryLink" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebSectionSort" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebGroupSort" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="MPPCIndustrySectionGroupSpareParts">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MPPCInductryId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MWebSectionId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MWebGroupId" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PPCIndustryLink" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebSectionSort" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebGroupSort" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PartsPageCode" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MProcess">
+    <Key>
+      <PropertyRef Name="ProcessID" />
+    </Key>
+    <Property Name="ProcessID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Process" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Webfields" Relationship="Self.FK_Webfields_MProcess" FromRole="MProcess" ToRole="Webfields" />
+  </EntityType>
+  <EntityType Name="MRegion">
+    <Key>
+      <PropertyRef Name="RegionID" />
+    </Key>
+    <Property Name="RegionID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RegionName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MContact" Relationship="Self.FK_MContact_MRegion" FromRole="MRegion" ToRole="MContact" />
+    <NavigationProperty Name="PressRelease" Relationship="Self.FK_PressRelease_MRegion" FromRole="MRegion" ToRole="PressRelease" />
+  </EntityType>
+  <EntityType Name="MTechNote">
+    <Key>
+      <PropertyRef Name="TechNoteID" />
+    </Key>
+    <Property Name="TechNoteID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TechNoteDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="TechNoteLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MTechNote" FromRole="MTechNote" ToRole="ProductPage" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MTechNote" FromRole="MTechNote" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MTerritory">
+    <Key>
+      <PropertyRef Name="TerritoryID" />
+    </Key>
+    <Property Name="TerritoryID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="TerritoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MContact" Relationship="Self.FK_MContact_MTerritory" FromRole="MTerritory" ToRole="MContact" />
+    <NavigationProperty Name="PressRelease" Relationship="Self.FK_PressRelease_MTerritory" FromRole="MTerritory" ToRole="PressRelease" />
+  </EntityType>
+  <EntityType Name="MWebGroup">
+    <Key>
+      <PropertyRef Name="WebGroupID" />
+    </Key>
+    <Property Name="WebGroupID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="WebGroupSort" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebGroup" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetaTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetaKeywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetaDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MWebGroup" FromRole="MWebGroup" ToRole="ProductPage" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MWebGroup" FromRole="MWebGroup" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MWebSection">
+    <Key>
+      <PropertyRef Name="WebSectionID" />
+    </Key>
+    <Property Name="WebSectionID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="WebSectionSort" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebSection" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="WebDescription" Type="String" MaxLength="55" FixedLength="false" Unicode="true" />
+    <Property Name="WebOverview" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WebSectionAltTag" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="WebSectionTitleTag" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="WebSectionMemo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="WebSectionMetaTag" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="WebSectionImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WebSectionLink" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" />
+    <Property Name="WebSectionIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="MetaTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetaKeywords" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetaDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MWebSection" FromRole="MWebSection" ToRole="ProductPage" />
+    <NavigationProperty Name="TechnicalLibrary" Relationship="Self.FK_TechnicalLibrary_MWebSection" FromRole="MWebSection" ToRole="TechnicalLibrary" />
+  </EntityType>
+  <EntityType Name="MWebTitle">
+    <Key>
+      <PropertyRef Name="WebTitleID" />
+    </Key>
+    <Property Name="WebTitleID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="WebTitleSort" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductPage_MWebTitle" FromRole="MWebTitle" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="NetPriceInfo">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NetPriceDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NetTitleID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SectionID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="GroupID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SORT1_Section" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SORT2_Group" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SORT3_Title" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SORT4_Part" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="MNetTitle" Relationship="Self.FK_NetPriceInfo_MNetTitle" FromRole="NetPriceInfo" ToRole="MNetTitle" />
+    <NavigationProperty Name="MPageGroup" Relationship="Self.FK_NetPriceInfo_MPageGroup" FromRole="NetPriceInfo" ToRole="MPageGroup" />
+    <NavigationProperty Name="MPageSection" Relationship="Self.FK_NetPriceInfo_MPageSection" FromRole="NetPriceInfo" ToRole="MPageSection" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_NetPriceList_ProductPageCode" FromRole="NetPriceInfo" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="PartsInfo">
+    <Key>
+      <PropertyRef Name="Partno" />
+    </Key>
+    <Property Name="Partno" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MSRP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Barcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PkgDimensions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="QProductID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CAProp65ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommodityCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="PartsPage">
+    <Key>
+      <PropertyRef Name="PartsPC" />
+    </Key>
+    <Property Name="PartsPC" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PageName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="BannerName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="WebSectionID" Type="Double" />
+    <Property Name="WebGroupID" Type="Double" />
+    <Property Name="imgTool" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ImgSchematic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PDFSchematic" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PPC" Type="Double" />
+    <Property Name="ManualID" Type="Double" />
+    <Property Name="MaintenanceCardID" Type="Double" />
+    <Property Name="PartsList" Type="Double" />
+    <Property Name="OtherRef" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OtherRef1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OtherRef2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="OtherRef3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ThumbNail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AltPPC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="PressRelease">
+    <Key>
+      <PropertyRef Name="PressReleaseID" />
+    </Key>
+    <Property Name="PressReleaseID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DatePosted" Type="DateTime" Precision="3" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="PRTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PRDescription" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="PRBlurb" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
+    <Property Name="PRFooter" Type="String" MaxLength="3000" FixedLength="false" Unicode="true" />
+    <Property Name="PRImage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PRLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TerritoryID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="RegionID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ContactID" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="MContact" Relationship="Self.FK_PressRelease_MContact" FromRole="PressRelease" ToRole="MContact" />
+    <NavigationProperty Name="MRegion" Relationship="Self.FK_PressRelease_MRegion" FromRole="PressRelease" ToRole="MRegion" />
+    <NavigationProperty Name="MTerritory" Relationship="Self.FK_PressRelease_MTerritory" FromRole="PressRelease" ToRole="MTerritory" />
+  </EntityType>
+  <EntityType Name="ProductAdvisory">
+    <Key>
+      <PropertyRef Name="ProductAdvisoryID" />
+    </Key>
+    <Property Name="ProductAdvisoryID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="AdvisoryType" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="AdvisoryTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AdvisoryDescription" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="AdvisoryImage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AdvistoryLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" />
+    <NavigationProperty Name="MAdvisoryType" Relationship="Self.FK_ProductAdvisory_MAdvisoryType" FromRole="ProductAdvisory" ToRole="MAdvisoryType" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductAdvisory_ProductPage" FromRole="ProductAdvisory" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="ProductFields">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Weight" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Barcode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="QProductID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PkgDimensions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="ApplicationID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PartUsageID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ProcessID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CAProp65ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommodityCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductFieldsOLD">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Weight" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Barcode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="QProductID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PkgDimensions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="ApplicationID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PartUsageID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ProcessID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CAProp65ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommodityCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductFieldsPending">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Weight" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Barcode" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="QProductID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PkgDimensions" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="ApplicationID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PartUsageID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ProcessID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CAProp65ID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CountryOrigin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CommodityCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductInfo">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PartSize" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Diameter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Thickness" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PartMaxRPMs" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Arbors" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Shape" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="RecommendedFor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Threads" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ForUseOn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Finish" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Grit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DepthOfCut" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Qty" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BondType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Container" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PiecesPerCase" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MSRP" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CatalogPageNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Material" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OrbitDiameter" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductPage">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PageName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="BannerName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SectionID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="GroupID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebSectionID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebGroupID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="WebTitleID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TechNoteID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MSDSID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ManualID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MaintenanceCardID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OtherReferenceID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FlyerID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DataSheet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ThumbNail" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AdditionalItem" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Video1" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="SpecChart" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="GritChart" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PictureLayout" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ChartLayout" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb5" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb6" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb7" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb8" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb9" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProcessID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OtherRef1" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OtherRef2" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OtherRef3" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PartsList" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CatalogPageNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MetaTags" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="MFlyer" Relationship="Self.FK_ProductPage_MFlyer" FromRole="ProductPage" ToRole="MFlyer" />
+    <NavigationProperty Name="MMaintenanceCard" Relationship="Self.FK_ProductPage_MMaintenanceCard" FromRole="ProductPage" ToRole="MMaintenanceCard" />
+    <NavigationProperty Name="MManual" Relationship="Self.FK_ProductPage_MManual" FromRole="ProductPage" ToRole="MManual" />
+    <NavigationProperty Name="MMsds" Relationship="Self.FK_ProductPage_MMsds" FromRole="ProductPage" ToRole="MMsds" />
+    <NavigationProperty Name="MOtherReference" Relationship="Self.FK_ProductPage_MOtherReference" FromRole="ProductPage" ToRole="MOtherReference" />
+    <NavigationProperty Name="MPageGroup" Relationship="Self.FK_ProductPage_MPageGroup" FromRole="ProductPage" ToRole="MPageGroup" />
+    <NavigationProperty Name="MPageSection" Relationship="Self.FK_ProductPage_MPageSection" FromRole="ProductPage" ToRole="MPageSection" />
+    <NavigationProperty Name="MTechNote" Relationship="Self.FK_ProductPage_MTechNote" FromRole="ProductPage" ToRole="MTechNote" />
+    <NavigationProperty Name="MWebGroup" Relationship="Self.FK_ProductPage_MWebGroup" FromRole="ProductPage" ToRole="MWebGroup" />
+    <NavigationProperty Name="MWebSection" Relationship="Self.FK_ProductPage_MWebSection" FromRole="ProductPage" ToRole="MWebSection" />
+    <NavigationProperty Name="MWebTitle" Relationship="Self.FK_ProductPage_MWebTitle" FromRole="ProductPage" ToRole="MWebTitle" />
+    <NavigationProperty Name="NetPriceInfo" Relationship="Self.FK_NetPriceList_ProductPageCode" FromRole="ProductPage" ToRole="NetPriceInfo" />
+    <NavigationProperty Name="ProductAdvisory" Relationship="Self.FK_ProductAdvisory_ProductPage" FromRole="ProductPage" ToRole="ProductAdvisory" />
+    <NavigationProperty Name="EducationalMaterial" Relationship="Self.FK_EducationalProducts_ProductPage" FromRole="ProductPage" ToRole="EducationalMaterial" />
+    <NavigationProperty Name="NewProducts" Relationship="Self.FK_NewProducts_ProductPage" FromRole="ProductPage" ToRole="NewProducts" />
+    <NavigationProperty Name="ProductText" Relationship="Self.FK_ProductText_ProductPage" FromRole="ProductPage" ToRole="ProductText" />
+    <NavigationProperty Name="ProductVideo" Relationship="Self.FK_ProductVideo_ProductPage" FromRole="ProductPage" ToRole="ProductVideo" />
+    <NavigationProperty Name="TNTechNote" Relationship="Self.FK_TNTechNote_ProductPage" FromRole="ProductPage" ToRole="TNTechNote" />
+    <NavigationProperty Name="Webfields" Relationship="Self.FK_Webfields_ProductPage" FromRole="ProductPage" ToRole="Webfields" />
+  </EntityType>
+  <EntityType Name="ProductRegistration">
+    <Key>
+      <PropertyRef Name="PRid" />
+    </Key>
+    <Property Name="PRid" Type="Int32" Nullable="false" />
+    <Property Name="ModelNo" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="SerialNo" Type="String" MaxLength="24" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="FirstName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Postal" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Telephone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="Dealer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Purpose" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="Industry" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CurDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProductRelatedText">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="RelatedText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Current" Type="Boolean" />
+    <Property Name="PageName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductRelatedTextNew">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PageName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ProdRelatedText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Current" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="ProductText">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ProductText1" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="TechTip" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="Notes" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="Features" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="RelatedProduct" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShortDescription2" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductText_ProductPage" FromRole="ProductText" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TNTechNote">
+    <Key>
+      <PropertyRef Name="TNID" />
+    </Key>
+    <Property Name="TNID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ProductPageOrderID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TNBlurb" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="TNHowID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TNHelpID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TNFAQID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TNImage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TNSpecChart" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_TNTechNote_ProductPage" FromRole="TNTechNote" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="VideoID" />
+    </Key>
+    <Property Name="VideoID" Type="Int32" Nullable="false" />
+    <Property Name="WebSection" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="VCurrentYN" Type="Boolean" />
+    <Property Name="Video720x480" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VideoMP4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VideoName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VideoDescription" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VideoLink2" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VUploadDate" Type="DateTime" Precision="3" />
+    <Property Name="VStopDate" Type="DateTime" Precision="3" />
+    <Property Name="VideoText" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Vimage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Filename" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Updated" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Industry" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="VideoLink" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ProductVideo" Relationship="Self.FK_ProductVideo_Video" FromRole="Video" ToRole="ProductVideo" />
+  </EntityType>
+  <EntityType Name="Webfields">
+    <Key>
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ApplicationID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PartUsageID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ProcessID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SORT4_Part" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Weight" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShopLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ShopImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="QProductID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="MApplication" Relationship="Self.FK_Webfields_MApplication" FromRole="Webfields" ToRole="MApplication" />
+    <NavigationProperty Name="MPartUsage" Relationship="Self.FK_Webfields_MPartUsage" FromRole="Webfields" ToRole="MPartUsage" />
+    <NavigationProperty Name="MProcess" Relationship="Self.FK_Webfields_MProcess" FromRole="Webfields" ToRole="MProcess" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_Webfields_ProductPage" FromRole="Webfields" ToRole="ProductPage" />
+    <NavigationProperty Name="WebPartNo" Relationship="Self.FK_Webfields_WebPartNo" FromRole="Webfields" ToRole="WebPartNo" />
+  </EntityType>
+  <EntityType Name="Webfields2">
+    <Key>
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ApplicationID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PartUsageID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ProcessID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SORT4_Part" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Weight" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShopLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ShopImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="QProductID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WebPartNo">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Webfields" Relationship="Self.FK_Webfields_WebPartNo" FromRole="WebPartNo" ToRole="Webfields" />
+  </EntityType>
+  <EntityType Name="AboutUs">
+    <Key>
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="AboutUsPDF" />
+    </Key>
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AboutUsPDF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AboutUsVideo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AboutUsLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Affiliations">
+    <Key>
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="AffiliateName" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="AffiliateName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="AffiliateLogo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="AffiliateLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Catalogs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="CatalogName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="Sort" Type="Double" />
+    <Property Name="Filename" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PDFSize" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ZipSize" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="FileZipped" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DealerInfo">
+    <Key>
+      <PropertyRef Name="DealerID" />
+    </Key>
+    <Property Name="DealerID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Location" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AccountNo" Type="String" MaxLength="16" FixedLength="false" Unicode="true" />
+    <Property Name="DealerLogoID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SLXAccountID" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="DateUpdated" Type="DateTime" Precision="0" />
+    <Property Name="Status" Type="Boolean" />
+    <Property Name="PricingInfo" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="EducationalMaterial">
+    <Key>
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="ProductPageCode" />
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="EdProductDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EdProductTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EdProductSummary" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="EdProductPhoto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EdProductPDF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_EducationalProducts_ProductPage" FromRole="EducationalMaterial" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="EmailSignup">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Employment">
+    <Key>
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="EmployTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EmployBlurb" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="EmployeeEmailLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EventCalendar">
+    <Key>
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="EventTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventBlurb" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="EventDetailPDF" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="EventLogo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="EventLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Links">
+    <Key>
+      <PropertyRef Name="LinkType" />
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="LinkName" />
+      <PropertyRef Name="LinkLogo" />
+      <PropertyRef Name="Link" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="LinkType" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="LinkName" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LinkLogo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Link" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="LinksType" Relationship="Self.FK_Links_LinksType" FromRole="Links" ToRole="LinksType" />
+  </EntityType>
+  <EntityType Name="MDealerWebSiteType">
+    <Key>
+      <PropertyRef Name="DealerWebSiteType" />
+    </Key>
+    <Property Name="DealerWebSiteType" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Members">
+    <Key>
+      <PropertyRef Name="Account" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Email" />
+      <PropertyRef Name="Password" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="Account" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="CredentialSentDate" Type="DateTime" Precision="3" />
+    <Property Name="LastUpdated" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MetalProducts">
+    <Key>
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="ProductPageCode" />
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="MetalProductDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetalProductTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetalProductSummary" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="MetalProductPhoto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MetalProductPDF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MProductRegModel">
+    <Key>
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="ProductModel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ModelDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NewProducts">
+    <Key>
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="ProductPageCode" />
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="NewProductDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NewProductTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NewProductSummary" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+    <Property Name="NewProductPhoto" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="NewProductPDF" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_NewProducts_ProductPage" FromRole="NewProducts" ToRole="ProductPage" />
+  </EntityType>
+  <EntityType Name="PartsWebfields">
+    <Key>
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="PartsPageCode" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PartsPageCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Version" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="DrawingNo" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Sort" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="QProductID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Barcode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Policies">
+    <Key>
+      <PropertyRef Name="DatePosted" />
+    </Key>
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="PolicyHeader" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="PolicySection" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Policy" Type="String" MaxLength="1500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductBulletins">
+    <Key>
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="BulletinTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BulletinDescription" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="BulletinPDF" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BulletinLogo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="BulletinInfoLink" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductBullets">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PBID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PBOrderID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PBText" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="PBLinks" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductPage_Snippets">
+    <Key>
+      <PropertyRef Name="PPC" />
+    </Key>
+    <Property Name="PPC" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="SnipText1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Meta" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Keywords" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProductVideo">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+      <PropertyRef Name="VideoID" />
+      <PropertyRef Name="Vorder" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="VideoID" Type="Int32" Nullable="false" />
+    <Property Name="Vorder" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProductPage" Relationship="Self.FK_ProductVideo_ProductPage" FromRole="ProductVideo" ToRole="ProductPage" />
+    <NavigationProperty Name="Video" Relationship="Self.FK_ProductVideo_Video" FromRole="ProductVideo" ToRole="Video" />
+  </EntityType>
+  <EntityType Name="RequestADealerInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+    <Property Name="Postal" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Country" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="WorkPhone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="HomePhone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Promocode" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Profession" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+    <Property Name="CurDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Shop_Description">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Type1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail4" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail5" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec6" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail6" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec7" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail7" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec8" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail8" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec9" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail9" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec10" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail10" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec11" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail11" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec12" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail12" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type13" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec13" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail13" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type14" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec14" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail14" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type15" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec15" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail15" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type16" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec16" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail16" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type17" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec17" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail17" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type18" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec18" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail18" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Type19" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Spec19" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Detail19" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Shopatron">
+    <Key>
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="ShopTitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShopBlurb" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ShopLink" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShopIntlCatData">
+    <Key>
+      <PropertyRef Name="MFG_PART_NUMBER___af6ac23849fa72f624786667e0fc1b73" />
+      <PropertyRef Name="SUB_CATEGORY3" />
+      <PropertyRef Name="SUB_CATEGORY4" />
+    </Key>
+    <Property Name="MFG_PART_NUMBER___af6ac23849fa72f624786667e0fc1b73" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TOOLBAR_CATEGORY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB_CATEGORY1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB_CATEGORY2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SUB_CATEGORY3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SUB_CATEGORY4" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CATEGORYRANK" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="ShopIntlCatDataTP">
+    <Key>
+      <PropertyRef Name="MFG_PART_NUMBER___af6ac23849fa72f624786667e0fc1b73" />
+      <PropertyRef Name="SUB_CATEGORY3" />
+      <PropertyRef Name="SUB_CATEGORY4" />
+    </Key>
+    <Property Name="MFG_PART_NUMBER___af6ac23849fa72f624786667e0fc1b73" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TOOLBAR_CATEGORY" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB_CATEGORY1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="SUB_CATEGORY2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="SUB_CATEGORY3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SUB_CATEGORY4" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CATEGORYRANK" Type="Decimal" Precision="18" Scale="0" />
+  </EntityType>
+  <EntityType Name="ShopIntlProductData">
+    <Key>
+      <PropertyRef Name="UPC_CODE" />
+      <PropertyRef Name="MFG_PART_NUMBER" />
+      <PropertyRef Name="LONG_DESCRIPTION" />
+      <PropertyRef Name="AVAILABILITY" />
+      <PropertyRef Name="AVG_DEALER_MARGIN" />
+      <PropertyRef Name="ACTIVE" />
+      <PropertyRef Name="LENGTH" />
+      <PropertyRef Name="HEIGHT" />
+      <PropertyRef Name="WIDTH" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME1" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME2" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME3" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME4" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME5" />
+      <PropertyRef Name="ADDITIONAL_IMG_FILE5" />
+      <PropertyRef Name="LEAD_TIME" />
+    </Key>
+    <Property Name="NAME___0570ef7f82aa34ce168e112e9ec4e125" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UPC_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MFG_PART_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SHORT_DESCRIPTION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="LONG_DESCRIPTION" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AVAILABILITY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RETAIL_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MAP_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MFG_OFFER_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AVG_DEALER_MARGIN" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IMAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ACTIVE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WEIGHT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LENGTH" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HEIGHT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WIDTH" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_NAME1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDITIONAL_IMG_NAME2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDITIONAL_IMG_NAME3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDITIONAL_IMG_NAME4" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDITIONAL_IMG_NAME5" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE5" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SPEC_TYPE1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_TYPE2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_TYPE3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_TYPE4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION4" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_TYPE5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION5" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LEAD_TIME" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShopIntlProductDataTP">
+    <Key>
+      <PropertyRef Name="UPC_CODE" />
+      <PropertyRef Name="MFG_PART_NUMBER" />
+      <PropertyRef Name="LONG_DESCRIPTION" />
+      <PropertyRef Name="AVAILABILITY" />
+      <PropertyRef Name="AVG_DEALER_MARGIN" />
+      <PropertyRef Name="ACTIVE" />
+      <PropertyRef Name="LENGTH" />
+      <PropertyRef Name="HEIGHT" />
+      <PropertyRef Name="WIDTH" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME1" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME2" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME3" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME4" />
+      <PropertyRef Name="ADDITIONAL_IMG_NAME5" />
+      <PropertyRef Name="ADDITIONAL_IMG_FILE5" />
+      <PropertyRef Name="LEAD_TIME" />
+    </Key>
+    <Property Name="NAME___0570ef7f82aa34ce168e112e9ec4e125" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UPC_CODE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MFG_PART_NUMBER" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SHORT_DESCRIPTION" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="LONG_DESCRIPTION" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AVAILABILITY" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RETAIL_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MAP_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="MFG_OFFER_PRICE" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="AVG_DEALER_MARGIN" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IMAGE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ACTIVE" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WEIGHT" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LENGTH" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HEIGHT" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="WIDTH" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_NAME1" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDITIONAL_IMG_NAME2" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDITIONAL_IMG_NAME3" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDITIONAL_IMG_NAME4" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ADDITIONAL_IMG_NAME5" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ADDITIONAL_IMG_FILE5" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SPEC_TYPE1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION1" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_TYPE2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME2" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION2" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_TYPE3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME3" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION3" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_TYPE4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME4" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION4" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_TYPE5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_NAME5" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SPEC_DESCRIPTION5" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="LEAD_TIME" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShopIntlSpecUpload">
+    <Key>
+      <PropertyRef Name="part_number___522f29b472827380188d8806fe15260a" />
+      <PropertyRef Name="spec_file_name" />
+    </Key>
+    <Property Name="part_number___522f29b472827380188d8806fe15260a" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="spec_type__text__hidden__global_image__unique_image__file_" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="spec_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="spec_description" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="spec_file_name" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ShopWebFields">
+    <Key>
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ApplicationID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="PartUsageID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ProcessID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="SORT4_Part" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Weight" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShopLink" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="ShopImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TechnicalLibrary">
+    <Key>
+      <PropertyRef Name="LibraryTypeID" />
+      <PropertyRef Name="WebSectionID" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="LibraryTypeID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="WebSectionID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="WebGroupID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="TechNoteID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MSDSID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ManualID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MaintenanceCardID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="OtherReferenceID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="FlyerID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+    <Property Name="PartsListID" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="MFlyer" Relationship="Self.FK_TechnicalLibrary_MFlyer" FromRole="TechnicalLibrary" ToRole="MFlyer" />
+    <NavigationProperty Name="MLibrary" Relationship="Self.FK_TechnicalLibrary_MLibrary" FromRole="TechnicalLibrary" ToRole="MLibrary" />
+    <NavigationProperty Name="MMaintenanceCard" Relationship="Self.FK_TechnicalLibrary_MMaintenanceCard" FromRole="TechnicalLibrary" ToRole="MMaintenanceCard" />
+    <NavigationProperty Name="MManual" Relationship="Self.FK_TechnicalLibrary_MManual" FromRole="TechnicalLibrary" ToRole="MManual" />
+    <NavigationProperty Name="MMsds" Relationship="Self.FK_TechnicalLibrary_MMsds" FromRole="TechnicalLibrary" ToRole="MMsds" />
+    <NavigationProperty Name="MOtherReference" Relationship="Self.FK_TechnicalLibrary_MOtherReference" FromRole="TechnicalLibrary" ToRole="MOtherReference" />
+    <NavigationProperty Name="MTechNote" Relationship="Self.FK_TechnicalLibrary_MTechNote" FromRole="TechnicalLibrary" ToRole="MTechNote" />
+    <NavigationProperty Name="MWebGroup" Relationship="Self.FK_TechnicalLibrary_MWebGroup" FromRole="TechnicalLibrary" ToRole="MWebGroup" />
+    <NavigationProperty Name="MWebSection" Relationship="Self.FK_TechnicalLibrary_MWebSection" FromRole="TechnicalLibrary" ToRole="MWebSection" />
+  </EntityType>
+  <EntityType Name="WhatIsNew">
+    <Key>
+      <PropertyRef Name="DatePosted" />
+      <PropertyRef Name="CurrentYN" />
+    </Key>
+    <Property Name="DatePosted" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="DateListed" Type="DateTime" Precision="3" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Blurb" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="DetailPDF" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentYN" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ONYX_AlphaWebOnyx_dbo_ProductText">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ProductText" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="TechTip" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="Notes" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="Features" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="RelatedProduct" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ONYX_AlphaWebOnyx_dbo_ProductText1">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ProductText" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="TechTip" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="Notes" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="Features" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="RelatedProduct" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIEWProductPageNoProductText">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PageName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CatalogPageNo" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="SectionID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="GroupID" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ShortDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="TechNote" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="MSDS" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="DataSheet" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Thumb4" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ReferralItems" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Video1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Video2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="PictureLayout" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ChartLayout" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="LongDescription" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VIEWProductPageProductText">
+    <Key>
+      <PropertyRef Name="ProductPageCode" />
+    </Key>
+    <Property Name="ProductPageCode" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="PageName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ShortDescription" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ProductText" Type="String" MaxLength="3000" FixedLength="false" Unicode="false" />
+    <Property Name="TechTip" Type="String" MaxLength="600" FixedLength="false" Unicode="false" />
+    <Property Name="Notes" Type="String" MaxLength="1500" FixedLength="false" Unicode="false" />
+    <Property Name="Features" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="RelatedProduct" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VIEWWebfieldsIndustry">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IndustryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Industry" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIEWWebfieldsMaterial">
+    <Key>
+      <PropertyRef Name="PartNo" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MaterialCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="Material" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="VIEWWebfieldsUsageProcessApplication">
+    <Key>
+      <PropertyRef Name="PartNo" />
+      <PropertyRef Name="PartUsage" />
+      <PropertyRef Name="Process" />
+      <PropertyRef Name="Application" />
+    </Key>
+    <Property Name="PartNo" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="PartUsage" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Process" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Application" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Links_LinksType">
+    <End Role="LinksType" Type="Self.LinksType" Multiplicity="1" />
+    <End Role="Links" Type="Self.Links" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LinksType">
+        <PropertyRef Name="LinkType" />
+      </Principal>
+      <Dependent Role="Links">
+        <PropertyRef Name="LinkType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductAdvisory_MAdvisoryType">
+    <End Role="MAdvisoryType" Type="Self.MAdvisoryType" Multiplicity="1" />
+    <End Role="ProductAdvisory" Type="Self.ProductAdvisory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MAdvisoryType">
+        <PropertyRef Name="AdvisoryType" />
+      </Principal>
+      <Dependent Role="ProductAdvisory">
+        <PropertyRef Name="AdvisoryType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Webfields_MApplication">
+    <End Role="MApplication" Type="Self.MApplication" Multiplicity="0..1" />
+    <End Role="Webfields" Type="Self.Webfields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MApplication">
+        <PropertyRef Name="ApplicationID" />
+      </Principal>
+      <Dependent Role="Webfields">
+        <PropertyRef Name="ApplicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MContact_MRegion">
+    <End Role="MRegion" Type="Self.MRegion" Multiplicity="0..1" />
+    <End Role="MContact" Type="Self.MContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MRegion">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="MContact">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MContact_MTerritory">
+    <End Role="MTerritory" Type="Self.MTerritory" Multiplicity="0..1" />
+    <End Role="MContact" Type="Self.MContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTerritory">
+        <PropertyRef Name="TerritoryID" />
+      </Principal>
+      <Dependent Role="MContact">
+        <PropertyRef Name="TerritoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressRelease_MContact">
+    <End Role="MContact" Type="Self.MContact" Multiplicity="0..1" />
+    <End Role="PressRelease" Type="Self.PressRelease" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MContact">
+        <PropertyRef Name="ContactID" />
+      </Principal>
+      <Dependent Role="PressRelease">
+        <PropertyRef Name="ContactID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MFlyer">
+    <End Role="MFlyer" Type="Self.MFlyer" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MFlyer">
+        <PropertyRef Name="FlyerID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="FlyerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MFlyer">
+    <End Role="MFlyer" Type="Self.MFlyer" Multiplicity="0..1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MFlyer">
+        <PropertyRef Name="FlyerID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="FlyerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MLibrary">
+    <End Role="MLibrary" Type="Self.MLibrary" Multiplicity="1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MLibrary">
+        <PropertyRef Name="LibraryTypeID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="LibraryTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MMaintenanceCard">
+    <End Role="MMaintenanceCard" Type="Self.MMaintenanceCard" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MMaintenanceCard">
+        <PropertyRef Name="MaintenanceCardID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="MaintenanceCardID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MMaintenanceCard">
+    <End Role="MMaintenanceCard" Type="Self.MMaintenanceCard" Multiplicity="0..1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MMaintenanceCard">
+        <PropertyRef Name="MaintenanceCardID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="MaintenanceCardID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MManual">
+    <End Role="MManual" Type="Self.MManual" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MManual">
+        <PropertyRef Name="ManualID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="ManualID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MManual">
+    <End Role="MManual" Type="Self.MManual" Multiplicity="0..1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MManual">
+        <PropertyRef Name="ManualID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="ManualID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MMsds">
+    <End Role="MMsds" Type="Self.MMsds" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MMsds">
+        <PropertyRef Name="MSDSID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="MSDSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MMsds">
+    <End Role="MMsds" Type="Self.MMsds" Multiplicity="0..1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MMsds">
+        <PropertyRef Name="MSDSID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="MSDSID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NetPriceInfo_MNetTitle">
+    <End Role="MNetTitle" Type="Self.MNetTitle" Multiplicity="0..1" />
+    <End Role="NetPriceInfo" Type="Self.NetPriceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MNetTitle">
+        <PropertyRef Name="NetTitleID" />
+      </Principal>
+      <Dependent Role="NetPriceInfo">
+        <PropertyRef Name="NetTitleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MOtherReference">
+    <End Role="MOtherReference" Type="Self.MOtherReference" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MOtherReference">
+        <PropertyRef Name="OtherReferenceID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="OtherReferenceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MOtherReference">
+    <End Role="MOtherReference" Type="Self.MOtherReference" Multiplicity="0..1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MOtherReference">
+        <PropertyRef Name="OtherReferenceID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="OtherReferenceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NetPriceInfo_MPageGroup">
+    <End Role="MPageGroup" Type="Self.MPageGroup" Multiplicity="0..1" />
+    <End Role="NetPriceInfo" Type="Self.NetPriceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MPageGroup">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="NetPriceInfo">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MPageGroup">
+    <End Role="MPageGroup" Type="Self.MPageGroup" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MPageGroup">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NetPriceInfo_MPageSection">
+    <End Role="MPageSection" Type="Self.MPageSection" Multiplicity="0..1" />
+    <End Role="NetPriceInfo" Type="Self.NetPriceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MPageSection">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="NetPriceInfo">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MPageSection">
+    <End Role="MPageSection" Type="Self.MPageSection" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MPageSection">
+        <PropertyRef Name="SectionID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="SectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Webfields_MPartUsage">
+    <End Role="MPartUsage" Type="Self.MPartUsage" Multiplicity="0..1" />
+    <End Role="Webfields" Type="Self.Webfields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MPartUsage">
+        <PropertyRef Name="PartUsageID" />
+      </Principal>
+      <Dependent Role="Webfields">
+        <PropertyRef Name="PartUsageID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Webfields_MProcess">
+    <End Role="MProcess" Type="Self.MProcess" Multiplicity="0..1" />
+    <End Role="Webfields" Type="Self.Webfields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MProcess">
+        <PropertyRef Name="ProcessID" />
+      </Principal>
+      <Dependent Role="Webfields">
+        <PropertyRef Name="ProcessID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressRelease_MRegion">
+    <End Role="MRegion" Type="Self.MRegion" Multiplicity="0..1" />
+    <End Role="PressRelease" Type="Self.PressRelease" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MRegion">
+        <PropertyRef Name="RegionID" />
+      </Principal>
+      <Dependent Role="PressRelease">
+        <PropertyRef Name="RegionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MTechNote">
+    <End Role="MTechNote" Type="Self.MTechNote" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTechNote">
+        <PropertyRef Name="TechNoteID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="TechNoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MTechNote">
+    <End Role="MTechNote" Type="Self.MTechNote" Multiplicity="0..1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTechNote">
+        <PropertyRef Name="TechNoteID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="TechNoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PressRelease_MTerritory">
+    <End Role="MTerritory" Type="Self.MTerritory" Multiplicity="0..1" />
+    <End Role="PressRelease" Type="Self.PressRelease" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MTerritory">
+        <PropertyRef Name="TerritoryID" />
+      </Principal>
+      <Dependent Role="PressRelease">
+        <PropertyRef Name="TerritoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MWebGroup">
+    <End Role="MWebGroup" Type="Self.MWebGroup" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MWebGroup">
+        <PropertyRef Name="WebGroupID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="WebGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MWebGroup">
+    <End Role="MWebGroup" Type="Self.MWebGroup" Multiplicity="0..1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MWebGroup">
+        <PropertyRef Name="WebGroupID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="WebGroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MWebSection">
+    <End Role="MWebSection" Type="Self.MWebSection" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MWebSection">
+        <PropertyRef Name="WebSectionID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="WebSectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TechnicalLibrary_MWebSection">
+    <End Role="MWebSection" Type="Self.MWebSection" Multiplicity="1" />
+    <End Role="TechnicalLibrary" Type="Self.TechnicalLibrary" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MWebSection">
+        <PropertyRef Name="WebSectionID" />
+      </Principal>
+      <Dependent Role="TechnicalLibrary">
+        <PropertyRef Name="WebSectionID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductPage_MWebTitle">
+    <End Role="MWebTitle" Type="Self.MWebTitle" Multiplicity="0..1" />
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MWebTitle">
+        <PropertyRef Name="WebTitleID" />
+      </Principal>
+      <Dependent Role="ProductPage">
+        <PropertyRef Name="WebTitleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NetPriceList_ProductPageCode">
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="0..1" />
+    <End Role="NetPriceInfo" Type="Self.NetPriceInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductPage">
+        <PropertyRef Name="ProductPageCode" />
+      </Principal>
+      <Dependent Role="NetPriceInfo">
+        <PropertyRef Name="ProductPageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductAdvisory_ProductPage">
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="1" />
+    <End Role="ProductAdvisory" Type="Self.ProductAdvisory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductPage">
+        <PropertyRef Name="ProductPageCode" />
+      </Principal>
+      <Dependent Role="ProductAdvisory">
+        <PropertyRef Name="ProductPageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_EducationalProducts_ProductPage">
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="1" />
+    <End Role="EducationalMaterial" Type="Self.EducationalMaterial" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductPage">
+        <PropertyRef Name="ProductPageCode" />
+      </Principal>
+      <Dependent Role="EducationalMaterial">
+        <PropertyRef Name="ProductPageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NewProducts_ProductPage">
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="1" />
+    <End Role="NewProducts" Type="Self.NewProducts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductPage">
+        <PropertyRef Name="ProductPageCode" />
+      </Principal>
+      <Dependent Role="NewProducts">
+        <PropertyRef Name="ProductPageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductText_ProductPage">
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="1" />
+    <End Role="ProductText" Type="Self.ProductText" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ProductPage">
+        <PropertyRef Name="ProductPageCode" />
+      </Principal>
+      <Dependent Role="ProductText">
+        <PropertyRef Name="ProductPageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductVideo_ProductPage">
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="1" />
+    <End Role="ProductVideo" Type="Self.ProductVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductPage">
+        <PropertyRef Name="ProductPageCode" />
+      </Principal>
+      <Dependent Role="ProductVideo">
+        <PropertyRef Name="ProductPageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TNTechNote_ProductPage">
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="0..1" />
+    <End Role="TNTechNote" Type="Self.TNTechNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductPage">
+        <PropertyRef Name="ProductPageCode" />
+      </Principal>
+      <Dependent Role="TNTechNote">
+        <PropertyRef Name="ProductPageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Webfields_ProductPage">
+    <End Role="ProductPage" Type="Self.ProductPage" Multiplicity="1" />
+    <End Role="Webfields" Type="Self.Webfields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductPage">
+        <PropertyRef Name="ProductPageCode" />
+      </Principal>
+      <Dependent Role="Webfields">
+        <PropertyRef Name="ProductPageCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ProductVideo_Video">
+    <End Role="Video" Type="Self.Video" Multiplicity="1" />
+    <End Role="ProductVideo" Type="Self.ProductVideo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Video">
+        <PropertyRef Name="VideoID" />
+      </Principal>
+      <Dependent Role="ProductVideo">
+        <PropertyRef Name="VideoID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Webfields_WebPartNo">
+    <End Role="WebPartNo" Type="Self.WebPartNo" Multiplicity="1" />
+    <End Role="Webfields" Type="Self.Webfields" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WebPartNo">
+        <PropertyRef Name="PartNo" />
+      </Principal>
+      <Dependent Role="Webfields">
+        <PropertyRef Name="PartNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AlphatoolEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="C_SerialNos2020" EntityType="Self.C_SerialNos2020" />
+    <EntitySet Name="CMSPageRef" EntityType="Self.CMSPageRef" />
+    <EntitySet Name="Collection" EntityType="Self.Collection" />
+    <EntitySet Name="CollectionDupInfo" EntityType="Self.CollectionDupInfo" />
+    <EntitySet Name="CollectionEmail" EntityType="Self.CollectionEmail" />
+    <EntitySet Name="dtproperties" EntityType="Self.dtproperties" />
+    <EntitySet Name="HomeBanners" EntityType="Self.HomeBanners" />
+    <EntitySet Name="HomeProducts" EntityType="Self.HomeProducts" />
+    <EntitySet Name="LinksType" EntityType="Self.LinksType" />
+    <EntitySet Name="MAdvisoryType" EntityType="Self.MAdvisoryType" />
+    <EntitySet Name="MApplication" EntityType="Self.MApplication" />
+    <EntitySet Name="MCAProp65" EntityType="Self.MCAProp65" />
+    <EntitySet Name="MContact" EntityType="Self.MContact" />
+    <EntitySet Name="MFlyer" EntityType="Self.MFlyer" />
+    <EntitySet Name="MIndustry" EntityType="Self.MIndustry" />
+    <EntitySet Name="MLibrary" EntityType="Self.MLibrary" />
+    <EntitySet Name="MMaintenanceCard" EntityType="Self.MMaintenanceCard" />
+    <EntitySet Name="MManual" EntityType="Self.MManual" />
+    <EntitySet Name="MMaterial" EntityType="Self.MMaterial" />
+    <EntitySet Name="MMsds" EntityType="Self.MMsds" />
+    <EntitySet Name="MNetTitle" EntityType="Self.MNetTitle" />
+    <EntitySet Name="MOtherRef1" EntityType="Self.MOtherRef1" />
+    <EntitySet Name="MOtherRef2" EntityType="Self.MOtherRef2" />
+    <EntitySet Name="MOtherRef3" EntityType="Self.MOtherRef3" />
+    <EntitySet Name="MOtherReference" EntityType="Self.MOtherReference" />
+    <EntitySet Name="MPageGroup" EntityType="Self.MPageGroup" />
+    <EntitySet Name="MPageSection" EntityType="Self.MPageSection" />
+    <EntitySet Name="MPartsList" EntityType="Self.MPartsList" />
+    <EntitySet Name="MPartUsage" EntityType="Self.MPartUsage" />
+    <EntitySet Name="MPPCIndustry" EntityType="Self.MPPCIndustry" />
+    <EntitySet Name="MPPCIndustrySectionGroupPages" EntityType="Self.MPPCIndustrySectionGroupPages" />
+    <EntitySet Name="MPPCIndustrySectionGroupSpareParts" EntityType="Self.MPPCIndustrySectionGroupSpareParts" />
+    <EntitySet Name="MProcess" EntityType="Self.MProcess" />
+    <EntitySet Name="MRegion" EntityType="Self.MRegion" />
+    <EntitySet Name="MTechNote" EntityType="Self.MTechNote" />
+    <EntitySet Name="MTerritory" EntityType="Self.MTerritory" />
+    <EntitySet Name="MWebGroup" EntityType="Self.MWebGroup" />
+    <EntitySet Name="MWebSection" EntityType="Self.MWebSection" />
+    <EntitySet Name="MWebTitle" EntityType="Self.MWebTitle" />
+    <EntitySet Name="NetPriceInfo" EntityType="Self.NetPriceInfo" />
+    <EntitySet Name="PartsInfo" EntityType="Self.PartsInfo" />
+    <EntitySet Name="PartsPage" EntityType="Self.PartsPage" />
+    <EntitySet Name="PressRelease" EntityType="Self.PressRelease" />
+    <EntitySet Name="ProductAdvisory" EntityType="Self.ProductAdvisory" />
+    <EntitySet Name="ProductFields" EntityType="Self.ProductFields" />
+    <EntitySet Name="ProductFieldsOLD" EntityType="Self.ProductFieldsOLD" />
+    <EntitySet Name="ProductFieldsPending" EntityType="Self.ProductFieldsPending" />
+    <EntitySet Name="ProductInfo" EntityType="Self.ProductInfo" />
+    <EntitySet Name="ProductPage" EntityType="Self.ProductPage" />
+    <EntitySet Name="ProductRegistration" EntityType="Self.ProductRegistration" />
+    <EntitySet Name="ProductRelatedText" EntityType="Self.ProductRelatedText" />
+    <EntitySet Name="ProductRelatedTextNew" EntityType="Self.ProductRelatedTextNew" />
+    <EntitySet Name="ProductText" EntityType="Self.ProductText" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TNTechNote" EntityType="Self.TNTechNote" />
+    <EntitySet Name="Video" EntityType="Self.Video" />
+    <EntitySet Name="Webfields" EntityType="Self.Webfields" />
+    <EntitySet Name="Webfields2" EntityType="Self.Webfields2" />
+    <EntitySet Name="WebPartNo" EntityType="Self.WebPartNo" />
+    <EntitySet Name="AboutUs" EntityType="Self.AboutUs" />
+    <EntitySet Name="Affiliations" EntityType="Self.Affiliations" />
+    <EntitySet Name="Catalogs" EntityType="Self.Catalogs" />
+    <EntitySet Name="DealerInfo" EntityType="Self.DealerInfo" />
+    <EntitySet Name="EducationalMaterial" EntityType="Self.EducationalMaterial" />
+    <EntitySet Name="EmailSignup" EntityType="Self.EmailSignup" />
+    <EntitySet Name="Employment" EntityType="Self.Employment" />
+    <EntitySet Name="EventCalendar" EntityType="Self.EventCalendar" />
+    <EntitySet Name="Links" EntityType="Self.Links" />
+    <EntitySet Name="MDealerWebSiteType" EntityType="Self.MDealerWebSiteType" />
+    <EntitySet Name="Members" EntityType="Self.Members" />
+    <EntitySet Name="MetalProducts" EntityType="Self.MetalProducts" />
+    <EntitySet Name="MProductRegModel" EntityType="Self.MProductRegModel" />
+    <EntitySet Name="NewProducts" EntityType="Self.NewProducts" />
+    <EntitySet Name="PartsWebfields" EntityType="Self.PartsWebfields" />
+    <EntitySet Name="Policies" EntityType="Self.Policies" />
+    <EntitySet Name="ProductBulletins" EntityType="Self.ProductBulletins" />
+    <EntitySet Name="ProductBullets" EntityType="Self.ProductBullets" />
+    <EntitySet Name="ProductPage_Snippets" EntityType="Self.ProductPage_Snippets" />
+    <EntitySet Name="ProductVideo" EntityType="Self.ProductVideo" />
+    <EntitySet Name="RequestADealerInfo" EntityType="Self.RequestADealerInfo" />
+    <EntitySet Name="Shop_Description" EntityType="Self.Shop_Description" />
+    <EntitySet Name="Shopatron" EntityType="Self.Shopatron" />
+    <EntitySet Name="ShopIntlCatData" EntityType="Self.ShopIntlCatData" />
+    <EntitySet Name="ShopIntlCatDataTP" EntityType="Self.ShopIntlCatDataTP" />
+    <EntitySet Name="ShopIntlProductData" EntityType="Self.ShopIntlProductData" />
+    <EntitySet Name="ShopIntlProductDataTP" EntityType="Self.ShopIntlProductDataTP" />
+    <EntitySet Name="ShopIntlSpecUpload" EntityType="Self.ShopIntlSpecUpload" />
+    <EntitySet Name="ShopWebFields" EntityType="Self.ShopWebFields" />
+    <EntitySet Name="TechnicalLibrary" EntityType="Self.TechnicalLibrary" />
+    <EntitySet Name="WhatIsNew" EntityType="Self.WhatIsNew" />
+    <EntitySet Name="ONYX_AlphaWebOnyx_dbo_ProductText" EntityType="Self.ONYX_AlphaWebOnyx_dbo_ProductText" />
+    <EntitySet Name="ONYX_AlphaWebOnyx_dbo_ProductText1" EntityType="Self.ONYX_AlphaWebOnyx_dbo_ProductText1" />
+    <EntitySet Name="VIEWProductPageNoProductText" EntityType="Self.VIEWProductPageNoProductText" />
+    <EntitySet Name="VIEWProductPageProductText" EntityType="Self.VIEWProductPageProductText" />
+    <EntitySet Name="VIEWWebfieldsIndustry" EntityType="Self.VIEWWebfieldsIndustry" />
+    <EntitySet Name="VIEWWebfieldsMaterial" EntityType="Self.VIEWWebfieldsMaterial" />
+    <EntitySet Name="VIEWWebfieldsUsageProcessApplication" EntityType="Self.VIEWWebfieldsUsageProcessApplication" />
+    <AssociationSet Name="FK_Links_LinksType" Association="Self.FK_Links_LinksType">
+      <End Role="LinksType" EntitySet="LinksType" />
+      <End Role="Links" EntitySet="Links" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductAdvisory_MAdvisoryType" Association="Self.FK_ProductAdvisory_MAdvisoryType">
+      <End Role="MAdvisoryType" EntitySet="MAdvisoryType" />
+      <End Role="ProductAdvisory" EntitySet="ProductAdvisory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Webfields_MApplication" Association="Self.FK_Webfields_MApplication">
+      <End Role="MApplication" EntitySet="MApplication" />
+      <End Role="Webfields" EntitySet="Webfields" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MContact_MRegion" Association="Self.FK_MContact_MRegion">
+      <End Role="MRegion" EntitySet="MRegion" />
+      <End Role="MContact" EntitySet="MContact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MContact_MTerritory" Association="Self.FK_MContact_MTerritory">
+      <End Role="MTerritory" EntitySet="MTerritory" />
+      <End Role="MContact" EntitySet="MContact" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressRelease_MContact" Association="Self.FK_PressRelease_MContact">
+      <End Role="MContact" EntitySet="MContact" />
+      <End Role="PressRelease" EntitySet="PressRelease" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MFlyer" Association="Self.FK_ProductPage_MFlyer">
+      <End Role="MFlyer" EntitySet="MFlyer" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MFlyer" Association="Self.FK_TechnicalLibrary_MFlyer">
+      <End Role="MFlyer" EntitySet="MFlyer" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MLibrary" Association="Self.FK_TechnicalLibrary_MLibrary">
+      <End Role="MLibrary" EntitySet="MLibrary" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MMaintenanceCard" Association="Self.FK_ProductPage_MMaintenanceCard">
+      <End Role="MMaintenanceCard" EntitySet="MMaintenanceCard" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MMaintenanceCard" Association="Self.FK_TechnicalLibrary_MMaintenanceCard">
+      <End Role="MMaintenanceCard" EntitySet="MMaintenanceCard" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MManual" Association="Self.FK_ProductPage_MManual">
+      <End Role="MManual" EntitySet="MManual" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MManual" Association="Self.FK_TechnicalLibrary_MManual">
+      <End Role="MManual" EntitySet="MManual" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MMsds" Association="Self.FK_ProductPage_MMsds">
+      <End Role="MMsds" EntitySet="MMsds" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MMsds" Association="Self.FK_TechnicalLibrary_MMsds">
+      <End Role="MMsds" EntitySet="MMsds" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NetPriceInfo_MNetTitle" Association="Self.FK_NetPriceInfo_MNetTitle">
+      <End Role="MNetTitle" EntitySet="MNetTitle" />
+      <End Role="NetPriceInfo" EntitySet="NetPriceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MOtherReference" Association="Self.FK_ProductPage_MOtherReference">
+      <End Role="MOtherReference" EntitySet="MOtherReference" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MOtherReference" Association="Self.FK_TechnicalLibrary_MOtherReference">
+      <End Role="MOtherReference" EntitySet="MOtherReference" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NetPriceInfo_MPageGroup" Association="Self.FK_NetPriceInfo_MPageGroup">
+      <End Role="MPageGroup" EntitySet="MPageGroup" />
+      <End Role="NetPriceInfo" EntitySet="NetPriceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MPageGroup" Association="Self.FK_ProductPage_MPageGroup">
+      <End Role="MPageGroup" EntitySet="MPageGroup" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NetPriceInfo_MPageSection" Association="Self.FK_NetPriceInfo_MPageSection">
+      <End Role="MPageSection" EntitySet="MPageSection" />
+      <End Role="NetPriceInfo" EntitySet="NetPriceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MPageSection" Association="Self.FK_ProductPage_MPageSection">
+      <End Role="MPageSection" EntitySet="MPageSection" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Webfields_MPartUsage" Association="Self.FK_Webfields_MPartUsage">
+      <End Role="MPartUsage" EntitySet="MPartUsage" />
+      <End Role="Webfields" EntitySet="Webfields" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Webfields_MProcess" Association="Self.FK_Webfields_MProcess">
+      <End Role="MProcess" EntitySet="MProcess" />
+      <End Role="Webfields" EntitySet="Webfields" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressRelease_MRegion" Association="Self.FK_PressRelease_MRegion">
+      <End Role="MRegion" EntitySet="MRegion" />
+      <End Role="PressRelease" EntitySet="PressRelease" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MTechNote" Association="Self.FK_ProductPage_MTechNote">
+      <End Role="MTechNote" EntitySet="MTechNote" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MTechNote" Association="Self.FK_TechnicalLibrary_MTechNote">
+      <End Role="MTechNote" EntitySet="MTechNote" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PressRelease_MTerritory" Association="Self.FK_PressRelease_MTerritory">
+      <End Role="MTerritory" EntitySet="MTerritory" />
+      <End Role="PressRelease" EntitySet="PressRelease" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MWebGroup" Association="Self.FK_ProductPage_MWebGroup">
+      <End Role="MWebGroup" EntitySet="MWebGroup" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MWebGroup" Association="Self.FK_TechnicalLibrary_MWebGroup">
+      <End Role="MWebGroup" EntitySet="MWebGroup" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MWebSection" Association="Self.FK_ProductPage_MWebSection">
+      <End Role="MWebSection" EntitySet="MWebSection" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TechnicalLibrary_MWebSection" Association="Self.FK_TechnicalLibrary_MWebSection">
+      <End Role="MWebSection" EntitySet="MWebSection" />
+      <End Role="TechnicalLibrary" EntitySet="TechnicalLibrary" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductPage_MWebTitle" Association="Self.FK_ProductPage_MWebTitle">
+      <End Role="MWebTitle" EntitySet="MWebTitle" />
+      <End Role="ProductPage" EntitySet="ProductPage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NetPriceList_ProductPageCode" Association="Self.FK_NetPriceList_ProductPageCode">
+      <End Role="ProductPage" EntitySet="ProductPage" />
+      <End Role="NetPriceInfo" EntitySet="NetPriceInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductAdvisory_ProductPage" Association="Self.FK_ProductAdvisory_ProductPage">
+      <End Role="ProductPage" EntitySet="ProductPage" />
+      <End Role="ProductAdvisory" EntitySet="ProductAdvisory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_EducationalProducts_ProductPage" Association="Self.FK_EducationalProducts_ProductPage">
+      <End Role="ProductPage" EntitySet="ProductPage" />
+      <End Role="EducationalMaterial" EntitySet="EducationalMaterial" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NewProducts_ProductPage" Association="Self.FK_NewProducts_ProductPage">
+      <End Role="ProductPage" EntitySet="ProductPage" />
+      <End Role="NewProducts" EntitySet="NewProducts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductText_ProductPage" Association="Self.FK_ProductText_ProductPage">
+      <End Role="ProductPage" EntitySet="ProductPage" />
+      <End Role="ProductText" EntitySet="ProductText" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductVideo_ProductPage" Association="Self.FK_ProductVideo_ProductPage">
+      <End Role="ProductPage" EntitySet="ProductPage" />
+      <End Role="ProductVideo" EntitySet="ProductVideo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TNTechNote_ProductPage" Association="Self.FK_TNTechNote_ProductPage">
+      <End Role="ProductPage" EntitySet="ProductPage" />
+      <End Role="TNTechNote" EntitySet="TNTechNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Webfields_ProductPage" Association="Self.FK_Webfields_ProductPage">
+      <End Role="ProductPage" EntitySet="ProductPage" />
+      <End Role="Webfields" EntitySet="Webfields" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductVideo_Video" Association="Self.FK_ProductVideo_Video">
+      <End Role="Video" EntitySet="Video" />
+      <End Role="ProductVideo" EntitySet="ProductVideo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Webfields_WebPartNo" Association="Self.FK_Webfields_WebPartNo">
+      <End Role="WebPartNo" EntitySet="WebPartNo" />
+      <End Role="Webfields" EntitySet="Webfields" />
+    </AssociationSet>
+    <FunctionImport Name="dt_addtosourcecontrol">
+      <Parameter Name="vchSourceSafeINI" Mode="In" Type="String" />
+      <Parameter Name="vchProjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_addtosourcecontrol_u">
+      <Parameter Name="vchSourceSafeINI" Mode="In" Type="String" />
+      <Parameter Name="vchProjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_adduserobject" />
+    <FunctionImport Name="dt_adduserobject_vcs">
+      <Parameter Name="vchProperty" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkinobject">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+      <Parameter Name="txStream1" Mode="In" Type="String" />
+      <Parameter Name="txStream2" Mode="In" Type="String" />
+      <Parameter Name="txStream3" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkinobject_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+      <Parameter Name="txStream1" Mode="In" Type="String" />
+      <Parameter Name="txStream2" Mode="In" Type="String" />
+      <Parameter Name="txStream3" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkoutobject">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_checkoutobject_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchComment" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iVCSFlags" Mode="In" Type="Int32" />
+      <Parameter Name="iActionFlag" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_displayoaerror">
+      <Parameter Name="iObject" Mode="In" Type="Int32" />
+      <Parameter Name="iresult" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_displayoaerror_u">
+      <Parameter Name="iObject" Mode="In" Type="Int32" />
+      <Parameter Name="iresult" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_droppropertiesbyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_dropuserobjectbyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_generateansiname">
+      <Parameter Name="name" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getobjwithprop" ReturnType="Collection(Int32)">
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getobjwithprop_u" ReturnType="Collection(Int32)">
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="uvalue" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid" ReturnType="Collection(AlphatoolsModel.dt_getpropertiesbyid_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_u" ReturnType="Collection(AlphatoolsModel.dt_getpropertiesbyid_u_Result)">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_vcs">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_getpropertiesbyid_vcs_u">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="InOut" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_isundersourcecontrol">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iWhoToo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_isundersourcecontrol_u">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+      <Parameter Name="iWhoToo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="dt_removefromsourcecontrol" />
+    <FunctionImport Name="dt_setpropertybyid">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="value" Mode="In" Type="String" />
+      <Parameter Name="lvalue" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="dt_setpropertybyid_u">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="property" Mode="In" Type="String" />
+      <Parameter Name="uvalue" Mode="In" Type="String" />
+      <Parameter Name="lvalue" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="dt_validateloginparams">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_validateloginparams_u">
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_vcsenabled" />
+    <FunctionImport Name="dt_verstamp006" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="dt_verstamp007" ReturnType="Collection(Int32)" />
+    <FunctionImport Name="dt_whocheckedout">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="dt_whocheckedout_u">
+      <Parameter Name="chObjectType" Mode="In" Type="String" />
+      <Parameter Name="vchObjectName" Mode="In" Type="String" />
+      <Parameter Name="vchLoginName" Mode="In" Type="String" />
+      <Parameter Name="vchPassword" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="EventCalendarUpdate" />
+    <FunctionImport Name="GetRecordCountsForAllTables" ReturnType="Collection(AlphatoolsModel.GetRecordCountsForAllTables_Result)" />
+    <FunctionImport Name="Shop1_Drop" />
+    <FunctionImport Name="Shop2_Fetch" />
+    <FunctionImport Name="Shop3_Data" />
+    <FunctionImport Name="Shop3_PartData" />
+    <FunctionImport Name="Shop4_Extract" ReturnType="Collection(AlphatoolsModel.Shop4_Extract_Result)" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="spDeleteDupCollection" />
+    <FunctionImport Name="spTNChart" ReturnType="Collection(AlphatoolsModel.spTNChart_Result)">
+      <Parameter Name="PPCode" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="spTNChartTemp">
+      <Parameter Name="PPCode" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="spTNChartTemp4" ReturnType="Collection(AlphatoolsModel.spTNChartTemp4_Result)">
+      <Parameter Name="PPCode" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="spVideoTemplate" ReturnType="Collection(AlphatoolsModel.spVideoTemplate_Result)">
+      <Parameter Name="PPCode" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="spWebMatInd" />
+  </EntityContainer>
+  <ComplexType Name="dt_getpropertiesbyid_Result">
+    <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="version" Nullable="false" />
+    <Property Type="String" Name="value" Nullable="true" MaxLength="255" />
+    <Property Type="Binary" Name="lvalue" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="dt_getpropertiesbyid_u_Result">
+    <Property Type="String" Name="property" Nullable="false" MaxLength="64" />
+    <Property Type="Int32" Name="version" Nullable="false" />
+    <Property Type="String" Name="uvalue" Nullable="true" MaxLength="255" />
+    <Property Type="Binary" Name="lvalue" Nullable="true" MaxLength="Max" />
+  </ComplexType>
+  <ComplexType Name="GetRecordCountsForAllTables_Result">
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Table_Name" Nullable="true" MaxLength="25" />
+    <Property Type="Int32" Name="Record_Count" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="Shop4_Extract_Result">
+    <Property Type="String" Name="NAME___0570ef7f82aa34ce168e112e9ec4e125" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="UPC_CODE" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="MFG_PART_NUMBER" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="SHORT_DESCRIPTION" Nullable="true" MaxLength="1000" />
+    <Property Type="String" Name="LONG_DESCRIPTION" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="AVAILABILITY" Nullable="false" MaxLength="1" />
+    <Property Type="Decimal" Name="RETAIL_PRICE" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="MAP_PRICE" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="Decimal" Name="MFG_OFFER_PRICE" Nullable="true" Precision="18" Scale="2" />
+    <Property Type="String" Name="AVG_DEALER_MARGIN" Nullable="false" MaxLength="3" />
+    <Property Type="String" Name="IMAGE" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ACTIVE" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="WEIGHT" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="LENGTH" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="HEIGHT" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="WIDTH" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ADDITIONAL_IMG_NAME1" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ADDITIONAL_IMG_FILE1" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ADDITIONAL_IMG_NAME2" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ADDITIONAL_IMG_FILE2" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ADDITIONAL_IMG_NAME3" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ADDITIONAL_IMG_FILE3" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ADDITIONAL_IMG_NAME4" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ADDITIONAL_IMG_FILE4" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="ADDITIONAL_IMG_NAME5" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="ADDITIONAL_IMG_FILE5" Nullable="false" MaxLength="1" />
+    <Property Type="String" Name="SPEC_TYPE1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_NAME1" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_DESCRIPTION1" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="SPEC_TYPE2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_NAME2" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_DESCRIPTION2" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="SPEC_TYPE3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_NAME3" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_DESCRIPTION3" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="SPEC_TYPE4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_NAME4" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_DESCRIPTION4" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="SPEC_TYPE5" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_NAME5" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SPEC_DESCRIPTION5" Nullable="true" MaxLength="250" />
+    <Property Type="String" Name="LEAD_TIME" Nullable="false" MaxLength="1" />
+  </ComplexType>
+  <ComplexType Name="spTNChart_Result">
+    <Property Type="String" Name="PartNo" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="PartSize" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Diameter" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Thickness" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PartMaxRPMs" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Arbors" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Shape" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RecommendedFor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Threads" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ForUseOn" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Finish" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Grit" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Color" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DepthOfCut" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Qty" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BondType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Container" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="PiecesPerCase" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="spTNChartTemp4_Result">
+    <Property Type="String" Name="PartNo" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="PartSize" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Diameter" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Thickness" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PartMaxRPMs" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Arbors" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Shape" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RecommendedFor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Threads" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ForUseOn" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Finish" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Grit" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Color" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DepthOfCut" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Qty" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BondType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Container" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="PiecesPerCase" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PartNoValue" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="iPartSize" Nullable="true" />
+    <Property Type="Int32" Name="iDiameter" Nullable="true" />
+    <Property Type="Int32" Name="iThickness" Nullable="true" />
+    <Property Type="Int32" Name="iPartMaxRPMs" Nullable="true" />
+    <Property Type="Int32" Name="iType" Nullable="true" />
+    <Property Type="Int32" Name="iArbors" Nullable="true" />
+    <Property Type="Int32" Name="iShape" Nullable="true" />
+    <Property Type="Int32" Name="iRecommendedFor" Nullable="true" />
+    <Property Type="Int32" Name="iThreads" Nullable="true" />
+    <Property Type="Int32" Name="iForUseOn" Nullable="true" />
+    <Property Type="Int32" Name="iFinish" Nullable="true" />
+    <Property Type="Int32" Name="iGrit" Nullable="true" />
+    <Property Type="Int32" Name="iColor" Nullable="true" />
+    <Property Type="Int32" Name="iDepthOfCut" Nullable="true" />
+    <Property Type="Int32" Name="iQty" Nullable="true" />
+    <Property Type="Int32" Name="iBondType" Nullable="true" />
+    <Property Type="Int32" Name="iContainer" Nullable="true" />
+    <Property Type="Int32" Name="iDescription" Nullable="true" />
+    <Property Type="Int32" Name="iPiecesPerCase" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spVideoTemplate_Result">
+    <Property Type="String" Name="PartNo" Nullable="false" MaxLength="255" />
+    <Property Type="String" Name="PartSize" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Diameter" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Thickness" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PartMaxRPMs" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Type" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Arbors" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Shape" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RecommendedFor" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Threads" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="ForUseOn" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Finish" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Grit" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Color" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="DepthOfCut" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Qty" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BondType" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Container" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Description" Nullable="true" MaxLength="255" />
+    <Property Type="String" Name="PiecesPerCase" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PartNoValue" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="iPartSize" Nullable="true" />
+    <Property Type="Int32" Name="iDiameter" Nullable="true" />
+    <Property Type="Int32" Name="iThickness" Nullable="true" />
+    <Property Type="Int32" Name="iPartMaxRPMs" Nullable="true" />
+    <Property Type="Int32" Name="iType" Nullable="true" />
+    <Property Type="Int32" Name="iArbors" Nullable="true" />
+    <Property Type="Int32" Name="iShape" Nullable="true" />
+    <Property Type="Int32" Name="iRecommendedFor" Nullable="true" />
+    <Property Type="Int32" Name="iThreads" Nullable="true" />
+    <Property Type="Int32" Name="iForUseOn" Nullable="true" />
+    <Property Type="Int32" Name="iFinish" Nullable="true" />
+    <Property Type="Int32" Name="iGrit" Nullable="true" />
+    <Property Type="Int32" Name="iColor" Nullable="true" />
+    <Property Type="Int32" Name="iDepthOfCut" Nullable="true" />
+    <Property Type="Int32" Name="iQty" Nullable="true" />
+    <Property Type="Int32" Name="iBondType" Nullable="true" />
+    <Property Type="Int32" Name="iContainer" Nullable="true" />
+    <Property Type="Int32" Name="iDescription" Nullable="true" />
+    <Property Type="Int32" Name="iPiecesPerCase" Nullable="true" />
+  </ComplexType>
+</Schema>

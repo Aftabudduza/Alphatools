@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Alphatool", "http://localhost:1843", "{E0547971-560D-4C96-B1EA-D288C59C652D}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		ProjectReferences = "{49333695-a537-484a-9fd2-4b33e4cb31f7}|AlphatoolServices.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/Alphatool"
+		Debug.AspNetCompiler.PhysicalPath = "Alphatool\"
+		Debug.AspNetCompiler.TargetPath = "Alphatool\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Alphatool"
+		Release.AspNetCompiler.PhysicalPath = "Alphatool\"
+		Release.AspNetCompiler.TargetPath = "Alphatool\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "Alphatool\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlphatoolServices", "AlphatoolServices\AlphatoolServices.csproj", "{49333695-A537-484A-9FD2-4B33E4CB31F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0547971-560D-4C96-B1EA-D288C59C652D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0547971-560D-4C96-B1EA-D288C59C652D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0547971-560D-4C96-B1EA-D288C59C652D}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0547971-560D-4C96-B1EA-D288C59C652D}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{49333695-A537-484A-9FD2-4B33E4CB31F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49333695-A537-484A-9FD2-4B33E4CB31F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49333695-A537-484A-9FD2-4B33E4CB31F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49333695-A537-484A-9FD2-4B33E4CB31F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
